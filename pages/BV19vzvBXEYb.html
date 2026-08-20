@@ -32,19 +32,22 @@ hr { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
 @media (max-width: 640px) {
   body { padding: 20px 14px 60px; font-size: 14.5px; }
   h1 { font-size: 22px; }
-  table, thead, tbody, tr, th, td { display: block; width: 100%; }
+  table { font-size: 13px; }
   thead { display: none; }
-  tr { margin: 0 0 14px; border: 1px solid #eee; border-radius: 10px; padding: 4px 0; background: #fff; }
-  td { border: none !important; padding: 7px 14px; }
-  td[data-label]:before { content: attr(data-label); display: block; font-weight: 600; color: #c23a1a; font-size: 12px; margin-bottom: 1px; }
   .statbar { gap: 6px; }
   .stat { padding: 6px 10px; font-size: 12px; }
   .btn { width: 100%; text-align: center; }
+  /* 贴士表卡片化（仅此表） */
+  table.tips-card, table.tips-card tbody, table.tips-card tr, table.tips-card td { display: block; width: 100%; }
+  table.tips-card tr { margin: 0 0 14px; border: 1px solid #eee; border-radius: 10px; padding: 4px 0; background: #fff; }
+  table.tips-card td { border: none !important; padding: 7px 14px; }
+  table.tips-card td:first-child { font-weight: 600; color: #c23a1a; }
 }
 
 </style>
 </head>
 <body>
+<p style="margin:0 0 18px;"><a href="../index.html" style="color:#c23a1a;text-decoration:none;font-weight:600;font-size:14px;">← 返回路线库首页</a></p>
 <h1>搭火车环游中国·第33站：满洲里</h1>
 <p>上/下两集 · 海拉尔 → 满洲里 → 呼伦湖（中俄蒙三国交界百年商埠）</p>
 <div class="statbar">
@@ -69,22 +72,25 @@ hr { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
 <ol><li><strong>满洲里历史与市井</strong>：本地人讲：满洲里开放前要办边防证，普通人不让来；小时候全城几乎都认识，真正有户口本的就12万人，占地670多平方公里（呼伦湖一个湖就2339平方公里）。城里汉族为主，也有俄罗斯族、朝鲜族、布里亚特族、蒙古族——大杂居小城市。</li><li><strong>铁路天桥看中欧班列</strong>：走上铁路天桥能看见一列列跨国货车：中俄贸易从廉价轻工业品到汽车电器机械设备，2013年以来超3万列中欧班列从满洲里驶出，连接中国与十多个欧洲国家（约13国60多个停靠站）。中国是1435mm标准轨，俄罗斯是1520mm宽轨，列车在口岸换装（后贝加尔斯克站）。</li><li><strong>国门景区</strong>：国门景区门票60元；售票处塔楼里有旋转餐厅（400元/人，可俯瞰对面俄罗斯土地，博主嫌贵没去）；边境地区禁止航拍。国门楼顶廊桥能近距离看对面俄罗斯的后贝加尔斯克车站（列车换装处），对面小镇繁华程度远不如满洲里。空地上有一排历代国门模型：第一代1902年木质（俄罗斯修的，中俄共用，顶有双头鹰）、第二代「中苏门」、第三代（60年代）、第四代（80年代末）、第五代（投资8000多万，现役）。</li><li><strong>中苏金街</strong>：满洲里最热闹的步行街，改革开放后随旅游业形成；俄式建筑圆顶尖顶雕花窗，街头欧式雕塑，国际化程度比哈尔滨中央大街还高。街名「中苏」即中国+苏联（现在该叫中俄街了）。周末街上三分之一中国人、三分之一俄罗斯人、三分之一蒙古人；每天有从俄罗斯赤塔、伊尔库茨克等地开来的大巴旅行团。多数店铺有俄文招牌，做买卖的中国人都会说几句俄语。</li><li><strong>俄货与套娃店</strong>：俄罗斯商品店：鹿肉罐头35元/罐、伏特加（56度，乌克兰进口人参伏特加卖得好）、俄罗斯啤酒「波罗的海三号」7元/瓶（不错，配烤串）；黑人娃娃、格瓦斯等。中苏街上还有一家以俄国画家列宾命名的套娃店，卖苏联时代纪念品（列宁像、加加林、门捷列夫、契诃夫、普希金铜像等），店主自学俄语、收藏老物件，「对苏联有很深的怀念」——对很多中国人来说，苏联是一段更浓烈的记忆。</li><li><strong>卢布里西餐厅（三道街）</strong>：满洲里俄餐界天花板，俄罗斯服务员载歌载舞（客人都是中国人，而俄国游客跑去喝珍珠奶茶吃麻辣烫）。招牌：炸土豆片（蓬松鼓泡，蘸番茄酱）、奶酪包39元（满汁芝士香，不用蘸酱直接吃）、俄式炭烤香肠59元（多汁带烟熏味，配酸黄瓜解腻）、低温冷熏三文鱼56元/盘（软糯+淡淡烟熏）、莫尔斯18元/杯（野生红豆饮料，酸甜回甘）。</li><li><strong>呼伦湖·成吉思汗拴马桩</strong>：第二天租车出城，沿331国道向南约80公里到呼伦湖边的成吉思汗拴马桩（免费观景台，是否开放需自把握）。呼伦湖是中国第四大淡水湖，面积2339平方公里≈366个西湖，蓄水量相当于1000个西湖；南面的贝尔湖是姊妹湖，90%以上水域归蒙古国管辖。湖大得像海，看不到边际。传说9岁的铁木真（成吉思汗）随父亲也速该来呼伦贝尔求亲，隔着呼伦湖遥望新娘所在——当时湖东生活着弘吉剌部（与中原交流多，受教育程度和经济都高于漠北蒙古）。</li><li><strong>捡玛瑙</strong>：呼伦湖边能捡到玛瑙（二氧化硅，与大兴安岭火山群一亿年前的喷发有关）。湖边被捡得差不多了，但在牧民家附近的草地上发现很多碎玛瑙，得到同意后捡了不少；满洲里地摊也卖，3元/块。提醒：草原上带铲子挖玛瑙会破坏草地，开车路过捡几块漏在泥土里的做纪念就好。</li><li><strong>新巴尔虎右旗·阿拉坦额莫勒</strong>：巴尔虎三旗中最后到达的一旗，政府驻地阿拉坦额莫勒镇，蒙语「黄金马鞍」（阿尔泰、阿勒泰同源，都是「黄金」的意思）。旗政府对面有家皮雕店，店主阿木古楞（蒙语「平安」，新巴尔虎左旗驻地也叫阿木古朗镇）是二十多岁的皮雕爱好者，想把牛皮雕成孔雀羽毛，想接待研学团让更多人体验皮雕。</li><li><strong>草原上的孩子：岛图诺</strong>：在莫日格勒河附近遇到六年级女孩岛图诺（蒙语「好朋友」），爸爸是牧民（用无人机监控看羊，羊总跑丢），她想让爸爸也买个无人机；她小时候在草原暴走几小时不戴帽子晒得很黑，爱抓虫子捡石头，给一只失去鸟巢的小鸟堆石头纪念。她想去俄罗斯和蒙古国留学（蒙古国朋友用的是竖排传统蒙文）。博主把「草原之春」明信片给她写（她写「我希望你来呼和浩特，我带你们去草地游玩」），还收到她的礼物：米奇发卡和玩了三年的玩偶「小飞」。</li></ol>
 
 <h2>四、费用清单</h2>
-<table><thead><tr><th style="width:34%">项目</th><th style="width:22%">金额（视频内）</th><th>说明</th></tr></thead>
-<tbody><tr><td>海拉尔 → 满洲里 火车</td><td><strong>约2小时</strong></td><td>草原绿皮车，禁烟；票价视频未明</td></tr><tr><td>满洲里公寓房（铁道北）</td><td><strong>130元/晚</strong></td><td>博主实住，楼下即市区</td></tr><tr><td>杨枝甘露（外卖）</td><td><strong>12元</strong></td><td>千问点外卖+优惠券，少冰少糖</td></tr><tr><td>国门景区门票</td><td><strong>60元</strong></td><td>国门楼顶廊桥可远眺俄罗斯</td></tr><tr><td>国门旋转餐厅</td><td><strong>400元/人</strong></td><td>俯瞰俄境，博主嫌贵没去</td></tr><tr><td>沙俄监狱旧址</td><td><strong>免费</strong></td><td>需带身份证登记</td></tr><tr><td>卢布里奶酪包</td><td><strong>39元</strong></td><td>招牌，满汁芝士</td></tr><tr><td>俄式炭烤香肠</td><td><strong>59元</strong></td><td>现烤，配酸黄瓜</td></tr><tr><td>低温冷熏三文鱼</td><td><strong>56元/盘</strong></td><td>软糯+淡淡烟熏</td></tr><tr><td>莫尔斯（野生红豆饮）</td><td><strong>18元/杯</strong></td><td>酸甜回甘</td></tr><tr><td>俄罗斯啤酒 波罗的海三号</td><td><strong>7元/瓶</strong></td><td>博主试喝，不错</td></tr><tr><td>鹿肉罐头</td><td><strong>35元/罐</strong></td><td>俄货店，稍有土腥味</td></tr><tr><td>呼伦湖 / 拴马桩</td><td><strong>免费</strong></td><td>观景台免费，是否开放需自把握</td></tr><tr><td>玛瑙石（地摊）</td><td><strong>3元/块</strong></td><td>湖边也能捡到</td></tr></tbody></table>
 <p class="note">注：以上为视频拍摄时（2026年1-2月）的价格信息，出行前请以实时信息为准。</p>
+<table><thead><tr><th style="width:34%">项目</th><th style="width:22%">金额</th><th>说明</th></tr></thead>
+<tbody><tr><td>海拉尔 → 满洲里 火车</td><td><strong>约2小时</strong></td><td>草原绿皮车，禁烟；票价视频未明</td></tr><tr><td>满洲里公寓房（铁道北）</td><td><strong>130元/晚</strong></td><td>博主实住，楼下即市区</td></tr><tr><td>杨枝甘露（外卖）</td><td><strong>12元</strong></td><td>千问点外卖+优惠券，少冰少糖</td></tr><tr><td>国门景区门票</td><td><strong>60元</strong></td><td>国门楼顶廊桥可远眺俄罗斯</td></tr><tr><td>国门旋转餐厅</td><td><strong>400元/人</strong></td><td>俯瞰俄境，博主嫌贵没去</td></tr><tr><td>沙俄监狱旧址</td><td><strong>免费</strong></td><td>需带身份证登记</td></tr><tr><td>卢布里奶酪包</td><td><strong>39元</strong></td><td>招牌，满汁芝士</td></tr><tr><td>俄式炭烤香肠</td><td><strong>59元</strong></td><td>现烤，配酸黄瓜</td></tr><tr><td>低温冷熏三文鱼</td><td><strong>56元/盘</strong></td><td>软糯+淡淡烟熏</td></tr><tr><td>莫尔斯（野生红豆饮）</td><td><strong>18元/杯</strong></td><td>酸甜回甘</td></tr><tr><td>俄罗斯啤酒 波罗的海三号</td><td><strong>7元/瓶</strong></td><td>博主试喝，不错</td></tr><tr><td>鹿肉罐头</td><td><strong>35元/罐</strong></td><td>俄货店，稍有土腥味</td></tr><tr><td>呼伦湖 / 拴马桩</td><td><strong>免费</strong></td><td>观景台免费，是否开放需自把握</td></tr><tr><td>玛瑙石（地摊）</td><td><strong>3元/块</strong></td><td>湖边也能捡到</td></tr></tbody></table>
+
 
 <h2>五、路线实用贴士</h2>
-<table><thead><tr><th style="width:4%">#</th><th style="width:78%">小tips</th><th>出处</th></tr></thead>
-<tbody><tr><td>1</td><td><strong>草原列车值得坐</strong>：海拉尔→满洲里约2小时，穿呼伦贝尔草原，6月满眼绿色、可能遇彩虹；禁烟绿皮车（经林区防火）。来呼伦贝尔一定要体验这趟火车。</td><td>上集·火车</td></tr><tr><td>2</td><td><strong>草原天气看头顶的云</strong>：天气预报在草原上基本失效：一片乌云飘过来就是雨（可能是冰雹），几分钟后又放晴。出行看头顶云层，别信预报。</td><td>上集·海拉尔</td></tr><tr><td>3</td><td><strong>住宿住铁道北</strong>：满洲里被铁道一分为二：铁道南是车站+老建筑（冷清），铁道北是新市中心（吃饭逛街方便）。城市不大，住铁道北步行去哪都方便，公寓房130元/晚。</td><td>上集·住宿</td></tr><tr><td>4</td><td><strong>沙俄监狱免费但要带身份证</strong>：沙俄监狱旧址免费参观，必须带身份证；最震撼的是地下室水牢和墙上百年刻字「抬头望望见北斗星」，慎入（阴森）。</td><td>上集·沙俄监狱</td></tr><tr><td>5</td><td><strong>博物馆周一闭馆</strong>：满洲里博物馆周一闭馆（博主跑空）；行程排期避开周一，里面很多中俄蒙三国历史资料。</td><td>下集·博物馆</td></tr><tr><td>6</td><td><strong>国门景区须知</strong>：门票60元；边境禁飞无人机；旋转餐厅400元/人（可俯瞰俄境，博主嫌贵没去）；国门楼顶廊桥能近距离看对面后贝加尔斯克车站，值得上。</td><td>下集·国门</td></tr><tr><td>7</td><td><strong>国门看五代变迁</strong>：空地上的历代国门模型必看：1902年第一代木质国门（俄修，中俄共用，顶有双头鹰）→「中苏门」→60年代第三代→80年代末第四代→投资8000多万的第五代现役国门。</td><td>下集·国门</td></tr><tr><td>8</td><td><strong>呼伦湖捡玛瑙的正确姿势</strong>：湖边+牧民家草地能捡玛瑙（二氧化硅，火山喷发遗留），地摊3元/块；别带铲子挖（破坏草地），开车路过捡漏在泥土里的几块做纪念即可。</td><td>下集·呼伦湖</td></tr><tr><td>9</td><td><strong>拴马桩是免费观景台</strong>：成吉思汗拴马桩（呼伦湖西北岸，距满洲里约88公里）免费，但能否进入需自己把握；草原像海一样辽阔，值得绕路。</td><td>下集·呼伦湖</td></tr><tr><td>10</td><td><strong>中苏街周末最热闹</strong>：周末街上三分之一中国人、三分之一俄罗斯人、三分之一蒙古人；俄罗斯旅行团主要来自赤塔、伊尔库茨克等邻近城市。俄货店可以还价，啤酒波罗的海三号7元/瓶值得试。</td><td>下集·中苏街</td></tr><tr><td>11</td><td><strong>卢布里必点清单</strong>：俄餐天花板：奶酪包39元（不用蘸酱直接吃）、俄式炭烤香肠59元（配酸黄瓜解腻）、低温冷熏三文鱼56元、莫尔斯18元（野生红豆饮）。</td><td>下集·卢布里</td></tr><tr><td>12</td><td><strong>宽轨/准轨冷知识</strong>：中国铁轨1435mm标准轨，俄罗斯1520mm宽轨，跨国列车必须在口岸换装（后贝加尔斯克站），所以铁路天桥上看换装也是一种风景。</td><td>下集·铁路天桥</td></tr></tbody></table>
+<table><thead><tr><th style="width:4%">#</th><th>贴士</th></tr></thead>
+<tbody><tr><td>1</td><td><strong>草原列车值得坐</strong>：海拉尔→满洲里约2小时，穿呼伦贝尔草原，6月满眼绿色、可能遇彩虹；禁烟绿皮车（经林区防火）。来呼伦贝尔一定要体验这趟火车。 <em style="color:#999;font-style:normal;font-size:12px;">（上集·火车）</em></td></tr><tr><td>2</td><td><strong>草原天气看头顶的云</strong>：天气预报在草原上基本失效：一片乌云飘过来就是雨（可能是冰雹），几分钟后又放晴。出行看头顶云层，别信预报。 <em style="color:#999;font-style:normal;font-size:12px;">（上集·海拉尔）</em></td></tr><tr><td>3</td><td><strong>住宿住铁道北</strong>：满洲里被铁道一分为二：铁道南是车站+老建筑（冷清），铁道北是新市中心（吃饭逛街方便）。城市不大，住铁道北步行去哪都方便，公寓房130元/晚。 <em style="color:#999;font-style:normal;font-size:12px;">（上集·住宿）</em></td></tr><tr><td>4</td><td><strong>沙俄监狱免费但要带身份证</strong>：沙俄监狱旧址免费参观，必须带身份证；最震撼的是地下室水牢和墙上百年刻字「抬头望望见北斗星」，慎入（阴森）。 <em style="color:#999;font-style:normal;font-size:12px;">（上集·沙俄监狱）</em></td></tr><tr><td>5</td><td><strong>博物馆周一闭馆</strong>：满洲里博物馆周一闭馆（博主跑空）；行程排期避开周一，里面很多中俄蒙三国历史资料。 <em style="color:#999;font-style:normal;font-size:12px;">（下集·博物馆）</em></td></tr><tr><td>6</td><td><strong>国门景区须知</strong>：门票60元；边境禁飞无人机；旋转餐厅400元/人（可俯瞰俄境，博主嫌贵没去）；国门楼顶廊桥能近距离看对面后贝加尔斯克车站，值得上。 <em style="color:#999;font-style:normal;font-size:12px;">（下集·国门）</em></td></tr><tr><td>7</td><td><strong>国门看五代变迁</strong>：空地上的历代国门模型必看：1902年第一代木质国门（俄修，中俄共用，顶有双头鹰）→「中苏门」→60年代第三代→80年代末第四代→投资8000多万的第五代现役国门。 <em style="color:#999;font-style:normal;font-size:12px;">（下集·国门）</em></td></tr><tr><td>8</td><td><strong>呼伦湖捡玛瑙的正确姿势</strong>：湖边+牧民家草地能捡玛瑙（二氧化硅，火山喷发遗留），地摊3元/块；别带铲子挖（破坏草地），开车路过捡漏在泥土里的几块做纪念即可。 <em style="color:#999;font-style:normal;font-size:12px;">（下集·呼伦湖）</em></td></tr><tr><td>9</td><td><strong>拴马桩是免费观景台</strong>：成吉思汗拴马桩（呼伦湖西北岸，距满洲里约88公里）免费，但能否进入需自己把握；草原像海一样辽阔，值得绕路。 <em style="color:#999;font-style:normal;font-size:12px;">（下集·呼伦湖）</em></td></tr><tr><td>10</td><td><strong>中苏街周末最热闹</strong>：周末街上三分之一中国人、三分之一俄罗斯人、三分之一蒙古人；俄罗斯旅行团主要来自赤塔、伊尔库茨克等邻近城市。俄货店可以还价，啤酒波罗的海三号7元/瓶值得试。 <em style="color:#999;font-style:normal;font-size:12px;">（下集·中苏街）</em></td></tr><tr><td>11</td><td><strong>卢布里必点清单</strong>：俄餐天花板：奶酪包39元（不用蘸酱直接吃）、俄式炭烤香肠59元（配酸黄瓜解腻）、低温冷熏三文鱼56元、莫尔斯18元（野生红豆饮）。 <em style="color:#999;font-style:normal;font-size:12px;">（下集·卢布里）</em></td></tr><tr><td>12</td><td><strong>宽轨/准轨冷知识</strong>：中国铁轨1435mm标准轨，俄罗斯1520mm宽轨，跨国列车必须在口岸换装（后贝加尔斯克站），所以铁路天桥上看换装也是一种风景。 <em style="color:#999;font-style:normal;font-size:12px;">（下集·铁路天桥）</em></td></tr></tbody></table>
 
 
-<div style="margin-top:34px;padding:12px 16px;background:#fdf6f2;border:1px solid #f0d9cf;border-radius:8px;font-size:13px;color:#7a4a3a;">
-  <strong>发现信息有误？</strong> 本站信息整理自公开视频，独立核验中，欢迎反馈纠错：
-  <a href="mailto:contact@example.com" style="color:#c23a1a;">联系站长</a>（附视频时间点可更快修正）
+
+<div style="margin-top:34px;padding:14px 18px;background:#fdf6f2;border:1px solid #f0d9cf;border-radius:8px;font-size:13.5px;color:#7a4a3a;">
+  <strong>联系站长</strong>：纠错、合作、交流均可 —— <a href="mailto:2799787505@qq.com" style="color:#c23a1a;">2799787505@qq.com</a>
 </div>
 
+
 <hr>
-<p class="note">整理说明：内容整理自 B 站视频《搭火车环游中国抵达满洲里，中俄蒙三国边境上的沧桑小城》（上集，第33站，2026-01-26）与《从满洲里到呼伦湖，中国边境小城挤满了来购物的俄罗斯人》（下集，2026-02-09）的 AI 语音转写，地名/史实已对照公开资料核实（呼伦湖2339平方公里为中国第四大淡水湖、成吉思汗拴马桩位于呼伦湖西北岸距满洲里88公里、中东铁路1897年动工1903年通车、扎赉诺尔区、弘吉剌部、后贝加尔斯克站等），个别价格以视频原话为准。价格为视频拍摄时（2026年1-2月）信息，出行前请核实。原创视频版权归小可追太阳所有，本站仅做结构化整理并附原视频链接。<br>数据状态：draft（初稿）｜ 首页：<a href="../index.html">返回旅行博主路线库</a></p>
+
+
 
 <script>
 (function(){
@@ -92,14 +98,21 @@ hr { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
   document.querySelectorAll('table').forEach(function(t){
     var heads = [];
     t.querySelectorAll('thead th').forEach(function(th){ heads.push(th.textContent.trim()); });
-    t.querySelectorAll('tbody tr').forEach(function(tr){
-      tr.querySelectorAll('td').forEach(function(td,i){
-        if (heads[i] && !td.getAttribute('data-label')) td.setAttribute('data-label', heads[i]);
-      });
-    });
+    var joined = heads.join('');
+    if (joined.indexOf('贴士') > -1 || joined.indexOf('小tips') > -1) {
+      t.className = 'tips-card';  // 贴士表：卡片化，不显示标签
+    } else {
+      // 其他表（路线总览/费用清单）：横向滑动
+      var w = document.createElement('div');
+      w.style.cssText = 'overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0;';
+      t.parentNode.insertBefore(w, t);
+      w.appendChild(t);
+    }
   });
 })();
 </script>
 
+
+<p class="note">本页整理自 B 站公开视频《搭火车环游中国第33站：满洲里（上/下两集）》（创作者：小可追太阳，发布于 2026-01-26）。价格为视频拍摄时信息，出行前请以官方实时信息为准。完整内容请观看原视频。</p>
 </body>
 </html>

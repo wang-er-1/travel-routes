@@ -32,19 +32,22 @@ hr { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
 @media (max-width: 640px) {
   body { padding: 20px 14px 60px; font-size: 14.5px; }
   h1 { font-size: 22px; }
-  table, thead, tbody, tr, th, td { display: block; width: 100%; }
+  table { font-size: 13px; }
   thead { display: none; }
-  tr { margin: 0 0 14px; border: 1px solid #eee; border-radius: 10px; padding: 4px 0; background: #fff; }
-  td { border: none !important; padding: 7px 14px; }
-  td[data-label]:before { content: attr(data-label); display: block; font-weight: 600; color: #c23a1a; font-size: 12px; margin-bottom: 1px; }
   .statbar { gap: 6px; }
   .stat { padding: 6px 10px; font-size: 12px; }
   .btn { width: 100%; text-align: center; }
+  /* 贴士表卡片化（仅此表） */
+  table.tips-card, table.tips-card tbody, table.tips-card tr, table.tips-card td { display: block; width: 100%; }
+  table.tips-card tr { margin: 0 0 14px; border: 1px solid #eee; border-radius: 10px; padding: 4px 0; background: #fff; }
+  table.tips-card td { border: none !important; padding: 7px 14px; }
+  table.tips-card td:first-child { font-weight: 600; color: #c23a1a; }
 }
 
 </style>
 </head>
 <body>
+<p style="margin:0 0 18px;"><a href="../index.html" style="color:#c23a1a;text-decoration:none;font-weight:600;font-size:14px;">← 返回路线库首页</a></p>
 <h1>坐水上公交游长江三峡</h1>
 <p>上/下两集 · 重庆 → 奉节 → 巫山 → 巴东 → 秭归 → 宜昌（顺流而下）</p>
 <div class="statbar">
@@ -69,22 +72,25 @@ hr { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
 <ol><li><strong>巫山→培石小红船</strong>：10元，8:00/14:00各一班；巫峡是三峡第二长峡谷（46km），精华段在巫山长江大桥→青石村，南北两岸共巫山十二峰（含神女峰），“曾经沧海难为水，除却巫山不是云”出处。</li><li><strong>青石村</strong>：巫峡前半段的江边小村，与神女峰隔江相望；约十几户人家，只有一家民宿“神女山庄”（100元包两顿饭）；不通网络预订，需现场找；徒步登翠屏峰约2小时登顶（往返4-5小时，路况野，需打草惊蛇防蛇，天黑前必须下山——赖导亲历摸黑下山1小时5分钟）；山顶可平视神女峰、看十二峰全景。</li><li><strong>培石乡</strong>：重庆最东端乡镇，渝鄂交界；小红船在此与湖北小白船“换乘对接”（船对船，游客换船），等船约1小时；镇上可坐小车兜风（5元单程）。</li><li><strong>巴东县</strong>：湖北恩施州巴东县，住宿比巫山升级（带阳台看长江）；注意：巴东→秭归无客船（历史上曾有过，公路发展后取消），包船报价5000元+，实际只能坐小客车。</li><li><strong>巴东→秭归小客车</strong>：一天仅一班，中午12点发车，约3小时，沿江边山路走，坐左侧靠窗看长江；途经西陵峡起点香溪口（王昭君故乡、屈原故里附近），兵书宝剑峡、牛肝马肺峡均因蓄水淹没/迁走。</li><li><strong>秭归县</strong>：新县城茅坪镇（老县城归州镇1995年首批移民，沉入江底）；湖北三峡移民博物馆（免费，有老县城水下模型、三峡大坝模型、五级船闸+升船机原理）；木鱼岛看三峡大坝正面（免费，可露营）；县城房价1万+/平，比宜昌市区还贵（无高铁站、无机场）。</li><li><strong>秭归特色菜</strong>：肉末南豆腐（当地家常，可拌饭）、炸辣椒（裹面糊炸）、腊肉炒辣椒（甜而不腻）。</li><li><strong>三峡大坝</strong>：不收门票但收景区交通车票；坛子岭（至高点看五级船闸全景）；185平台（坝高185米，平视坝顶）；五级船闸（3000吨以上船，过闸约4小时）；升船机（3000吨以下船坐“巨型电梯”，垂直升降113米，全程约40分钟，票价已含）。</li><li><strong>茅坪渡口轮渡</strong>：8元/人，20分钟到对岸刘家河渡口，再走几分钟到太平溪港（夷陵区）——避开绕路30km。</li><li><strong>西陵峡和谐号游轮</strong>：608元/人，含三峡大坝升船机+葛洲坝船闸+西陵峡后半段（76km，三峡最长最险）+到宜昌市区；船上可升级VIP舱（送纪念币）；升船机下降过程约10分钟，无失重感，落差113米震撼。</li><li><strong>终点宜昌</strong>：南津关（三峡东口），“三峡至此穷”。</li></ol>
 
 <h2>四、费用清单</h2>
-<table><thead><tr><th style="width:34%">项目</th><th style="width:20%">金额（视频内）</th><th>说明</th></tr></thead>
-<tbody><tr><td>奉节 → 巫山 小红船</td><td><strong>40元/人</strong></td><td>8:00/14:00各一班，约3.5小时</td></tr><tr><td>巫山 → 培石 小红船</td><td><strong>10元</strong></td><td>8:00/14:00各一班（巫峡精华段）</td></tr><tr><td>青石 → 培石 小红船</td><td><strong>30元</strong></td><td>换乘湖北小白船</td></tr><tr><td>青石村神女山庄</td><td><strong>100元（包两顿饭）</strong></td><td>仅此一家民宿，不通网订，现场找</td></tr><tr><td>培石镇上小车</td><td><strong>5元/单程</strong></td><td>等换船时可兜风</td></tr><tr><td>巴东 → 秭归 小客车</td><td><strong>票价未明</strong></td><td>一天仅一班，中午12点发车；错过需包船5000元+</td></tr><tr><td>茅坪渡口轮渡</td><td><strong>8元</strong></td><td>20分钟到对岸，避开绕路30km</td></tr><tr><td>西陵峡和谐号游轮</td><td><strong>608元/人</strong></td><td>含升船机+葛洲坝船闸+西陵峡后半段+到宜昌</td></tr><tr><td>三峡之巅打车</td><td><strong>往返100元 / 单程60元</strong></td><td>盘山约半小时</td></tr><tr><td>奉节临江商务酒店</td><td><strong>89元/晚</strong></td><td>江景房</td></tr><tr><td>巫山锦衣酒店</td><td><strong>180元/晚</strong></td><td>智能酒店，小江景</td></tr><tr><td>纸包鱼（一家馆子）</td><td><strong>98元/条</strong></td><td>蒜香味，约2.5斤</td></tr><tr><td>麻辣菜包</td><td><strong>1元/个</strong></td><td>巨辣，早餐排队抢购</td></tr><tr><td>巫山烤面筋</td><td><strong>3元/串</strong></td><td>“巫山正宗第一家”</td></tr><tr><td>三峡大坝</td><td><strong>不收门票</strong></td><td>收景区交通车票</td></tr></tbody></table>
 <p class="note">注：以上为2025年秋视频拍摄时的价格信息，出行前请以实时信息为准。</p>
+<table><thead><tr><th style="width:34%">项目</th><th style="width:20%">金额</th><th>说明</th></tr></thead>
+<tbody><tr><td>奉节 → 巫山 小红船</td><td><strong>40元/人</strong></td><td>8:00/14:00各一班，约3.5小时</td></tr><tr><td>巫山 → 培石 小红船</td><td><strong>10元</strong></td><td>8:00/14:00各一班（巫峡精华段）</td></tr><tr><td>青石 → 培石 小红船</td><td><strong>30元</strong></td><td>换乘湖北小白船</td></tr><tr><td>青石村神女山庄</td><td><strong>100元（包两顿饭）</strong></td><td>仅此一家民宿，不通网订，现场找</td></tr><tr><td>培石镇上小车</td><td><strong>5元/单程</strong></td><td>等换船时可兜风</td></tr><tr><td>巴东 → 秭归 小客车</td><td><strong>票价未明</strong></td><td>一天仅一班，中午12点发车；错过需包船5000元+</td></tr><tr><td>茅坪渡口轮渡</td><td><strong>8元</strong></td><td>20分钟到对岸，避开绕路30km</td></tr><tr><td>西陵峡和谐号游轮</td><td><strong>608元/人</strong></td><td>含升船机+葛洲坝船闸+西陵峡后半段+到宜昌</td></tr><tr><td>三峡之巅打车</td><td><strong>往返100元 / 单程60元</strong></td><td>盘山约半小时</td></tr><tr><td>奉节临江商务酒店</td><td><strong>89元/晚</strong></td><td>江景房</td></tr><tr><td>巫山锦衣酒店</td><td><strong>180元/晚</strong></td><td>智能酒店，小江景</td></tr><tr><td>纸包鱼（一家馆子）</td><td><strong>98元/条</strong></td><td>蒜香味，约2.5斤</td></tr><tr><td>麻辣菜包</td><td><strong>1元/个</strong></td><td>巨辣，早餐排队抢购</td></tr><tr><td>巫山烤面筋</td><td><strong>3元/串</strong></td><td>“巫山正宗第一家”</td></tr><tr><td>三峡大坝</td><td><strong>不收门票</strong></td><td>收景区交通车票</td></tr></tbody></table>
+
 
 <h2>五、路线实用贴士</h2>
-<table><thead><tr><th style="width:4%">#</th><th style="width:78%">小tips</th><th>出处</th></tr></thead>
-<tbody><tr><td>1</td><td><strong>小红船班次固定</strong>：奉节⇄巫山、巫山→培石的小红船都是 8:00、14:00 各一班，想赶早班船要提前到码头，别卡点。</td><td>上集·小红船乘船点</td></tr><tr><td>2</td><td><strong>坐船看景怎么选</strong>：小红船有二层甲板+室内座，可上二层甲板看江景；巴东→秭归小客车要坐左侧靠窗，正好看长江。</td><td>上集·小红船；下集·小客车</td></tr><tr><td>3</td><td><strong>青石村住宿只能现场找</strong>：青石村只有“神女山庄”一家民宿，100元包两顿饭，不通网络预订，需下船后现场找。</td><td>下集·青石村</td></tr><tr><td>4</td><td><strong>爬翠屏峰的教训</strong>：路况野，要“打草惊蛇”防蛇；往返4-5小时，天黑前必须下山（赖导亲历摸黑下山走了1小时5分钟）。</td><td>下集·青石村</td></tr><tr><td>5</td><td><strong>巴东→秭归只有一班车</strong>：无客船，仅中午12点一班小客车，约3小时；错过就要包船，报价5000元+。</td><td>下集·巴东县</td></tr><tr><td>6</td><td><strong>三峡之巅进山限制</strong>：徒步路线已封闭，下午1:30-2点后禁止进山；爬山需3-6小时，建议直接索道上下。</td><td>上集·三峡之巅</td></tr><tr><td>7</td><td><strong>三峡之巅交通与温度</strong>：打车往返约100元、单程60元，盘山约半小时；山顶约10°C，记得带外套。</td><td>上集·三峡之巅</td></tr><tr><td>8</td><td><strong>看夔门不用多花钱</strong>：10元人民币背面图案的实景夔门，在白帝城门票区域内就有观景台。</td><td>上集·白帝城</td></tr><tr><td>9</td><td><strong>茅坪渡口轮渡省钱</strong>：8元/人、20分钟到对岸刘家河渡口，再走几分钟到太平溪港，能避开绕路30km。</td><td>下集·茅坪渡口</td></tr><tr><td>10</td><td><strong>游轮升船机体验</strong>：和谐号游轮可现场升级VIP舱（送纪念币）；升船机下降约10分钟，无失重感，113米落差很震撼。</td><td>下集·和谐号游轮</td></tr><tr><td>11</td><td><strong>培石换船要等</strong>：小红船与湖北小白船“船对船”换乘，等船约1小时；等船时可在镇上坐小车兜风，5元单程。</td><td>下集·培石乡</td></tr><tr><td>12</td><td><strong>巫山美食清单</strong>：纸包鱼认准“一家馆子纸包鱼”（蒜香味98元/条约2.5斤）；麻辣菜包1元/个、巨辣、早餐要排队抢；卷卷、巫山正宗第一家烤面筋（3元/串）、铁板烧“甩一杯”。</td><td>上集·巫山美食</td></tr><tr><td>13</td><td><strong>住宿省钱参考</strong>：奉节临江商务酒店89元/晚（江景）；巫山锦衣酒店180元/晚（智能酒店小江景）；巴东住宿比巫山升级，带阳台看长江。</td><td>上集·住宿参考</td></tr><tr><td>14</td><td><strong>大坝看点顺序</strong>：三峡大坝不收门票但收景区交通车票；坛子岭看五级船闸全景、185平台平视坝顶（坝高185米）；3000吨以上船走五级船闸（约4小时），3000吨以下船坐升船机（约40分钟）。</td><td>下集·三峡大坝</td></tr></tbody></table>
+<table><thead><tr><th style="width:4%">#</th><th>贴士</th></tr></thead>
+<tbody><tr><td>1</td><td><strong>小红船班次固定</strong>：奉节⇄巫山、巫山→培石的小红船都是 8:00、14:00 各一班，想赶早班船要提前到码头，别卡点。 <em style="color:#999;font-style:normal;font-size:12px;">（上集·小红船乘船点）</em></td></tr><tr><td>2</td><td><strong>坐船看景怎么选</strong>：小红船有二层甲板+室内座，可上二层甲板看江景；巴东→秭归小客车要坐左侧靠窗，正好看长江。 <em style="color:#999;font-style:normal;font-size:12px;">（上集·小红船；下集·小客车）</em></td></tr><tr><td>3</td><td><strong>青石村住宿只能现场找</strong>：青石村只有“神女山庄”一家民宿，100元包两顿饭，不通网络预订，需下船后现场找。 <em style="color:#999;font-style:normal;font-size:12px;">（下集·青石村）</em></td></tr><tr><td>4</td><td><strong>爬翠屏峰的教训</strong>：路况野，要“打草惊蛇”防蛇；往返4-5小时，天黑前必须下山（赖导亲历摸黑下山走了1小时5分钟）。 <em style="color:#999;font-style:normal;font-size:12px;">（下集·青石村）</em></td></tr><tr><td>5</td><td><strong>巴东→秭归只有一班车</strong>：无客船，仅中午12点一班小客车，约3小时；错过就要包船，报价5000元+。 <em style="color:#999;font-style:normal;font-size:12px;">（下集·巴东县）</em></td></tr><tr><td>6</td><td><strong>三峡之巅进山限制</strong>：徒步路线已封闭，下午1:30-2点后禁止进山；爬山需3-6小时，建议直接索道上下。 <em style="color:#999;font-style:normal;font-size:12px;">（上集·三峡之巅）</em></td></tr><tr><td>7</td><td><strong>三峡之巅交通与温度</strong>：打车往返约100元、单程60元，盘山约半小时；山顶约10°C，记得带外套。 <em style="color:#999;font-style:normal;font-size:12px;">（上集·三峡之巅）</em></td></tr><tr><td>8</td><td><strong>看夔门不用多花钱</strong>：10元人民币背面图案的实景夔门，在白帝城门票区域内就有观景台。 <em style="color:#999;font-style:normal;font-size:12px;">（上集·白帝城）</em></td></tr><tr><td>9</td><td><strong>茅坪渡口轮渡省钱</strong>：8元/人、20分钟到对岸刘家河渡口，再走几分钟到太平溪港，能避开绕路30km。 <em style="color:#999;font-style:normal;font-size:12px;">（下集·茅坪渡口）</em></td></tr><tr><td>10</td><td><strong>游轮升船机体验</strong>：和谐号游轮可现场升级VIP舱（送纪念币）；升船机下降约10分钟，无失重感，113米落差很震撼。 <em style="color:#999;font-style:normal;font-size:12px;">（下集·和谐号游轮）</em></td></tr><tr><td>11</td><td><strong>培石换船要等</strong>：小红船与湖北小白船“船对船”换乘，等船约1小时；等船时可在镇上坐小车兜风，5元单程。 <em style="color:#999;font-style:normal;font-size:12px;">（下集·培石乡）</em></td></tr><tr><td>12</td><td><strong>巫山美食清单</strong>：纸包鱼认准“一家馆子纸包鱼”（蒜香味98元/条约2.5斤）；麻辣菜包1元/个、巨辣、早餐要排队抢；卷卷、巫山正宗第一家烤面筋（3元/串）、铁板烧“甩一杯”。 <em style="color:#999;font-style:normal;font-size:12px;">（上集·巫山美食）</em></td></tr><tr><td>13</td><td><strong>住宿省钱参考</strong>：奉节临江商务酒店89元/晚（江景）；巫山锦衣酒店180元/晚（智能酒店小江景）；巴东住宿比巫山升级，带阳台看长江。 <em style="color:#999;font-style:normal;font-size:12px;">（上集·住宿参考）</em></td></tr><tr><td>14</td><td><strong>大坝看点顺序</strong>：三峡大坝不收门票但收景区交通车票；坛子岭看五级船闸全景、185平台平视坝顶（坝高185米）；3000吨以上船走五级船闸（约4小时），3000吨以下船坐升船机（约40分钟）。 <em style="color:#999;font-style:normal;font-size:12px;">（下集·三峡大坝）</em></td></tr></tbody></table>
 
 
-<div style="margin-top:34px;padding:12px 16px;background:#fdf6f2;border:1px solid #f0d9cf;border-radius:8px;font-size:13px;color:#7a4a3a;">
-  <strong>发现信息有误？</strong> 本站信息整理自公开视频，独立核验中，欢迎反馈纠错：
-  <a href="mailto:contact@example.com" style="color:#c23a1a;">联系站长</a>（附视频时间点可更快修正）
+
+<div style="margin-top:34px;padding:14px 18px;background:#fdf6f2;border:1px solid #f0d9cf;border-radius:8px;font-size:13.5px;color:#7a4a3a;">
+  <strong>联系站长</strong>：纠错、合作、交流均可 —— <a href="mailto:2799787505@qq.com" style="color:#c23a1a;">2799787505@qq.com</a>
 </div>
 
+
 <hr>
-<p class="note">整理说明：内容整理自《赖导三峡线路还原与行程方案》分享页「一、赖导视频还原（两集全文转写）」部分（原页为AI全文转写整理），仅取路线/交通/价格/攻略等结构化信息，未含其他章节。价格为视频拍摄时（2025年秋）信息，出行前请核实。原创视频版权归赖导AboutLai所有，本站仅做结构化整理并附原视频链接。<br>数据状态：draft（初稿）｜ 首页：<a href="../index.html">返回赖导路线库</a></p>
+
+
 
 <script>
 (function(){
@@ -92,14 +98,21 @@ hr { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
   document.querySelectorAll('table').forEach(function(t){
     var heads = [];
     t.querySelectorAll('thead th').forEach(function(th){ heads.push(th.textContent.trim()); });
-    t.querySelectorAll('tbody tr').forEach(function(tr){
-      tr.querySelectorAll('td').forEach(function(td,i){
-        if (heads[i] && !td.getAttribute('data-label')) td.setAttribute('data-label', heads[i]);
-      });
-    });
+    var joined = heads.join('');
+    if (joined.indexOf('贴士') > -1 || joined.indexOf('小tips') > -1) {
+      t.className = 'tips-card';  // 贴士表：卡片化，不显示标签
+    } else {
+      // 其他表（路线总览/费用清单）：横向滑动
+      var w = document.createElement('div');
+      w.style.cssText = 'overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0;';
+      t.parentNode.insertBefore(w, t);
+      w.appendChild(t);
+    }
   });
 })();
 </script>
 
+
+<p class="note">本页整理自 B 站公开视频《坐水上公交游长江三峡（上/下两集）》（创作者：赖导，发布于 2025-11-26）。价格为视频拍摄时信息，出行前请以官方实时信息为准。完整内容请观看原视频。</p>
 </body>
 </html>

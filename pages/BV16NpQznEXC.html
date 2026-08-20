@@ -31,19 +31,22 @@ hr { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
 @media (max-width: 640px) {
   body { padding: 20px 14px 60px; font-size: 14.5px; }
   h1 { font-size: 22px; }
-  table, thead, tbody, tr, th, td { display: block; width: 100%; }
+  table { font-size: 13px; }
   thead { display: none; }
-  tr { margin: 0 0 14px; border: 1px solid #eee; border-radius: 10px; padding: 4px 0; background: #fff; }
-  td { border: none !important; padding: 7px 14px; }
-  td[data-label]:before { content: attr(data-label); display: block; font-weight: 600; color: #c23a1a; font-size: 12px; margin-bottom: 1px; }
   .statbar { gap: 6px; }
   .stat { padding: 6px 10px; font-size: 12px; }
   .btn { width: 100%; text-align: center; }
+  /* 贴士表卡片化（仅此表） */
+  table.tips-card, table.tips-card tbody, table.tips-card tr, table.tips-card td { display: block; width: 100%; }
+  table.tips-card tr { margin: 0 0 14px; border: 1px solid #eee; border-radius: 10px; padding: 4px 0; background: #fff; }
+  table.tips-card td { border: none !important; padding: 7px 14px; }
+  table.tips-card td:first-child { font-weight: 600; color: #c23a1a; }
 }
 
 </style>
 </head>
 <body>
+<p style="margin:0 0 18px;"><a href="../index.html" style="color:#c23a1a;text-decoration:none;font-weight:600;font-size:14px;">← 返回路线库首页</a></p>
 <h1>一个人自驾河西走廊·武威+张掖（2天）</h1>
 <p>兰州 → 乌鞘岭（起点）→ 天梯山石窟 → 武威：姑臧城遗址/昭武门/雷台汉墓/鸠摩罗什寺/北关市场三套车 → 山丹军马场 → 马蹄寺石窟 → 张掖：大佛寺/钟鼓楼/牛肉小饭/炒炮 → 外星谷 → 高台县花墙子村（《隐入尘烟》取景地）</p>
 <div class="statbar">
@@ -64,22 +67,25 @@ hr { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
 <ol><li><strong>河西走廊与乌鞘岭</strong>：河西走廊是甘肃境内东南→西北的狭长地带，东西1000公里、南北最窄仅几公里，因地处黄河以西得名。公元前121年霍去病（骠骑将军）击败匈奴后设武威、张掖、酒泉、敦煌四郡。本期从兰州出发，先到河西走廊起点乌鞘岭（海拔约3052米，青藏/黄土/内蒙古三大高原交汇处）：年平均气温-2.2°C，古书称「盛夏飞雪、寒气砭骨」，8月真遇上了冰雹。</li><li><strong>天梯山石窟：石窟鼻祖</strong>：开凿于祁连山支脉岩壁，北凉时期（距今1600年）始建，是我国开凿最早的石窟之一，考古界称之为「凉州模式」开创者——这里的工匠后来去平城、洛阳建造了云冈和龙门石窟，直接影响中原佛教石窟风格。第十三窟主佛释迦牟尼28米（甘肃版乐山大佛），两侧二弟子二菩萨；脚下扔满现金零钱。1958年修黄羊河水库，洞窟塑像壁画整体搬迁到甘肃省博物馆，现在只剩大佛。</li><li><strong>武威（凉州）</strong>：河西四郡第一座城、河西走廊中心城市，号称「六朝古都」。看点：①姑臧城遗址——匈奴所建，汉设武威郡后为郡治，现只剩小区里的夯土墙残骸；②南城门楼（昭武门）——始建于隋、明代翻修，上世纪末原址重建，仿明式；③雷台汉墓——1969年农民挖战备地道时发现，东汉晚期砖室墓，出土国宝铜奔马「马踏飞燕」（原件在甘肃省博物馆），1号墓长40米、230余件随葬品，墓主张姓，砖块抗压强度超现代砖（古砖每平方分米抗压370公斤 vs 现代砖100多公斤）；④鸠摩罗什寺——中国佛教四大翻译家之首鸠摩罗什在凉州住了17年，他创造的「烦恼、苦海、未来、不可思议、想入非非、回光返照」等词沿用至今，413年圆寂后舌舍利供奉于此；⑤海藏寺——东晋始建，1927年古浪8级大地震损坏，玄奘西行曾在此讲经。</li><li><strong>武威美食：三套车</strong>：北关市场招牌「三套车」26元：行面（黏稠汤汁拌面）+卤肉（配葱丝辣椒）+冰糖红枣茯茶（解腻神器）。传说左宗棠西征路过凉州，百姓用这三样招待他，得名「三套车」。市场里周记、杨记等一排三套车店。另外凉皮面皮6元/碗（成记面皮总店，12点半就卖完），出租车起步5元。</li><li><strong>山丹军马场</strong>：往张掖方向绕道祁连山国家级自然保护区，路过世界最古老的皇家马场——山丹军马场：前121年霍去病为对战匈奴草原马而建立，总面积约329万亩（比深圳市还大），从西汉延续到新中国成立后，如今以旅游观光为主。</li><li><strong>马蹄寺石窟</strong>：在肃南裕固族自治县，祁连山山谷里。整个石窟群嵌在崖壁上：北寺石窟七层43米，远看像悬空寺；「三十三天石窟」七层二十一窟，从山脚小门进去沿陡峭台阶攀爬（最陡85.5°，跟老鼠一样爬），每层由之字形隧道相连，体验感拉满。寺名源于传说：天马下凡引水留下蹄印，马蹄殿里真有一枚天马蹄迹。北凉时河西大儒郭瑀及弟子开凿。</li><li><strong>张掖（甘州）</strong>：「金张掖，银武威」。市区：钟鼓楼（镇远楼，明代始建、清代重建）；大佛寺——亚洲最大室内木胎泥塑卧佛，释迦牟尼侧卧像身长34.5米、肩宽7.5米，全国最大西夏佛教殿堂，卧佛身后还有西游记壁画（可能早于吴承恩小说，且壁画里猪八戒是挑担作战的形象）；黑河（古称弱水）——西北第二大内陆河，发源祁连山北麓，滋养了张掖绿洲。杏皮茶5-6元/杯。甘州区房价：80多平15-16万（每平不到2000元，甘肃最低），年轻人买房没压力。</li><li><strong>张掖美食</strong>：牛肉小饭（早点）：面条切成小颗粒，配牛肉汤，用勺子吃；孙记炒炮：一段段的小面条炒菜，配排骨卤肉、糖蒜，加辣椒油更香；山丹炒拨拉：猪羊内脏+洋葱爆炒（起源于霍去病三军征战后用平底锅炒肉），配0.5度米酒是标配；甘州巷子美食城集中各种小吃。</li><li><strong>丹霞地貌：外星谷</strong>：张掖知名风光除了七彩丹霞还有冰沟丹霞、平山湖大峡谷、外星谷。选了最远的外星谷（唯一允许自驾进入+随便飞无人机的）：门票100元，买票后加微信才发导航（地图上搜不到），景区内无商业、自备水粮。五彩迎宾山（赤橙黄白多色岩层）、天书峡（岩壁像转镜筒）、木星峡谷。遇到沙尘暴+保安驱散，短短两小时从蓝天白云变末日景象。</li><li><strong>高台县花墙子村</strong>：《隐入尘烟》取景地，在张掖市高台县罗城镇（离市区130公里，正好在去酒泉敦煌方向）。村里630多户、1500多人，常住人口只有600多。主演马有铁（电影里男主）就是本地村民，拍完电影还在村里种地。两个六年级小孩（小公、小曹）带赖导逛村：燕子在院子里筑了第三代窝、沙地里挖沟渠迷宫、炸鸡裹蛋液面糊撒孜然辣椒面。在村里戏台等日出，小孩们说「别疲劳驾驶」。</li></ol>
 
 <h2>三、费用清单</h2>
-<table><thead><tr><th style="width:34%">项目</th><th style="width:22%">金额（视频内）</th><th>说明</th></tr></thead>
-<tbody><tr><td>武威阳光假日大酒店</td><td><strong>130多元/晚</strong></td><td>标间20-30平，旅游旺季也算便宜</td></tr><tr><td>张掖酒店（钟鼓楼附近）</td><td><strong>170-180元/晚</strong></td><td>更时尚，大床房+干湿分离</td></tr><tr><td>武威出租车</td><td><strong>5元起步</strong></td><td>市区内基本起步价</td></tr><tr><td>三套车（北关市场）</td><td><strong>26元</strong></td><td>行面+卤肉+冰糖红枣茯茶</td></tr><tr><td>面皮（成记面皮总店）</td><td><strong>6元/碗</strong></td><td>12点半就卖完，要赶早</td></tr><tr><td>杏皮茶</td><td><strong>5-6元/杯</strong></td><td>大佛寺门口5元，夜市6元</td></tr><tr><td>外星谷</td><td><strong>100元/人</strong></td><td>可自驾进景区+飞无人机；景区内无商业</td></tr><tr><td>甘州区房价参考</td><td><strong>80多平15-16万</strong></td><td>每平不到2000元，甘肃最低</td></tr></tbody></table>
 <p class="note">注：以上为视频拍摄时的价格信息，出行前请以实时信息为准。</p>
+<table><thead><tr><th style="width:34%">项目</th><th style="width:22%">金额</th><th>说明</th></tr></thead>
+<tbody><tr><td>武威阳光假日大酒店</td><td><strong>130多元/晚</strong></td><td>标间20-30平，旅游旺季也算便宜</td></tr><tr><td>张掖酒店（钟鼓楼附近）</td><td><strong>170-180元/晚</strong></td><td>更时尚，大床房+干湿分离</td></tr><tr><td>武威出租车</td><td><strong>5元起步</strong></td><td>市区内基本起步价</td></tr><tr><td>三套车（北关市场）</td><td><strong>26元</strong></td><td>行面+卤肉+冰糖红枣茯茶</td></tr><tr><td>面皮（成记面皮总店）</td><td><strong>6元/碗</strong></td><td>12点半就卖完，要赶早</td></tr><tr><td>杏皮茶</td><td><strong>5-6元/杯</strong></td><td>大佛寺门口5元，夜市6元</td></tr><tr><td>外星谷</td><td><strong>100元/人</strong></td><td>可自驾进景区+飞无人机；景区内无商业</td></tr><tr><td>甘州区房价参考</td><td><strong>80多平15-16万</strong></td><td>每平不到2000元，甘肃最低</td></tr></tbody></table>
+
 
 <h2>四、路线实用贴士</h2>
-<table><thead><tr><th style="width:4%">#</th><th style="width:78%">小tips</th><th>出处</th></tr></thead>
-<tbody><tr><td>1</td><td><strong>乌鞘岭天气极端</strong>：海拔3000米+，年均温-2.2°C，盛夏也可能冰雹雨雪（视频8月遇冰雹）；穿够衣服，观景台风巨大。</td><td>乌鞘岭</td></tr><tr><td>2</td><td><strong>天梯山石窟去之前知道这些</strong>：13窟大佛28米在武威城南50公里；1958年修水库后文物都搬到甘肃省博物馆，现场只能看大佛本体。</td><td>天梯山</td></tr><tr><td>3</td><td><strong>武威三套车必吃</strong>：北关市场26元：行面+卤肉+冰糖红枣茯茶；左宗棠传说的搭配。市场里还有凉皮、驴肉。</td><td>武威美食</td></tr><tr><td>4</td><td><strong>雷台汉墓看点</strong>：马踏飞燕（铜奔马）出土处，原件在甘肃省博物馆（去兰州可以顺路看）；1号墓长40米可入内，砖块抗压强度比现代砖还高。</td><td>雷台汉墓</td></tr><tr><td>5</td><td><strong>马蹄寺石窟要爬</strong>：三十三天石窟七层21窟，最陡85.5°，爬上去是修行、下来更惊险；金塔寺常整改关闭，先确认开放。</td><td>马蹄寺</td></tr><tr><td>6</td><td><strong>张掖大佛寺卧佛震撼</strong>：亚洲最大室内木胎泥塑卧佛：身长34.5米、肩宽7.5米；背后西游记壁画可能早于小说，猪八戒是正面形象。</td><td>大佛寺</td></tr><tr><td>7</td><td><strong>外星谷小众玩法</strong>：100元门票可自驾进景区+随便飞无人机，人流量是七彩丹霞的千分之一；景区内没商店，自带水粮；天气多变可能遇沙尘暴，随时准备撤。</td><td>外星谷</td></tr><tr><td>8</td><td><strong>花墙子村顺路打卡</strong>：《隐入尘烟》取景地，在去酒泉敦煌的路上（高台县罗城镇）；主演就是本地村民；村里小孩很热情，日出很好看。</td><td>花墙子村</td></tr><tr><td>9</td><td><strong>河西走廊自驾节奏</strong>：城市间距离远（武威→张掖100多公里），但全程高速/国道路况好；推荐西安→兰州→乌鞘岭→武威→张掖→酒泉→敦煌的四郡全程。</td><td>自驾</td></tr></tbody></table>
+<table><thead><tr><th style="width:4%">#</th><th>贴士</th></tr></thead>
+<tbody><tr><td>1</td><td><strong>乌鞘岭天气极端</strong>：海拔3000米+，年均温-2.2°C，盛夏也可能冰雹雨雪（视频8月遇冰雹）；穿够衣服，观景台风巨大。 <em style="color:#999;font-style:normal;font-size:12px;">（乌鞘岭）</em></td></tr><tr><td>2</td><td><strong>天梯山石窟去之前知道这些</strong>：13窟大佛28米在武威城南50公里；1958年修水库后文物都搬到甘肃省博物馆，现场只能看大佛本体。 <em style="color:#999;font-style:normal;font-size:12px;">（天梯山）</em></td></tr><tr><td>3</td><td><strong>武威三套车必吃</strong>：北关市场26元：行面+卤肉+冰糖红枣茯茶；左宗棠传说的搭配。市场里还有凉皮、驴肉。 <em style="color:#999;font-style:normal;font-size:12px;">（武威美食）</em></td></tr><tr><td>4</td><td><strong>雷台汉墓看点</strong>：马踏飞燕（铜奔马）出土处，原件在甘肃省博物馆（去兰州可以顺路看）；1号墓长40米可入内，砖块抗压强度比现代砖还高。 <em style="color:#999;font-style:normal;font-size:12px;">（雷台汉墓）</em></td></tr><tr><td>5</td><td><strong>马蹄寺石窟要爬</strong>：三十三天石窟七层21窟，最陡85.5°，爬上去是修行、下来更惊险；金塔寺常整改关闭，先确认开放。 <em style="color:#999;font-style:normal;font-size:12px;">（马蹄寺）</em></td></tr><tr><td>6</td><td><strong>张掖大佛寺卧佛震撼</strong>：亚洲最大室内木胎泥塑卧佛：身长34.5米、肩宽7.5米；背后西游记壁画可能早于小说，猪八戒是正面形象。 <em style="color:#999;font-style:normal;font-size:12px;">（大佛寺）</em></td></tr><tr><td>7</td><td><strong>外星谷小众玩法</strong>：100元门票可自驾进景区+随便飞无人机，人流量是七彩丹霞的千分之一；景区内没商店，自带水粮；天气多变可能遇沙尘暴，随时准备撤。 <em style="color:#999;font-style:normal;font-size:12px;">（外星谷）</em></td></tr><tr><td>8</td><td><strong>花墙子村顺路打卡</strong>：《隐入尘烟》取景地，在去酒泉敦煌的路上（高台县罗城镇）；主演就是本地村民；村里小孩很热情，日出很好看。 <em style="color:#999;font-style:normal;font-size:12px;">（花墙子村）</em></td></tr><tr><td>9</td><td><strong>河西走廊自驾节奏</strong>：城市间距离远（武威→张掖100多公里），但全程高速/国道路况好；推荐西安→兰州→乌鞘岭→武威→张掖→酒泉→敦煌的四郡全程。 <em style="color:#999;font-style:normal;font-size:12px;">（自驾）</em></td></tr></tbody></table>
 
 
-<div style="margin-top:34px;padding:12px 16px;background:#fdf6f2;border:1px solid #f0d9cf;border-radius:8px;font-size:13px;color:#7a4a3a;">
-  <strong>发现信息有误？</strong> 本站信息整理自公开视频，独立核验中，欢迎反馈纠错：
-  <a href="mailto:contact@example.com" style="color:#c23a1a;">联系站长</a>（附视频时间点可更快修正）
+
+<div style="margin-top:34px;padding:14px 18px;background:#fdf6f2;border:1px solid #f0d9cf;border-radius:8px;font-size:13.5px;color:#7a4a3a;">
+  <strong>联系站长</strong>：纠错、合作、交流均可 —— <a href="mailto:2799787505@qq.com" style="color:#c23a1a;">2799787505@qq.com</a>
 </div>
 
+
 <hr>
-<p class="note">整理说明：内容整理自 B 站视频《一个人自驾河西走廊武威、张掖，甘肃“小城”都这么宜居！？》（赖导AboutLai，2025-09-20 发布）的 AI 语音转写，地名/史实已对照公开资料核实（乌鞘岭为河西走廊起点、天梯山石窟北凉始建1600年、雷台汉墓出土马踏飞燕、山丹军马场329.54万亩前121年霍去病始创、张掖大佛寺卧佛34.5米为亚洲最大室内木胎泥塑卧佛、鸠摩罗什寺389年后凉始建等）。价格为视频拍摄时（2025年）信息，出行前请核实。原创视频版权归赖导AboutLai所有，本站仅做结构化整理并附原视频链接。<br>数据状态：draft（初稿）｜ 首页：<a href="../index.html">返回旅行博主路线库</a></p>
+
+
 
 <script>
 (function(){
@@ -87,14 +93,21 @@ hr { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
   document.querySelectorAll('table').forEach(function(t){
     var heads = [];
     t.querySelectorAll('thead th').forEach(function(th){ heads.push(th.textContent.trim()); });
-    t.querySelectorAll('tbody tr').forEach(function(tr){
-      tr.querySelectorAll('td').forEach(function(td,i){
-        if (heads[i] && !td.getAttribute('data-label')) td.setAttribute('data-label', heads[i]);
-      });
-    });
+    var joined = heads.join('');
+    if (joined.indexOf('贴士') > -1 || joined.indexOf('小tips') > -1) {
+      t.className = 'tips-card';  // 贴士表：卡片化，不显示标签
+    } else {
+      // 其他表（路线总览/费用清单）：横向滑动
+      var w = document.createElement('div');
+      w.style.cssText = 'overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0;';
+      t.parentNode.insertBefore(w, t);
+      w.appendChild(t);
+    }
   });
 })();
 </script>
 
+
+<p class="note">本页整理自 B 站公开视频《一个人自驾河西走廊·武威+张掖（2天）》（创作者：赖导，发布于 2025-09-20）。价格为视频拍摄时信息，出行前请以官方实时信息为准。完整内容请观看原视频。</p>
 </body>
 </html>
