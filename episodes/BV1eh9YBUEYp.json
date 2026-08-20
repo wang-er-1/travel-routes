@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "episode": {
+    "blogger": "赖导AboutLai",
+    "title": "探访中国“最孤独”的城市茫崖，当地人生活啥样？",
+    "bvid": "BV1eh9YBUEYp",
+    "url": "https://www.bilibili.com/video/BV1eh9YBUEYp",
+    "duration": "48:15",
+    "publish_date": "2026-04-30",
+    "stats": {
+      "plays": 5065462,
+      "likes": 137127,
+      "favorites": 44835,
+      "danmaku": 19397,
+      "comments": null
+    },
+    "tags": [
+      "茫崖",
+      "青海",
+      "柴达木盆地",
+      "石油城市",
+      "无人区",
+      "冷湖"
+    ],
+    "description": "茫崖位于青海省海西蒙古族藏族自治州的西北边陲，是一座2018年底才新建立的县级市。之所以被称为“中国最孤独的城市”，是因为它地处柴达木盆地的最西端，被三大无人区所包裹（北边是罗布泊无人区，西边是阿尔金无人区，南边是可可西里无人区），方圆350公里内没有其他建制城市。",
+    "related_episodes": []
+  },
+  "trip": {
+    "title": "探访中国“最孤独”的城市茫崖（2天）",
+    "route_summary": "西宁 →（飞机）→ 花土沟机场 → 花土沟镇 → 艾肯泉（恶魔之眼）→ 茫崖翡翠湖 →（自驾300km）→ 冷湖石油基地遗址 → 赛什腾山天文台 → 冷湖镇",
+    "direction": "西宁向西（柴达木盆地最西端）",
+    "season": "多风沙（4月，随时雪/冰雹/暴晒）",
+    "duration_days": 2,
+    "transport_modes": [
+      "飞机",
+      "自驾"
+    ],
+    "cost_total": null,
+    "cost_per_person": null,
+    "cost_notes": "视频内明确价格：酒店124元/晚（花土沟/冷湖）、小炒牦牛肉/羊羔肉68元、炒炮仗10元（内部价）、共享电车2.5元起步",
+    "price_as_of": "2026-04",
+    "stops": [
+      {
+        "name": "西宁 → 德令哈 → 茫崖（花土沟机场）",
+        "day": null,
+        "arrive_transport": "飞机",
+        "arrive_cost": "—",
+        "activities": [
+          "降落如坐海盗船（大风）；机场指示牌全指向无人区：罗布泊200km/阿尔金110km/可可西里300km/羌塘500km"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "花土沟镇（市中心）",
+        "day": null,
+        "arrive_transport": "步行/打车",
+        "arrive_cost": "酒店124元/晚",
+        "activities": [
+          "茫崖唯一像样的镇：集市、酒店、超市、共享电车（2.5元起步）"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "艾肯泉（恶魔之眼）",
+        "day": null,
+        "arrive_transport": "自驾（市区30多公里）",
+        "arrive_cost": "区间车收费",
+        "activities": [
+          "泉眼直径超10米、深超1千米，含硫磺矿物质呈红褐色；要无人机高空视角才壮观"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "茫崖翡翠湖",
+        "day": null,
+        "arrive_transport": "自驾",
+        "arrive_cost": "淡季人少",
+        "activities": [
+          "人工采盐矿坑积水成湖：青/碧/黄绿多色，盐粒结晶如雪"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "冷湖石油基地遗址",
+        "day": null,
+        "arrive_transport": "自驾（300公里，4.5小时）",
+        "arrive_cost": "免费",
+        "activities": [
+          "老基地/四号/五号基地：西北小香港→荒废；电影院、供销社、土坯房、子弟学校"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "赛什腾山天文台",
+        "day": null,
+        "arrive_transport": "自驾（冷湖方向）",
+        "arrive_cost": "暂未开放",
+        "activities": [
+          "东半球顶级台址（4300米，43台科研设备），上山路积雪未化"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "冷湖镇",
+        "day": null,
+        "arrive_transport": "自驾",
+        "arrive_cost": "酒店124元/晚",
+        "activities": [
+          "西部电影风小镇：霓虹灯牌、绿皮书/肖申克海报主题酒店"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      }
+    ]
+  },
+  "tips": [
+    "茫崖很大，别低估路程",
+    "看艾肯泉必须有无人机",
+    "翡翠湖人少景美",
+    "冷湖遗址值得专门跑一趟",
+    "赛什腾山天文台大概率白跑",
+    "当地物价不高",
+    "戈壁天气多变"
+  ],
+  "highlights": [
+    "中国最孤独的城市：4.99万平方公里只有1.9万人，被三大无人区包裹",
+    "石油工人张哥请客：68元小炒牦牛肉/羊羔肉",
+    "艾肯泉恶魔之眼：直径10米深超千米的硫磺泉",
+    "冷湖石油基地废墟：西北小香港变鬼城",
+    "戈壁里偶遇疑似UFO、赛什腾山顶级天文台"
+  ],
+  "transcript_ref": "自驾爱好者、石油工业史/废墟爱好者；敦煌出发可顺路（茫崖距敦煌390公里）",
+  "source_data": "茫崖镇与镇之间300公里+；艾肯泉必须有无人机；赛什腾山常因积雪关闭；戈壁天气多变",
+  "last_updated": "2026-08-19",
+  "data_status": "draft",
+  "l3_hooks": {
+    "suitable_for": "D:\\output\\赖导路线库\\赖导_茫崖\\transcript\\BV1eh9YBUEYp.txt",
+    "customization_notes": "B站 BV1eh9YBUEYp 全文转写（SenseVoice，10521字）+ 百度百科核实"
+  }
+}

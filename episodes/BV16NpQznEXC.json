@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0",
+  "episode": {
+    "blogger": "赖导AboutLai",
+    "title": "一个人自驾河西走廊武威、张掖，甘肃“小城”都这么宜居！？",
+    "bvid": "BV16NpQznEXC",
+    "url": "https://www.bilibili.com/video/BV16NpQznEXC",
+    "duration": "1:43:17",
+    "publish_date": "2025-09-20",
+    "stats": {
+      "plays": 4016550,
+      "likes": 261150,
+      "favorites": 84317,
+      "danmaku": 35674,
+      "comments": null
+    },
+    "tags": [
+      "河西走廊",
+      "武威",
+      "张掖",
+      "甘肃",
+      "自驾",
+      "石窟"
+    ],
+    "description": "在中国的西北地区有这样一个神奇的地带，它位于甘肃省内，由东南向西北呈现出了一个狭长区域，东西长达1000公里，南北最窄处却只有数几公里，两边高高隆起的山脉把中间夹得像一条走廊一般，再加上这里又地处黄河以西，所以它被人们称之为“河西走廊”。",
+    "related_episodes": []
+  },
+  "trip": {
+    "title": "一个人自驾河西走廊·武威+张掖（2天）",
+    "route_summary": "兰州 → 乌鞘岭（起点）→ 天梯山石窟 → 武威：姑臧城遗址/昭武门/雷台汉墓/鸠摩罗什寺/北关市场三套车 → 山丹军马场 → 马蹄寺石窟 → 张掖：大佛寺/钟鼓楼/牛肉小饭/炒炮 → 外星谷 → 高台县花墙子村（《隐入尘烟》取景地）",
+    "direction": "兰州向西北（河西走廊东段）",
+    "season": "夏末初秋（9月，早晚凉爽）",
+    "duration_days": 2,
+    "transport_modes": [
+      "自驾（零跑C10）"
+    ],
+    "cost_total": null,
+    "cost_per_person": null,
+    "cost_notes": "视频内明确价格：武威酒店130多元/晚、张掖酒店170-180元/晚、三套车26元、面皮6元、杏皮茶5-6元、外星谷100元、甘州区房价80多平15-16万",
+    "price_as_of": "2025-09",
+    "stops": [
+      {
+        "name": "兰州 → 乌鞘岭",
+        "day": null,
+        "arrive_transport": "自驾（零跑C10）",
+        "arrive_cost": "—",
+        "activities": [
+          "河西走廊起点：三大高原交汇（青藏/黄土/内蒙古），海拔约3052米，8月下冰雹"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "天梯山石窟",
+        "day": null,
+        "arrive_transport": "自驾（祁连山支脉）",
+        "arrive_cost": "—",
+        "activities": [
+          "「石窟鼻祖」：北凉开凿1600年，13窟主佛28米，1958年黄羊河水库搬迁文物"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "武威（河西四郡第一城）",
+        "day": null,
+        "arrive_transport": "自驾",
+        "arrive_cost": "酒店130多元/晚",
+        "activities": [
+          "姑臧城遗址、昭武门南城门楼、雷台汉墓（马踏飞燕出土地）、鸠摩罗什寺、海藏寺、北关市场三套车"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "山丹军马场",
+        "day": null,
+        "arrive_transport": "自驾（绕道祁连山保护区）",
+        "arrive_cost": "—",
+        "activities": [
+          "世界最古老皇家马场（前121年霍去病始创），329万亩比深圳大"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "马蹄寺石窟（肃南）",
+        "day": null,
+        "arrive_transport": "自驾",
+        "arrive_cost": "—",
+        "activities": [
+          "三十三天石窟七层21窟、85.5°陡梯、天马蹄迹、北凉开凿"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "张掖（甘州）",
+        "day": null,
+        "arrive_transport": "自驾",
+        "arrive_cost": "酒店170-180元/晚",
+        "activities": [
+          "大佛寺（亚洲最大室内木胎泥塑卧佛34.5米）、钟鼓楼、黑河、杏皮茶、牛肉小饭、炒炮"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "外星谷/七彩丹霞",
+        "day": null,
+        "arrive_transport": "自驾",
+        "arrive_cost": "外星谷100元",
+        "activities": [
+          "七彩丹霞地貌群：外星谷可自驾+飞无人机，遇沙尘暴"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "高台县花墙子村",
+        "day": null,
+        "arrive_transport": "自驾（130公里）",
+        "arrive_cost": "免费",
+        "activities": [
+          "《隐入尘烟》取景地，主演马有铁是本地村民，农村烟火气"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      }
+    ]
+  },
+  "tips": [
+    "乌鞘岭天气极端",
+    "天梯山石窟去之前知道这些",
+    "武威三套车必吃",
+    "雷台汉墓看点",
+    "马蹄寺石窟要爬",
+    "张掖大佛寺卧佛震撼",
+    "外星谷小众玩法",
+    "花墙子村顺路打卡",
+    "河西走廊自驾节奏"
+  ],
+  "highlights": [
+    "乌鞘岭：河西走廊起点，8月飞冰雹",
+    "天梯山石窟「石窟鼻祖」：28米大佛+凉州模式",
+    "雷台汉墓：马踏飞燕出土地，古砖比现代砖硬3倍",
+    "山丹军马场：329万亩世界最古老皇家马场",
+    "张掖大佛寺：34.5米亚洲最大室内卧佛",
+    "外星谷100元自驾+飞无人机，人少景野"
+  ],
+  "transcript_ref": "自驾爱好者、石窟/历史人文控；河西走廊全程（兰州→敦煌四郡）自驾党的东段样板",
+  "source_data": "乌鞘岭天气极端需防寒；马蹄寺要爬85.5°陡梯；外星谷自备水粮；花墙子村顺路在去酒泉方向",
+  "last_updated": "2026-08-19",
+  "data_status": "draft",
+  "l3_hooks": {
+    "suitable_for": "D:\\output\\赖导路线库\\赖导_河西走廊\\transcript\\BV16NpQznEXC.txt",
+    "customization_notes": "B站 BV16NpQznEXC 全文转写（SenseVoice，18785字）+ 百度百科核实"
+  }
+}
