@@ -1,0 +1,223 @@
+{
+  "schema_version": "1.0",
+  "episode": {
+    "blogger": "赖导AboutLai",
+    "title": "20年前“人去楼空”的甘肃小城，现在是什么样？",
+    "bvid": "BV19jfPY9Eot",
+    "url": "https://www.bilibili.com/video/BV19jfPY9Eot",
+    "duration": "51:46",
+    "publish_date": "2025-04-02",
+    "stats": {
+      "plays": 2940071,
+      "likes": 88936,
+      "favorites": 31877,
+      "danmaku": 18933,
+      "comments": null
+    },
+    "tags": [
+      "玉门",
+      "甘肃",
+      "老市区",
+      "石油",
+      "资源枯竭",
+      "铁人王进喜",
+      "空城",
+      "河西走廊"
+    ],
+    "description": "玉门市因石油而兴，2003年市委市政府搬迁到70公里外的新市区，老市区荒废原地。曾经的20多万人口只剩不到2万。20年过去了，玉门老市区现在什么样？",
+    "related_episodes": []
+  },
+  "trip": {
+    "title": "玉门老市区·资源枯竭小城探访（4天）",
+    "route_summary": "上海 →（飞机）→ 嘉峪关 →（客车20元）→ 玉门老市区：解放门/大环岛市中心 → 浩宇大酒店 → 解放路购物街（金玉宾馆）→ 游城学校+棋牌广场 → 游城公园（王进喜铜像）→ 老君庙油田（中国第一口油井/老一井/窑洞）→ 赤金镇（铁人王进喜家乡）→ 清泉乡（人参果/羊羔肉）",
+    "direction": "甘肃西北（河西走廊）",
+    "season": "3-4月（零下10°C~0°C，阳光充沛；夏天避暑）",
+    "duration_days": 4,
+    "transport_modes": [
+      "飞机",
+      "客车",
+      "面包车",
+      "自驾"
+    ],
+    "cost_total": null,
+    "cost_per_person": null,
+    "cost_notes": "视频内明确价格：嘉峪关→老市区客车20元、老君庙面包车5-10元、网购椰子44.89元/小海鲜16.63元/冲锋衣59.9元、房价七八万一套（七八十平）、月租一两百；酒店/和乐面价格未明",
+    "price_as_of": "2025-03",
+    "stops": [
+      {
+        "name": "上海 → 嘉峪关 → 老市区",
+        "day": 1,
+        "arrive_transport": "飞机+客车",
+        "arrive_cost": "客车20元",
+        "activities": [
+          "嘉峪关9:00发车一天两班",
+          "祁连山雪山风景",
+          "标志性石油工人雕像"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "浩宇大酒店",
+        "day": 1,
+        "arrive_transport": "步行",
+        "arrive_cost": "房费未明",
+        "activities": [
+          "标准间干净整洁带香薰",
+          "对面游城往事饭店"
+        ],
+        "lodging": {
+          "place": "浩宇大酒店",
+          "price": null,
+          "notes": "老市区市中心"
+        },
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "解放门/大环岛市中心",
+        "day": 1,
+        "arrive_transport": "步行",
+        "arrive_cost": "免费",
+        "activities": [
+          "老玉门“维多利亚广场”格局",
+          "解放路主干道",
+          "没有红绿灯都是环岛"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "解放路购物街（金玉宾馆）",
+        "day": 2,
+        "arrive_transport": "步行",
+        "arrive_cost": "免费",
+        "activities": [
+          "老红绿灯路口",
+          "金碧辉煌KTV",
+          "房价七八万一套"
+        ],
+        "lodging": {
+          "place": "金玉宾馆",
+          "price": null,
+          "notes": "中心十字路口，窗口正对老红绿灯"
+        },
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "游城学校+棋牌广场",
+        "day": 2,
+        "arrive_transport": "步行",
+        "arrive_cost": "免费",
+        "activities": [
+          "小学+初中，一个年级一个班约40人",
+          "搬来买房生活的农民",
+          "一万块买房的居民"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "游城公园",
+        "day": 2,
+        "arrive_transport": "步行",
+        "arrive_cost": "免费",
+        "activities": [
+          "始建于50年代",
+          "铁人王进喜铜像+孙建初纪念碑",
+          "一两百棵树，夏天避暑胜地"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "老君庙油田",
+        "day": 2,
+        "arrive_transport": "面包车",
+        "arrive_cost": "10元（3-4公里）",
+        "activities": [
+          "1939年中国第一口油井",
+          "老一井旧址+抽油机纪念碑",
+          "老君庙（太上老君/山神/土地）",
+          "石油河铁桥+老石油工人窑洞（现存40多间）"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": [
+          "整个景区游客极少"
+        ]
+      },
+      {
+        "name": "赤金镇（铁人王进喜家乡）",
+        "day": 3,
+        "arrive_transport": "自驾（油田姐姐带）",
+        "arrive_cost": "免费",
+        "activities": [
+          "铁人村故居纪念馆",
+          "镇上规模跟老市区差不多",
+          "快递能派送到村庄"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "清泉乡",
+        "day": 3,
+        "arrive_transport": "自驾",
+        "arrive_cost": "免费",
+        "activities": [
+          "因泉水清澈得名",
+          "人参果（脆爽像西红柿）",
+          "羊羔肉加肉"
+        ],
+        "lodging": null,
+        "food": [
+          "人参果",
+          "羊羔肉"
+        ],
+        "cost_notes": [],
+        "tips": []
+      }
+    ]
+  },
+  "tips": [
+    "交通：先到嘉峪关",
+    "住宿选金玉宾馆",
+    "别被“空城”吓到",
+    "老君庙油田必去",
+    "网购也能到，包邮",
+    "天气与季节",
+    "吃和乐面认准半干半汤",
+    "资源枯竭城市看什么"
+  ],
+  "highlights": [
+    "中国石油工业摇篮：1939年第一口油井+老一井旧址+石油工人窑洞",
+    "铁人王进喜故乡：赤金镇铁人村故居纪念馆",
+    "房价实录：七八十平七八万一套、月租一两百甚至40元",
+    "拼多多西部包邮实测：海南椰子/山东小海鲜/福建冲锋衣4-5天到",
+    "20年没人整理的废弃三室一厅+墙上的《钗头凤》",
+    "油田姐姐的留守故事：矿区禁酒、红工服的地狱梗"
+  ],
+  "transcript_ref": "D:\\output\\赖导路线库\\赖导_玉门\\transcript\\BV19jfPY9Eot.txt",
+  "source_data": "B站 BV19jfPY9Eot 全文转写（SenseVoice，约1万字）+ B站view API元数据",
+  "last_updated": "2026-08-23",
+  "data_status": "draft",
+  "l3_hooks": {
+    "suitable_for": "对资源枯竭型城市、老工业基地、铁人精神感兴趣的人；河西走廊自驾可顺路",
+    "customization_notes": "嘉峪关9点客车一天两班；晚上饭店才开；老君庙油田在老市区最南端"
+  }
+}
