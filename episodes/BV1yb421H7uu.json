@@ -31,7 +31,7 @@
     "title": "大理旅居15天·网红景点打卡路线",
     "route_summary": "大理古城（落脚）→ 苍山（崇圣寺三塔/寂照庵/洗马潭/玉带云游路/白石溪）→ 洱海环海（才村/生态廊道/文笔村/理想邦/小普陀/三圣岛）→ 喜洲古镇 → 双廊古镇 → 周城（扎染）",
     "direction": "以大理古城为中心，苍山+环洱海",
-    "season": "夏季（视频2024年7月发布；大理四季可游，夏秋雨季注意天气）",
+    "season": "夏季（视频2024年7月发布；大理四季可游）",
     "duration_days": 15,
     "transport_modes": [
       "公交",
@@ -42,14 +42,14 @@
     ],
     "cost_total": null,
     "cost_per_person": null,
-    "cost_notes": "本期为无口播画面Vlog，视频未提供具体花费；以下为大理公开参考价：三塔约75元、感通索道约100元往返、苍山大索道（洗马潭）约282元、环海自行车约30-50元/天、喜洲严家大院约60-90元、小普陀登岛约十几元；古城/双廊/理想邦免费",
-    "price_as_of": "2024-07（公开参考价）",
+    "cost_notes": null,
+    "price_as_of": null,
     "stops": [
       {
         "name": "大理古城",
         "day": null,
         "arrive_transport": "公交/打车",
-        "arrive_cost": "免费",
+        "arrive_cost": null,
         "activities": [
           "旅居落脚中心",
           "复兴路/人民路/洋人街/五华楼",
@@ -68,7 +68,7 @@
         "name": "苍山（三塔/寂照庵/洗马潭）",
         "day": null,
         "arrive_transport": "打车+索道",
-        "arrive_cost": "索道100-282元不等",
+        "arrive_cost": null,
         "activities": [
           "崇圣寺三塔",
           "寂照庵（最美尼庵，多肉素斋）",
@@ -87,7 +87,7 @@
         "name": "洱海生态廊道（才村/文笔村/理想邦）",
         "day": null,
         "arrive_transport": "骑行/电动车",
-        "arrive_cost": "车租约30-50元/天",
+        "arrive_cost": null,
         "activities": [
           "环海129公里绿道",
           "才村看日出",
@@ -105,7 +105,7 @@
         "name": "小普陀 / 三圣岛",
         "day": null,
         "arrive_transport": "环海东岸",
-        "arrive_cost": "登岛约十几元",
+        "arrive_cost": null,
         "activities": [
           "洱海袖珍小岛",
           "冬季海鸥",
@@ -120,7 +120,7 @@
         "name": "喜洲古镇",
         "day": null,
         "arrive_transport": "公交/包车",
-        "arrive_cost": "古镇免费",
+        "arrive_cost": null,
         "activities": [
           "白族建筑+严家大院",
           "喜洲破酥粑粑",
@@ -131,16 +131,14 @@
         "food": [
           "喜洲破酥粑粑"
         ],
-        "cost_notes": [
-          "严家大院约60-90元"
-        ],
+        "cost_notes": [],
         "tips": []
       },
       {
         "name": "双廊古镇",
         "day": null,
         "arrive_transport": "环海北岸",
-        "arrive_cost": "免费",
+        "arrive_cost": null,
         "activities": [
           "洱海东北岸最著名观海古镇",
           "玉几岛",
@@ -155,7 +153,7 @@
         "name": "周城",
         "day": null,
         "arrive_transport": "公交",
-        "arrive_cost": "扎染体验约几十元",
+        "arrive_cost": null,
         "activities": [
           "白族扎染之乡",
           "染坊扎染体验"
@@ -168,11 +166,10 @@
     ]
   },
   "tips": [
-    "本页说明",
     "旅居式玩法更适合大理",
     "洱海环海怎么玩",
     "苍山按索道选路线",
-    "喜洲/周城连着玩",
+    "喜洲、周城、双廊连着玩",
     "理想邦“小圣托里尼”",
     "最佳拍摄时间"
   ],
@@ -184,7 +181,7 @@
     "小普陀登岛、才村日出经典出片机位"
   ],
   "transcript_ref": null,
-  "source_data": "B站 BV1yb421H7uu 视频简介公开的拍摄地点清单 + 大理公开旅行信息（本期为4K画面Vlog无口播，未做逐字转写；门票交通为大众公开参考价）",
+  "source_data": "B站 BV1yb421H7uu 视频简介公开的拍摄地点清单（本期为4K画面Vlog无口播，未做逐字转写）",
   "last_updated": "2026-08-23",
   "data_status": "draft",
   "l3_hooks": {
