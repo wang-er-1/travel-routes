@@ -1,0 +1,230 @@
+{
+  "schema_version": "1.0",
+  "episode": {
+    "blogger": "赖导AboutLai",
+    "title": "去山东最北海岛旅行，我找到了让时间变慢的方法",
+    "bvid": "BV1UJ4m1M7vd",
+    "url": "https://www.bilibili.com/video/BV1UJ4m1M7vd",
+    "duration": "48:39",
+    "publish_date": "2024-06-14",
+    "stats": {
+      "plays": 2785522,
+      "likes": 110780,
+      "favorites": 59987,
+      "danmaku": 19683,
+      "comments": null
+    },
+    "tags": [
+      "北隍城岛",
+      "山东",
+      "蓬莱",
+      "渤海",
+      "海岛",
+      "渔家乐",
+      "赶海",
+      "灯塔"
+    ],
+    "description": "山东最北端的海岛北隍城岛，面积仅2.72平方公里，常住人口不到2000人。赶在酷暑前去一个相对僻静、不那么商业化的海岛上慢节奏待几天——坐4小时客船，去钓鱼、赶海、看日落。",
+    "related_episodes": []
+  },
+  "trip": {
+    "title": "山东最北海岛·北隍城岛慢旅行（3天）",
+    "route_summary": "蓬莱（前夜住码头）→（巡仙十二号客船，4小时）→ 北隍城岛：渔家乐（吃住一体）→ 山后村（记忆展馆/观音礁海滩/淡化水厂）→ 出海钓鱼 → 北隍城灯塔（海上日落）→ 赶海 → 山前村（邮政/超市/理发）→ 离岛回蓬莱",
+    "direction": "蓬莱向北（渤海海峡）",
+    "season": "5月底（赶在酷暑前，气温20°C但海水凉、日照强）",
+    "duration_days": 3,
+    "transport_modes": [
+      "飞机",
+      "客船（4小时）",
+      "步行",
+      "搭车"
+    ],
+    "cost_total": null,
+    "cost_per_person": null,
+    "cost_notes": "视频内明确价格：渔家乐吃住一体320元/天管三餐、客船升舱30元、山前村理发15元；船票/包船钓鱼价格未明",
+    "price_as_of": "2024-06",
+    "stops": [
+      {
+        "name": "蓬莱（出发港）",
+        "day": 0,
+        "arrive_transport": "飞机",
+        "arrive_cost": null,
+        "activities": [
+          "前一夜住码头附近酒店",
+          "蓬莱小面/共享单车",
+          "滨海小城慢生活"
+        ],
+        "lodging": {
+          "place": "蓬莱码头附近酒店",
+          "price": null,
+          "notes": "赶早8点船"
+        },
+        "food": [
+          "蓬莱小面"
+        ],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "巡仙十二号客船",
+        "day": 1,
+        "arrive_transport": "客船",
+        "arrive_cost": "升舱30元",
+        "activities": [
+          "早8:00开船，航行4小时",
+          "海鸥成群可投喂",
+          "三层观光甲板视野好"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": [
+          "只有早上有船"
+        ]
+      },
+      {
+        "name": "北隍城岛·渔家乐",
+        "day": 1,
+        "arrive_transport": "步行",
+        "arrive_cost": "320元/天",
+        "activities": [
+          "吃住一体管三餐",
+          "鲍鱼水饺/海菜包子/炸虾酱"
+        ],
+        "lodging": {
+          "place": "渔家乐（网上联系）",
+          "price": "320元/天",
+          "notes": "吃住一体管三餐，大炕房独立卫浴"
+        },
+        "food": [
+          "鲍鱼水饺",
+          "海菜包子",
+          "炸虾酱",
+          "皮皮虾"
+        ],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "山后村",
+        "day": 1,
+        "arrive_transport": "步行",
+        "arrive_cost": "免费",
+        "activities": [
+          "篮球场",
+          "山后村记忆展馆（邹姓三兄弟闯关东）",
+          "观音礁海滩（玻璃水）",
+          "海水淡化厂（全岛吃水）"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "出海钓鱼",
+        "day": 1,
+        "arrive_transport": "包船",
+        "arrive_cost": "价未明",
+        "activities": [
+          "70岁渔民大叔开船30年",
+          "早4点出海，出一次钓七八十斤",
+          "最大8斤，5-9月开放"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": [
+          "钓鱼船鹅卵石坡滑着下水"
+        ]
+      },
+      {
+        "name": "北隍城灯塔（日落）",
+        "day": 1,
+        "arrive_transport": "爬山",
+        "arrive_cost": "免费",
+        "activities": [
+          "山顶灯塔视野绝佳",
+          "海上日落+山后村全景",
+          "路过军事区外围（勿拍）"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "赶海",
+        "day": 2,
+        "arrive_transport": "步行",
+        "arrive_cost": "免费",
+        "activities": [
+          "退潮后石头下巨多螃蟹",
+          "海星（烤着吃香，肥时全是籽）",
+          "小心蟹钳划破手"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": [
+          "每天退潮比前一天晚约1小时"
+        ]
+      },
+      {
+        "name": "山前村",
+        "day": 2,
+        "arrive_transport": "隧道+搭车",
+        "arrive_cost": "免费",
+        "activities": [
+          "中国邮政/卫生院/美术馆",
+          "“我在北方很想你”打卡牌",
+          "岛上最大超市+15元理发店",
+          "两个村各有一个篮球场"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "离岛",
+        "day": 3,
+        "arrive_transport": "客船",
+        "arrive_cost": null,
+        "activities": [
+          "回蓬莱，码头群像电影大团圆"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      }
+    ]
+  },
+  "tips": [
+    "只有早上有船，提前住蓬莱",
+    "岛上住宿：渔家乐吃住一体",
+    "单行隧道要注意",
+    "赶海看退潮时间",
+    "钓鱼要早起",
+    "灯塔日落路线",
+    "5月底水还凉",
+    "山前村更“发达”"
+  ],
+  "highlights": [
+    "山东最北端海岛北隍城岛：2.72平方公里、两个村不到2000人，渤海内海的“功臣”",
+    "渔家乐320元/天吃住一体：鲍鱼水饺、海菜包子、炸虾酱",
+    "出海钓鱼：70岁大叔30年船龄，早4点出海一网七八十斤",
+    "北隍城灯塔海上日落，视野绝佳",
+    "赶海：退潮后石头下全是螃蟹海星",
+    "山前村“我在北方很想你”打卡牌+15元理发"
+  ],
+  "transcript_ref": "D:\\output\\赖导路线库\\赖导_长岛\\transcript\\BV1UJ4m1M7vd.txt",
+  "source_data": "B站 BV1UJ4m1M7vd 全文转写（SenseVoice，7535字）+ B站view API元数据",
+  "last_updated": "2026-08-23",
+  "data_status": "draft",
+  "l3_hooks": {
+    "suitable_for": "想找一个人少、不商业化的北方海岛慢节奏待几天的人；蓬莱中转，周末+1天",
+    "customization_notes": "只有早上8点一班船；住渔家乐320元/天含三餐；5月底海水仍凉"
+  }
+}
