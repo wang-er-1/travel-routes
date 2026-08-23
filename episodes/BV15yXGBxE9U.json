@@ -1,0 +1,249 @@
+{
+  "schema_version": "1.0",
+  "episode": {
+    "blogger": "赖导AboutLai",
+    "title": "自驾1400公里去云南最南边境县城，探索热带雨林里的独特风物",
+    "bvid": "BV15yXGBxE9U",
+    "url": "https://www.bilibili.com/video/BV15yXGBxE9U",
+    "duration": "68:05",
+    "publish_date": "2026-03-28",
+    "stats": {
+      "plays": 3817807,
+      "likes": 93760,
+      "favorites": 35058,
+      "danmaku": 17645,
+      "comments": null
+    },
+    "tags": [
+      "勐腊",
+      "西双版纳",
+      "热带雨林",
+      "望天树",
+      "边境",
+      "磨憨",
+      "赶摆",
+      "自驾"
+    ],
+    "description": "勐腊县是云南边境线最长的县城，分布着成片热带雨林，是国际学界公认的中国热带雨林核心地区。这次自驾1400多公里，从重庆一路向南，去探索这座边境小城的独特风物。",
+    "related_episodes": []
+  },
+  "trip": {
+    "title": "云南最南边境小城·勐腊自驾（3天）",
+    "route_summary": "重庆 →（自驾1400km）→ 景洪 →（国道130km）→ 勐腊县城：景兰大酒店（《边水往事》取景地）→ 牛乐乐老挝火锅 → 望天树景区（树冠走廊）→ 老城中心+星光夜市 → 布过村 → 小徐家橡胶林 → 曼龙勒村雨林赶摆+南腊河漂流 → 曼东村龙脑香禅院",
+    "direction": "重庆向南（西双版纳）",
+    "season": "春节后（2-3月，气温舒适，云南最有春天气息）",
+    "duration_days": 3,
+    "transport_modes": [
+      "自驾（深蓝S07纯电）",
+      "皮划艇漂流"
+    ],
+    "cost_total": null,
+    "cost_per_person": null,
+    "cost_notes": "视频内明确价格：景兰大酒店246元/晚、老城中心酒店169元/晚、佐料牛肉盖饭约20元、赶摆烤鸡+五花肉+烤鱼共160元、望天树无人机拍摄另付费、门票/漂流票价未明",
+    "price_as_of": "2026-03",
+    "stops": [
+      {
+        "name": "重庆 → 景洪 → 勐腊",
+        "day": 1,
+        "arrive_transport": "自驾（纯电）",
+        "arrive_cost": null,
+        "activities": [
+          "重庆到景洪约1400公里3天",
+          "景洪到勐腊国道130公里近4小时",
+          "边境无边防证"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "景兰大酒店（《边水往事》取景地）",
+        "day": 1,
+        "arrive_transport": "自驾",
+        "arrive_cost": "246元/晚",
+        "activities": [
+          "电视剧《边水往事》取景地",
+          "带阳台，楼下停车场"
+        ],
+        "lodging": {
+          "place": "景兰大酒店",
+          "price": "246元/晚",
+          "notes": "《边水往事》取景地，无主灯较暗"
+        },
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "牛乐乐老挝火锅",
+        "day": 1,
+        "arrive_transport": "自驾",
+        "arrive_cost": "人均约60-80元",
+        "activities": [
+          "涮烤一体锅",
+          "老挝酱+干碟蘸料",
+          "牛肉/胸膘/猪五花"
+        ],
+        "lodging": null,
+        "food": [
+          "老挝火锅（涮烤一体）"
+        ],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "望天树景区",
+        "day": 2,
+        "arrive_transport": "自驾（县城20公里外）",
+        "arrive_cost": "门票未明",
+        "activities": [
+          "500米世界最高树冠走廊（36米）",
+          "望天树高40-80米",
+          "雨林徒步：马钱子剧毒勿食",
+          "无人机拍摄区付费"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": [
+          "随身物品放好防掉落"
+        ]
+      },
+      {
+        "name": "老城中心+星光夜市",
+        "day": 2,
+        "arrive_transport": "步行",
+        "arrive_cost": "169元/晚",
+        "activities": [
+          "泼水节广场/星光夜市",
+          "佐料牛肉盖饭约20元"
+        ],
+        "lodging": {
+          "place": "老城中心酒店",
+          "price": "169元/晚",
+          "notes": "全智能，对面星光夜市"
+        },
+        "food": [
+          "佐料牛肉盖饭约20元"
+        ],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "布过村（布过族）",
+        "day": 3,
+        "arrive_transport": "自驾",
+        "arrive_cost": "免费",
+        "activities": [
+          "哈尼族支系，全国仅七八百人",
+          "村寨寺庙金碧辉煌",
+          "传统服饰+自己的语言"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "小徐家橡胶林",
+        "day": 3,
+        "arrive_transport": "自驾",
+        "arrive_cost": "免费",
+        "activities": [
+          "12月开春到年底每天割胶",
+          "胶汁卖给加工厂做鞋轮胎"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "曼龙勒村雨林赶摆",
+        "day": 3,
+        "arrive_transport": "自驾",
+        "arrive_cost": "人均30-100元",
+        "activities": [
+          "中国唯一热带雨林赶摆（每周六）",
+          "烤青蛙/炸蚂蚱/蚕蛹/菠萝饭/巴拉达",
+          "下午5点收摊"
+        ],
+        "lodging": null,
+        "food": [
+          "烤青蛙",
+          "炸蚂蚱",
+          "炸蚕蛹",
+          "菠萝饭",
+          "巴拉达",
+          "老挝咖啡"
+        ],
+        "cost_notes": [
+          "烤鸡+五花肉+烤鱼共160元"
+        ],
+        "tips": [
+          "只有周六举办"
+        ]
+      },
+      {
+        "name": "南腊河雨林漂流",
+        "day": 3,
+        "arrive_transport": "皮划艇",
+        "arrive_cost": "票价未明",
+        "activities": [
+          "6公里约2小时纯手划",
+          "两岸雨林+村民河边烤鱼"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": [
+          "会湿裤子"
+        ]
+      },
+      {
+        "name": "曼东村龙脑香禅院",
+        "day": 3,
+        "arrive_transport": "自驾",
+        "arrive_cost": "免费",
+        "activities": [
+          "废弃禅院：释迦牟尼涅槃像",
+          "那伽护法像+南传佛教雕塑",
+          "龙脑香树林，地图搜不到定位"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": [
+          "建议白天去"
+        ]
+      }
+    ]
+  },
+  "tips": [
+    "自驾路线和时间",
+    "纯电自驾无压力",
+    "树冠走廊的教训",
+    "赶摆只有周六",
+    "漂流会湿裤子",
+    "龙脑香禅院别晚上去",
+    "勐腊口味和赶摆美食",
+    "泼水节来最热闹"
+  ],
+  "highlights": [
+    "望天树树冠走廊：500米长、36米高，世界最高的树冠走廊",
+    "中国唯一的热带雨林赶摆（曼龙勒村，每周六）",
+    "南腊河雨林漂流6公里，皮划艇穿过雨林",
+    "布过族探访：哈尼族支系，全国仅七八百人",
+    "曼东村龙脑香禅院：废弃禅院的释迦牟尼涅槃像+那伽护法像",
+    "《边水往事》取景地景兰大酒店246元/晚"
+  ],
+  "transcript_ref": "D:\\output\\赖导路线库\\赖导_勐腊\\transcript\\BV15yXGBxE9U.txt",
+  "source_data": "B站 BV15yXGBxE9U 全文转写（SenseVoice，12162字）+ B站view API元数据",
+  "last_updated": "2026-08-23",
+  "data_status": "draft",
+  "l3_hooks": {
+    "suitable_for": "喜欢热带雨林、边境小城、异域风情市集的人；西双版纳深度游可加勐腊2-3天",
+    "customization_notes": "赶摆只在周六；望天树+漂流可同天；泼水节（4月中）最热闹"
+  }
+}
