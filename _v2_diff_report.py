@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
 """样本转换差异报告（Codex 第8条要求的8个维度）"""
 import json, os, sys
-sys.path.insert(0, r"D:\output\routes-site-v2")
-os.chdir(r"D:\output\routes-site-v2")
-from _v2_convert import convert_any, content_inventory
+BASE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, BASE)
+os.chdir(BASE)
+from _v2_convert import convert_any, leaf_inventory
 
 def report(bv, label):
     src = json.load(open(f'episodes/{bv}.json', encoding='utf-8'))
     out = json.load(open(f'_v2_samples/{bv}.json', encoding='utf-8'))
-    before, after = set(content_inventory(src)), set(content_inventory(out))
-    lost = [t for t in before - after if len(t) > 4]
+    before, after = leaf_inventory(src), leaf_inventory(out)
+    lost = [t for t in before if t not in after]
 
     ep, tr = out['episode'], out['trip']
     print(f"\n{'='*64}\n【{label}】 {bv}\n{'='*64}")
@@ -46,7 +47,7 @@ def report(bv, label):
     else: print()
 
     # 6 删除的绝对路径
-    _, removed = convert_any(src)
+    _, removed, _ = convert_any(src)
     print(f"⑥ 删除本地路径: {len(removed)}处 {removed if removed else ''}")
 
     # 7 无法自动归类字段（源里有但没映射进去的顶层键）

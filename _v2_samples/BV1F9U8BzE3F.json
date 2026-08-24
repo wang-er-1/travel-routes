@@ -13,7 +13,7 @@
       "favorites": 61950,
       "danmaku": 17586,
       "comments": null,
-      "captured_at": "2026-08-18T00:00:00+08:00"
+      "captured_at": null
     },
     "tags": [
       "三峡",
@@ -256,14 +256,7 @@
     ],
     "suitable_for": "低成本游三峡：全程水上公交+轮渡+小客车，不坐高价观光游轮也能玩全程",
     "customization_notes": "顺流而下不回头；赶早班船需提前到码头；青石村住宿节假日可能满房",
-    "locations": [
-      {
-        "city": null,
-        "province": null,
-        "region": null,
-        "country": "中国"
-      }
-    ],
+    "locations": [],
     "themes": [],
     "budget": {
       "total": null,
@@ -283,6 +276,7 @@
   ],
   "last_updated": "2026-08-18",
   "data_status": "draft",
+  "source_note": "wang-er-1.github.io/share/赖导三峡线路还原与行程方案.html「一、赖导视频还原」部分（此前AI转写整理，转写全文未在本机）",
   "tips": [
     {
       "category": "其他",
@@ -341,7 +335,6 @@
       "text": "大坝看点顺序"
     }
   ],
-  "source_note": "wang-er-1.github.io/share/赖导三峡线路还原与行程方案.html「一、赖导视频还原」部分（此前AI转写整理，转写全文未在本机）",
   "next_stop": null,
   "last_checked_at": null
 }

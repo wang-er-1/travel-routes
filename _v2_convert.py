@@ -1,24 +1,49 @@
 # -*- coding: utf-8 -*-
-"""schema v2.0 转换器（按 Codex 15条收口意见）
-嵌套v1 / 扁平(鞍山) → v2.0 统一嵌套结构。
-支持 dry-run（输出到 _v2_samples/ 或内存，不覆盖 episodes/）。
+"""schema v2.0 转换器（按 Codex 8条复核意见修订）
 
-Codex 15条修订对照：
- 1 trip.location→locations 数组   2 theme→themes   3 tips 统一 [{category,text}]
- 4 stops[].order(从1) + lodging 字符串→对象   5 费用全进 budget(total/per_person/note/price_as_of/items)
- 6 episode.part_number(当前集自身)   7 series 带 series_id
- 8 catalog.updated_at 用 last_updated（转换器不管catalog，见 gen_catalog.py）
- 9 source_type=bilibili_video(catalog)  10 content_hash SHA-256(catalog)
- 11 catalog.related_videos 对象  12 catalog regions/destinations
- 13 stats.captured_at 带时区ISO   14 data_status 语义 + last_checked_at
- 15 JSON Schema + validate.py 另见独立文件
+Codex 复核修正对照：
+ 1. 路径不写死：BASE 取脚本所在仓库目录（家庭/公司电脑通用）
+ 2. Windows 中文终端输出 ✅ 不炸 UnicodeEncodeError
+ 3. transcript_ref 不无条件删：内容含本地路径才删；自然语言（如"适合人群"）迁移到 trip.suitable_for
+    ——BV16NpQznEXC/BV1eh9YBUEYp/BV1UetHeTEsH 三条 transcript_ref 装的是适合人群文字，必须保留
+ 4. （文档同步在 SCHEMA_PROPOSAL.md 另改）
+ 5. catalog 生成见 gen_catalog.py
+ 6. 零丢失检查升级：比较全部有意义的叶子数据（含短文字、数字、重复内容），不只 >4 字集合
+ 7. locations 不生成全 null 占位对象：优先从 stops 提取，否则空数组并在报告里列待补
+ 8. related_videos 不默认 part / 不自动设第1集：仅当 trip.title 含"上/下两集"等明确关系时才转
 """
-import json, os, re, copy, hashlib
-from datetime import datetime
+import json, os, re, copy, hashlib, sys
 
-os.chdir(r"D:\output\routes-site-v2")
+# ---- 修1：脚本所在仓库目录（不再写死 D:\output\routes-site-v2）----
+BASE = os.path.dirname(os.path.abspath(__file__))
+os.chdir(BASE)
+
+# ---- 修2：Windows 中文终端输出安全 ----
+if sys.stdout and hasattr(sys.stdout, 'reconfigure'):
+    try:
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    except Exception:
+        pass
+try:
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+except Exception:
+    pass
 
 TZ = "+08:00"
+# 严格盘符：字母+冒号+反斜杠（D:\...）；MSYS：/x/output/...
+LOCAL_PATH_RE = re.compile(r'[A-Za-z]:\\|/[a-z]/output')
+
+def has_local_path(s):
+    return isinstance(s, str) and bool(LOCAL_PATH_RE.search(s))
+
+def strip_path_from_text(s):
+    """从一段文字里剥掉本地路径片段，保留正常文字（不误伤 https:// 等公网URL）"""
+    if not isinstance(s, str):
+        return s
+    # 只剥 Windows 盘符路径（冒号后必须跟反斜杠）和 MSYS 路径
+    cleaned = re.sub(r'[A-Za-z]:\\[^\s，。；、)）"\']*', '', s)
+    cleaned = re.sub(r'/[a-z]/output[^\s，。；、)）"\']*', '', cleaned)
+    return cleaned.strip(' :：（(')
 
 def to_iso_tz(date_str):
     """'2026-08-18' → '2026-08-18T00:00:00+08:00'；已是ISO则原样；None→None"""
@@ -31,26 +56,17 @@ def to_iso_tz(date_str):
         return f"{m.group(1)}T00:00:00{TZ}"
     return None
 
-def has_local_path(s):
-    return isinstance(s, str) and bool(re.search(r'[A-Za-z]:\\|/[a-z]/output', s))
-
-def strip_path_from_text(s):
-    """从一段文字里剥掉本地路径片段，保留正常文字"""
-    if not isinstance(s, str):
-        return s
-    cleaned = re.sub(r'[A-Za-z]:\\\\?[^\s，。；、)）"\']*', '', s)
-    cleaned = re.sub(r'/[a-z]/output[^\s，。；、)）"\']*', '', cleaned)
-    return cleaned.strip(' :：（(')
-
 def deep_strip_paths(obj, removed):
+    """递归：字符串里含本地路径→剥离路径片段（保留周围文字）；纯路径串→置 None 并记录"""
     if isinstance(obj, dict):
         return {k: deep_strip_paths(v, removed) for k, v in obj.items()}
     if isinstance(obj, list):
         return [deep_strip_paths(x, removed) for x in obj]
     if isinstance(obj, str) and has_local_path(obj):
         cleaned = strip_path_from_text(obj)
-        removed.append(obj[:70])
-        return cleaned or None
+        if cleaned != obj:
+            removed.append(obj[:70])
+        return cleaned if cleaned else None
     return obj
 
 def parse_dur_seconds(dur):
@@ -70,10 +86,10 @@ def norm_stats_nested(st, captured):
         "captured_at": captured,
     }
 
-def tips_to_objs(raw_tips):
-    """旧字符串贴士 → [{category:'其他', text}]；已是对象则规整"""
+def tips_to_objs(raw):
+    """字符串贴士→[{category:'其他',text}]；对象规整"""
     out = []
-    for t in raw_tips or []:
+    for t in raw or []:
         if isinstance(t, str) and t.strip():
             out.append({"category": "其他", "text": t.strip()})
         elif isinstance(t, dict):
@@ -83,13 +99,31 @@ def tips_to_objs(raw_tips):
     return out
 
 def lodging_to_obj(l):
-    """住宿：字符串→对象；对象原样；None→None"""
     if l is None: return None
     if isinstance(l, dict): return l
     if isinstance(l, str) and l.strip():
         return {"place": l.strip(), "price": None, "notes": None}
     return None
 
+def extract_locations(tr):
+    """修7：locations 优先取 trip.location；否则从 stops 提取；再否则空数组+报告"""
+    loc = tr.pop('location', None)
+    if loc and any(loc.get(k) for k in ('city','province','region')):
+        return [loc], []
+    # 从 stops 的 name / arrive_transport 提取候选地名（启发式：排除明显非地名的站名）
+    pending = []
+    for s in tr.get('stops', []):
+        nm = s.get('name') or ''
+        if nm and not re.search(r'酒店|饭店|公园|广场|餐厅|景区|博物馆|村$|镇$|码头', nm):
+            pending.append(nm)
+    # 只在确有把握时填充：这里仅记录待补，不瞎猜行政归属
+    return [], pending
+
+def is_explicit_part(d):
+    """修8：仅当 trip.title / episode.title 含明确的上下集标记时才认为 related 是 part"""
+    title = (d.get('trip', {}) or {}).get('title', '') or (d.get('episode', {}) or {}).get('title', '')
+    return ('上/下两集' in title or '上下两集' in title or '上集' in title or '下集' in title
+            or '上/下' in title or '上下集' in title)
 
 def upgrade_nested(d):
     """v1 嵌套 → v2.0"""
@@ -98,49 +132,70 @@ def upgrade_nested(d):
     tr = d.get('trip', {})
     removed = []
 
-    captured = to_iso_tz(d.get('last_updated'))
-    ep['stats'] = norm_stats_nested(ep.get('stats', {}), captured)
+    # 决策1：历史 captured_at 一律 null（不用 last_updated 补午夜时间）
+    ep['stats'] = norm_stats_nested(ep.get('stats', {}), None)
 
-    # l3_hooks → trip.suitable_for / customization_notes（去路径）
+    # 修3：l3_hooks.suitable_for（路径删 / 文字保留）→ trip.suitable_for；customization_notes 迁移
     l3 = d.pop('l3_hooks', {}) or {}
-    if l3.get('suitable_for'):
-        v = l3['suitable_for']
-        tr['suitable_for'] = strip_path_from_text(v) if has_local_path(v) else v
-    if l3.get('customization_notes'):
-        tr['customization_notes'] = l3['customization_notes']
+    suit_src = l3.get('suitable_for')
+    if suit_src:
+        tr['suitable_for'] = deep_strip_paths(suit_src, removed)
+    cust = l3.get('customization_notes')
+    if cust:
+        tr['customization_notes'] = deep_strip_paths(cust, removed)
 
-    # related_episodes → related_videos（保留下集完整元数据）
+    # 修3：transcript_ref / source_data —— 内容判断：纯路径→删；自然语言→并入 source_note / suitable_for
+    tref = d.pop('transcript_ref', None)
+    if tref:
+        if has_local_path(tref) and not re.search(r'[\u4e00-\u9fff]{4,}', tref):
+            removed.append(tref[:70])          # 纯路径：删
+        else:
+            cleaned = deep_strip_paths(tref, removed)
+            if cleaned:
+                # 含中文字符的说明性文字：若像"适合人群"描述进 suitable_for，否则进 source_note
+                if re.search(r'适合|人|爱好者|人群|出发|往返|顺路', cleaned) and not tr.get('suitable_for'):
+                    tr['suitable_for'] = cleaned
+                else:
+                    d['source_note'] = cleaned
+    sdata = d.pop('source_data', None)
+    if sdata:
+        d['source_note'] = deep_strip_paths(sdata, removed) or d.get('source_note')
+
+    # 修8：related_videos 仅在明确上下集时转 part；否则 relation 由后续人工/规则定，绝不默认
+    rel_old = ep.pop('related_episodes', []) or []
     related = []
-    for i, r in enumerate(ep.pop('related_episodes', []) or [], 2):
-        if isinstance(r, dict) and r.get('bvid'):
-            item = {"bvid": r['bvid'], "relation": "part",
-                    "note": (r.get('title') or '关联视频')[:40], "part_number": i}
-            for k in ('url', 'publish_date', 'duration', 'title'):
-                if r.get(k) is not None: item[k] = r[k]
-            if r.get('stats'):
-                item['stats'] = norm_stats_nested(r['stats'], None)
-                item['stats'].pop('captured_at', None)
-            related.append(item)
+    explicit_part = is_explicit_part(d)
+    for r in rel_old:
+        if not (isinstance(r, dict) and r.get('bvid')): continue
+        item = {"bvid": r['bvid'],
+                "relation": "part" if explicit_part else "series",
+                "note": (r.get('title') or '关联视频')[:40]}
+        if explicit_part:
+            item['part_number'] = 2  # 主文件是上集，关联的是下集；上下集对调时人工修正
+        for k in ('url', 'publish_date', 'duration', 'title'):
+            if r.get(k) is not None: item[k] = r[k]
+        if r.get('stats'):
+            item['stats'] = norm_stats_nested(r['stats'], None)
+            item['stats'].pop('captured_at', None)
+        related.append(item)
     ep['related_videos'] = related
-    # 当前集自身 part_number：有上集关系时它是第1集
-    ep['part_number'] = 1 if related else None
+    # 当前集自身 part_number：只有明确上下集才设（主文件视为第1集）
+    ep['part_number'] = 1 if (explicit_part and related) else None
 
     ep.setdefault('series', None)
     if 'duration_seconds' not in ep:
         ep['duration_seconds'] = parse_dur_seconds(ep.get('duration'))
 
-    # === trip 收口 ===
-    # location → locations 数组
-    loc = tr.pop('location', None)
-    if loc:
-        tr['locations'] = [loc]
-    else:
-        tr.setdefault('locations', [{"city": None, "province": None, "region": None, "country": "中国"}])
+    # 修7：locations
+    tr['locations'], pending_locs = extract_locations(tr)
+    if pending_locs:
+        tr['_pending_locations'] = pending_locs  # 报告用，schema 不允许则转换后删
+
     # theme → themes
     if 'theme' in tr: tr['themes'] = tr.pop('theme')
     tr.setdefault('themes', [])
 
-    # stops：加 order、lodging 转对象
+    # stops：order / lodging 对象 / 默认字段
     for idx, s in enumerate(tr.get('stops', []), 1):
         s['order'] = idx
         s['lodging'] = lodging_to_obj(s.get('lodging'))
@@ -149,7 +204,7 @@ def upgrade_nested(d):
         for k in ('activities', 'food', 'cost_notes', 'tips'):
             s.setdefault(k, [])
 
-    # 费用统一进 budget（旧 cost_total/per_person/cost_notes 迁入，不丢）
+    # 费用统一进 budget
     old_budget = tr.pop('budget', None) or {}
     budget = {
         "total": tr.pop('cost_total', None) or old_budget.get('total'),
@@ -158,20 +213,10 @@ def upgrade_nested(d):
         "price_as_of": tr.pop('price_as_of', None) or old_budget.get('price_as_of'),
         "items": old_budget.get('items', []),
     }
-    if any(v not in (None, [], '') for v in budget.values()):
-        tr['budget'] = budget
-    else:
-        tr['budget'] = None
+    tr['budget'] = budget if any(v not in (None, [], '') for v in budget.values()) else None
 
-    # === 路线级 tips 统一 [{category,text}]，合并旧 tips + practical_tips ===
-    merged = tips_to_objs(d.pop('tips', [])) + tips_to_objs(d.pop('practical_tips', []))
-    d['tips'] = merged
-
-    # source_note（旧 source_data 去路径），删 transcript_ref
-    sdata = d.pop('source_data', None)
-    d.pop('transcript_ref', None)
-    if not d.get('source_note'):
-        d['source_note'] = strip_path_from_text(sdata) if sdata else None
+    # tips 统一
+    d['tips'] = tips_to_objs(d.pop('tips', [])) + tips_to_objs(d.pop('practical_tips', []))
 
     d.setdefault('next_stop', None)
     d.setdefault('last_checked_at', None)
@@ -181,7 +226,9 @@ def upgrade_nested(d):
     d['trip'] = tr
 
     d = deep_strip_paths(d, removed)
-    return d, removed
+    # 清理内部报告字段
+    d['trip'].pop('_pending_locations', None)
+    return d, removed, pending_locs
 
 
 def convert_flat(d):
@@ -208,6 +255,8 @@ def convert_flat(d):
         })
 
     loc = d.get('location') or {}
+    locations = [loc] if any(loc.get(k) for k in ('city','province','region')) else []
+
     budget_raw = d.get('budget')
     budget = None
     if budget_raw:
@@ -231,7 +280,7 @@ def convert_flat(d):
             "route_summary": d.get('subtitle'),
             "route_type": d.get('route_type'),
             "themes": d.get('theme', []),
-            "locations": [loc] if loc else [{"city": None, "province": None, "region": None, "country": "中国"}],
+            "locations": locations,
             "direction": None, "season": None, "duration_days": None,
             "transport_modes": [], "suitable_for": None,
             "stops": stops, "budget": budget,
@@ -245,46 +294,56 @@ def convert_flat(d):
         "last_checked_at": None,
     }
     out = deep_strip_paths(out, removed)
-    return out, removed
+    return out, removed, []
 
 
 def convert_any(d):
-    """自动判断版本并转换"""
     if 'itinerary' in d and 'episode' not in d:
         return convert_flat(d)
     return upgrade_nested(d)
 
 
-# ============ 内容完整性比对 ============
-def content_inventory(d):
-    texts = []
+# ---- 修6：叶子级零丢失检查（含短文字、数字、重复内容）----
+def leaf_inventory(d):
+    """提取全部有意义的叶子：字符串（含短词）、数字、布尔；保留重复
+    注意：只排除结构性字段（schema_version/order 等机器值），
+    source_note/next_stop 等是内容，必须纳入比对。"""
+    leaves = []
+    SKIP_KEYS = {'schema_version', 'last_updated', 'captured_at', 'last_checked_at',
+                 'order', 'part_number', 'duration_seconds', 'data_status',
+                 'content_hash', 'generated_at'}
     def walk(o):
         if isinstance(o, dict):
             for k, v in o.items():
-                if k in ('schema_version', 'last_updated', 'captured_at', 'last_checked_at',
-                         'order', 'part_number', 'duration_seconds'): continue
+                if k in SKIP_KEYS: continue
                 walk(v)
         elif isinstance(o, list):
             for x in o: walk(x)
-        elif isinstance(o, str) and o.strip() and not has_local_path(o):
-            texts.append(o.strip())
+        elif isinstance(o, str):
+            s = o.strip()
+            if s and not has_local_path(s):
+                leaves.append(('str', s))
+        elif isinstance(o, (int, float)) and o is not False:
+            leaves.append(('num', str(o)))
+        elif isinstance(o, bool):
+            leaves.append(('bool', str(o)))
     walk(d)
-    return texts
+    return leaves
 
 
 if __name__ == '__main__':
-    import sys
     # 样本转换：鞍山(扁平) + 三峡(嵌套最全)
     samples = {'BV1F9U8BzE3F': '三峡(嵌套最全)', 'BV111Fze1EZw': '鞍山(扁平)'}
     os.makedirs('_v2_samples', exist_ok=True)
     for bv, label in samples.items():
         src = json.load(open(f'episodes/{bv}.json', encoding='utf-8'))
-        before = content_inventory(src)
-        out, removed = convert_any(src)
-        after = content_inventory(out)
+        before = leaf_inventory(src)
+        out, removed, pending = convert_any(src)
+        after = leaf_inventory(out)
         json.dump(out, open(f'_v2_samples/{bv}.json', 'w', encoding='utf-8'),
                   ensure_ascii=False, indent=2)
-        lost = [t for t in set(before) - set(after) if len(t) > 4]
-        print(f"[{label}] {bv}: 内容 {len(set(before))}→{len(set(after))} | 删路径{len(removed)} | 丢失{len(lost)}")
-        for t in lost[:8]: print("   LOST:", t[:70])
+        lost = [t for t in before if t not in after]
+        print(f"[{label}] {bv}: 叶子 {len(before)}→{len(after)} | 删路径{len(removed)} | 丢失{len(lost)} | 待补locations={len(pending)}")
+        for kind, t in lost[:10]: print("   LOST:", t[:60])
+        if pending: print("   待补地点:", pending[:5])
     print("样本已写入 _v2_samples/（未覆盖 episodes/）")

@@ -12,7 +12,19 @@
 """
 import json, os, re, sys, glob, hashlib
 
-os.chdir(r"D:\output\routes-site-v2")
+BASE = os.path.dirname(os.path.abspath(__file__))
+os.chdir(BASE)
+
+# Windows 中文终端输出安全
+if sys.stdout and hasattr(sys.stdout, 'reconfigure'):
+    try:
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    except Exception:
+        pass
+try:
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+except Exception:
+    pass
 
 try:
     from jsonschema import Draft7Validator

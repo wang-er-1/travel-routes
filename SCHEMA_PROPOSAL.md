@@ -70,53 +70,54 @@
   "trip": {
     "title": "路线标题",
     "route_summary": "A→B→C 一句话路线总览",
-    "route_type": "城市人文一日",     // 吸收自鞍山
-    "theme": ["工业遗产", "城市探索"], // 吸收自鞍山
-    "location": {                    // 吸收自鞍山
-      "city": "鞍山", "province": "辽宁", "region": "东北", "country": "中国"
-    },
+    "route_type": "城市人文一日",
+    "themes": ["工业遗产", "城市探索"],        // 复数数组
+    "locations": [                             // 数组；单城市1个对象，跨省多个
+      {"city": "鞍山", "province": "辽宁", "region": "东北", "country": "中国"}
+    ],
     "direction": "方向描述",
     "season": "季节建议",
     "duration_days": 1,
     "transport_modes": ["火车", "步行", "打车"],
-    "cost_total": null,
-    "cost_per_person": null,
-    "cost_notes": "费用总说明",
-    "price_as_of": "2025-02",
-    "suitable_for": "适合什么人（从旧 l3_hooks.suitable_for 迁移，去路径）",
+    "suitable_for": "适合什么人（自然语言）",
+    "customization_notes": "定制备注（可选）",
 
     "stops": [                       // 路线顺序（核心，保留原14条全部细节）
       {
+        "order": 1,                  // 从1连续
         "name": "站点名",
         "day": 1,
-        "time": "上午",              // 吸收自鞍山 itinerary
+        "time": "上午",              // 可选
         "arrive_transport": "火车",   // 节点交通（不可丢）
         "arrive_cost": "—",
-        "detail": "详细介绍（吸收自鞍山itinerary.detail，长文叙述）",
+        "detail": "详细介绍（长文叙述）",
         "activities": ["看点1", "看点2"],
-        "lodging": {"place": "住宿名", "price": "169元/晚", "notes": "..."},  // 住宿不可丢
+        "lodging": {"place": "住宿名", "price": "169元/晚", "notes": "..."},  // 对象或null
         "food": ["美食1(价格)"],      // 餐饮不可丢
         "cost_notes": ["费用明细"],   // 费用不可丢
         "tips": ["本站提示"]          // 提示不可丢
       }
     ],
 
-    "budget": {                      // 吸收自鞍山，视频没提则 null
-      "note": "视频中实际消费",
+    "budget": {                      // 费用统一入口，视频没提则 null
+      "total": null,
+      "per_person": null,
+      "note": "费用总说明",
+      "price_as_of": "2025-02",
       "items": [{"item": "项目", "price": "约20元", "note": "明细"}]
     }
   },
 
-  "tips": ["整条路线级贴士1", "贴士2"],       // 保留
-  "practical_tips": [                        // 吸收自鞍山（带分类），可与 tips 二选一或并存
-    {"category": "交通|餐饮|住宿|拍摄|季节|人文", "tip": "具体建议"}
+  "tips": [                                    // 路线级贴士统一对象（不再有 practical_tips）
+    {"category": "交通", "text": "具体建议"}
   ],
-  "highlights": ["亮点1", "亮点2"],           // 保留
+  "highlights": ["亮点1", "亮点2"],
 
-  "next_stop": "下一站文字描述（系列片用，吸收自鞍山）",  // 可选
-  "source_note": "来源说明（一句话，无本地路径）",       // 吸收自鞍山
+  "next_stop": "下一站文字描述（系列片用，可选）",
+  "source_note": "来源说明（一句话，无本地路径）",
   "data_status": "draft",                    // draft / verified（不写 published）
-  "last_updated": "2026-08-24"
+  "last_updated": "2026-08-24",              // 数据更新时间（≠视频发布日期）
+  "last_checked_at": null                    // 票价/班次等事实最后复核日期
 }
 ```
 
@@ -128,14 +129,14 @@
 | 标题 | `episode.title` / `trip.title` | ✓ |
 | BV号 | `episode.bvid` | ✓ |
 | 原视频 | `episode.url` | ✓ |
-| 路线顺序 | `trip.stops[]`（有序） | ✓ |
-| 地点 | `trip.location` + `stops[].name` | ✓ |
+| 路线顺序 | `trip.stops[]`（有序，order从1） | ✓ |
+| 地点 | `trip.locations[]` + `stops[].name` | ✓ |
 | 交通 | `stops[].arrive_transport` + `transport_modes` | ✓ |
-| 费用 | `trip.budget` + `stops[].cost_notes` + `cost_notes` | ✓ |
+| 费用 | `trip.budget` + `stops[].cost_notes` | ✓ |
 | 吃住 | `stops[].food` + `stops[].lodging` | ✓ |
-| 提示 | `tips` + `practical_tips` + `stops[].tips` | ✓ |
+| 提示 | `tips[]`（{category,text}）+ `stops[].tips` | ✓ |
 | 亮点 | `highlights[]` | ✓ |
-| 更新时间 | `last_updated` | ✓ |
+| 更新时间 | `last_updated`（数据更新时间，≠publish_date） | ✓ |
 | 核验状态 | `data_status` | ✓ |
 
 ---
@@ -150,17 +151,18 @@
   "routes": [
     {
       "source_id": "BV111Fze1EZw",     // 值为BV号
-      "source_type": "bilibili",
-      "content_hash": "sha1:...",       // 或 content_version，后台判断变化用
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:...",     // 按最终JSON UTF-8文件内容计算的SHA-256
       "blogger": "小可追太阳",
-      "series": {"title": "搭火车环游中国", "episode_number": 5},
+      "series": {"title": "搭火车环游中国", "series_id": "xiaoke-train-china", "episode_number": 5},
       "title": "在中国钢铁之城...",
-      "region": "鞍山",
+      "regions": ["东北"],
+      "destinations": ["鞍山"],
       "data_status": "draft",
-      "updated_at": "2025-02-02",
+      "updated_at": "2026-08-24",      // 来自JSON的last_updated（≠视频publish_date）
       "json_path": "episodes/BV111Fze1EZw.json",
       "page_path": "pages/BV111Fze1EZw.html",
-      "related_videos": ["BV..."]
+      "related_videos": [{"bvid": "BV...", "relation": "part", "part_number": 2}]
     }
   ]
 }

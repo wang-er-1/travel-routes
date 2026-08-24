@@ -82,8 +82,7 @@
         "themes": { "type": "array", "items": { "type": "string" } },
         "locations": {
           "type": "array",
-          "minItems": 1,
-          "description": "单城市放一个对象，跨城市/跨省放多个",
+          "description": "单城市放一个对象，跨城市/跨省放多个；无法确认时可为空数组（待补数据在转换报告中提示）",
           "items": {
             "type": "object",
             "required": ["city"],
