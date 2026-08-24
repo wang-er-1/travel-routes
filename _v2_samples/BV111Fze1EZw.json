@@ -1,0 +1,172 @@
+{
+  "schema_version": "2.0",
+  "episode": {
+    "blogger": "小可追太阳",
+    "blogger_mid": null,
+    "title": "在中国钢铁之城，吃6元一碟的东北炒菜，看见大地上的700米伤疤",
+    "bvid": "BV111Fze1EZw",
+    "url": "https://www.bilibili.com/video/BV111Fze1EZw",
+    "duration": "18:10",
+    "duration_seconds": 1090,
+    "publish_date": "2025-02-02",
+    "stats": {
+      "views": 826717,
+      "likes": 17940,
+      "favorites": 8543,
+      "danmaku": 2272,
+      "comments": 1760,
+      "captured_at": null
+    },
+    "tags": [
+      "工业遗产",
+      "东北美食",
+      "城市探索",
+      "人文纪实"
+    ],
+    "series": {
+      "title": "搭火车环游中国",
+      "series_id": "xiaoke-train-china",
+      "episode_number": 5
+    },
+    "related_videos": [],
+    "description": "搭火车环游中国第5站：鞍山——鞍钢工人的6元午饭、小武康大楼、胜利广场鸽、大孤山700米深矿坑"
+  },
+  "trip": {
+    "title": "搭火车环游中国第5站：鞍山——鞍钢工人的6元午饭、小武康大楼、胜利广场鸽、大孤山700米深矿坑",
+    "route_summary": "搭火车环游中国第5站：鞍山——鞍钢工人的6元午饭、小武康大楼、胜利广场鸽、大孤山700米深矿坑",
+    "route_type": "城市人文一日",
+    "theme": [
+      "工业遗产",
+      "东北美食",
+      "城市探索",
+      "人文纪实"
+    ],
+    "location": {
+      "city": "鞍山",
+      "province": "辽宁",
+      "region": "东北",
+      "country": "中国"
+    },
+    "direction": null,
+    "season": null,
+    "duration_days": null,
+    "transport_modes": [],
+    "cost_total": null,
+    "cost_per_person": null,
+    "cost_notes": null,
+    "price_as_of": null,
+    "suitable_for": null,
+    "stops": [
+      {
+        "name": "抵达鞍山 · 鞍钢小饭馆午饭",
+        "day": null,
+        "time": "上午",
+        "arrive_transport": null,
+        "arrive_cost": null,
+        "detail": "零下7度的冬天抵达鞍山。中午11点去鞍钢附近路边菜馆，坐满穿工服的鞍钢职工，需要拼桌就餐。菜价惊人：烧茄子8块、拆骨肉14、尖椒干豆腐6块。一顿饭吃二三十很幸福。有工厂的地方都有自己的汽水，2块钱一瓶。",
+        "activities": [],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "居民楼楼顶俯瞰鞍钢 + 小武康大楼",
+        "day": null,
+        "time": "午后",
+        "arrive_transport": null,
+        "arrive_cost": null,
+        "detail": "想拍鞍钢全貌，网上说坐电梯上居民楼楼顶可以看到。一楼电梯厅被各家众筹出一个公共客厅，有茶几沙发。1933年日本人在鞍山成立昭和制钢所，至1945年累计产钢548万吨。之后去'小武康大楼'——1920年东京建筑会社建的日本职员宿舍，三角形围合建筑，现为文物保护。",
+        "activities": [],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "胜利广场 · 广场鸽与明信片传递",
+        "day": null,
+        "time": "下午",
+        "arrive_transport": null,
+        "arrive_cost": null,
+        "detail": "胜利广场建于1917年，仿巴黎戴高乐广场。大量广场鸽，跟在曼哈顿似的。请广场上喂鸽子的小男孩在明信片上写字留念，把上一站沈阳铁西区退休电风扇厂职工宋阿姨写的明信片转交给他。",
+        "activities": [],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "大孤山铁矿 · 690米深巨型矿坑",
+        "day": null,
+        "time": "傍晚",
+        "arrive_transport": null,
+        "arrive_cost": null,
+        "detail": "顺着胜利广场东南方向，卫星地图上看到一个巨大深坑。1911年日本南满铁道株式会社地质勘探员发现大孤山有10.2亿吨铁矿储量。采矿初期是隆起的山丘，20年后变平地，2017年停止开采时深度达近700米。碗状矿坑一圈圈运输道路如同地质年轮。",
+        "activities": [],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      },
+      {
+        "name": "炭火烤肉 + 告别鞍山",
+        "day": null,
+        "time": "夜晚",
+        "arrive_transport": null,
+        "arrive_cost": null,
+        "detail": "不想沉浸在宏大思考里，守着炉子吃炭火烤肉：羊上脑、牛肋条，蘸料带酸甜味。鞍山没什么景点但很特殊——只要中国有铁路的地方，就有鞍钢生产的钢铁。带着小男孩写的明信片，沿辽东半岛铁路线继续南下。",
+        "activities": [],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": []
+      }
+    ],
+    "budget": {
+      "note": "视频中实际消费",
+      "items": [
+        {
+          "item": "鞍钢小饭馆午饭（3菜+汽水）",
+          "price": "约20-30元",
+          "note": "烧茄子8元/拆骨肉14元/尖椒干豆腐6元/汽水2元"
+        }
+      ]
+    }
+  },
+  "tips": [],
+  "practical_tips": [
+    {
+      "category": "交通",
+      "tip": "搭火车抵达鞍山，市内公交/打车。大孤山铁矿距市区有一定距离，建议打车或包车前往。"
+    },
+    {
+      "category": "餐饮",
+      "tip": "鞍钢附近小饭馆：人均15-30元，6元一碟炒菜，拼桌就餐是常态。晚上吃炭火烤肉，蘸料有东北特色酸甜味。"
+    },
+    {
+      "category": "拍摄",
+      "tip": "想拍鞍钢全貌：去鞍钢对面居民楼坐电梯上楼顶。小武康大楼在东山街和五一路夹角处。"
+    },
+    {
+      "category": "人文",
+      "tip": "大孤山铁矿是鞍山城市的原点，建议了解其殖民开采→新中国钢铁摇篮的完整历史。矿坑边缘的植被恢复（沙棘果等）值得关注。"
+    },
+    {
+      "category": "最佳季节",
+      "tip": "视频中是冬季（零下7度），东北冬天寒冷但工业城市氛围独特。夏天可配合鲅鱼圈海边行程。"
+    }
+  ],
+  "highlights": [
+    "鞍钢附近小饭馆拼桌：6元一碟的东北炒菜，职工们的'另一个食堂'",
+    "居民楼电梯上楼顶俯瞰鞍钢全貌：竖井传来的金属回声带有工业频率",
+    "鞍山'小武康大楼'：1920年东京建筑会社建的昭和制钢所职员宿舍，三角形建筑，现为文物",
+    "胜利广场喂鸽子：1917年仿巴黎戴高乐广场建造，广场鸽+圆形广场",
+    "大孤山铁矿：人类挖出的690米深巨型矿坑，1911年发现10.2亿吨储量，2017年停止开采",
+    "炭火烤肉：羊上脑+牛肋条，蘸料带酸甜味，守着炉子吃东北烤肉"
+  ],
+  "next_stop": "鲅鱼圈（辽宁营口，中国罕见冻海+大集）",
+  "source_note": "内容整理自视频原声与公开资料核实：昭和制钢所1933年成立、1945年累计产钢548万吨，大孤山1911年发现10.2亿吨储量、2017年停采深度近700米等数据均来自视频原声。",
+  "data_status": "draft",
+  "last_updated": "2026-08-24"
+}

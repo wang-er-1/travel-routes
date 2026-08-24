@@ -1,0 +1,266 @@
+{
+  "schema_version": "2.0",
+  "episode": {
+    "blogger": "赖导AboutLai",
+    "title": "坐水上公交游长江三峡，从奉节到巫山，去江边看看移民后的城市",
+    "bvid": "BV1F9U8BzE3F",
+    "url": "https://www.bilibili.com/video/BV1F9U8BzE3F",
+    "duration": "54:41",
+    "publish_date": "2025-11-26",
+    "stats": {
+      "views": 3551994,
+      "likes": 150868,
+      "favorites": 61950,
+      "danmaku": 17586,
+      "comments": null,
+      "captured_at": "2026-08-18"
+    },
+    "tags": [
+      "三峡",
+      "水上公交",
+      "重庆",
+      "宜昌",
+      "奉节",
+      "巫山"
+    ],
+    "description": "坐水上公交游长江三峡",
+    "related_videos": [
+      {
+        "bvid": "BV1TwS7BmETP",
+        "relation": "part",
+        "note": "坐水上公交游长江三峡，从重庆到宜昌，逛江边小镇探大国重器",
+        "part_number": 2,
+        "url": "https://www.bilibili.com/video/BV1TwS7BmETP",
+        "publish_date": "2025-11-28",
+        "duration": "1:17:10",
+        "title": "坐水上公交游长江三峡，从重庆到宜昌，逛江边小镇探大国重器",
+        "stats": {
+          "views": 2206879,
+          "likes": 87571,
+          "favorites": 30986,
+          "danmaku": 19188,
+          "comments": null
+        }
+      }
+    ],
+    "series": null,
+    "duration_seconds": 3281
+  },
+  "trip": {
+    "title": "坐水上公交游长江三峡（上/下两集）",
+    "route_summary": "重庆 → 奉节 → 巫山 → 巴东 → 秭归 → 宜昌",
+    "direction": "顺流而下（西→东）",
+    "season": null,
+    "duration_days": null,
+    "transport_modes": [
+      "高铁/大巴",
+      "小红船（水上公交）",
+      "湖北小白船",
+      "小客车",
+      "轮渡",
+      "游轮"
+    ],
+    "cost_total": null,
+    "cost_per_person": null,
+    "cost_notes": "视频内明确价格：奉节→巫山40元、巫山→培石10元、青石→培石30元、神女山庄100元包两顿、轮渡8元、和谐号游轮608元、三峡之巅打车往返100元、奉节住宿89元/晚、巫山住宿180元/晚、纸包鱼98元/条等",
+    "price_as_of": "2025-11",
+    "stops": [
+      {
+        "name": "奉节县",
+        "day": null,
+        "arrive_transport": "重庆→奉节 高铁/大巴",
+        "arrive_cost": null,
+        "activities": [
+          "夔门大桥",
+          "老县城遗址（一斗门2002年迁建）",
+          "白帝城（夔门观景台）",
+          "三峡之巅（赤甲山索道）",
+          "瞿塘峡（8km）"
+        ],
+        "lodging": {
+          "place": "奉节临江商务酒店",
+          "price": "89元/晚",
+          "notes": "江景房"
+        },
+        "food": [],
+        "cost_notes": [],
+        "tips": [
+          "三峡之巅徒步封闭，下午1:30-2点后禁山",
+          "山顶10°C带外套",
+          "打车往返100元/单程60元"
+        ]
+      },
+      {
+        "name": "巫山县",
+        "day": null,
+        "arrive_transport": "小红船（奉节→巫山）",
+        "arrive_cost": "40元/人",
+        "activities": [
+          "巫山长江大桥",
+          "神女大道（1136级台阶）",
+          "古城码头"
+        ],
+        "lodging": {
+          "place": "巫山锦衣酒店",
+          "price": "180元/晚",
+          "notes": "智能酒店小江景"
+        },
+        "food": [
+          "纸包鱼（一家馆子，98元/条）",
+          "麻辣菜包（1元/个）",
+          "卷卷",
+          "烤面筋（3元/串）",
+          "铁板烧“甩一杯”"
+        ],
+        "cost_notes": [],
+        "tips": [
+          "神女大扶梯在建（约900米，比香港中环-半山扶梯长100米）"
+        ]
+      },
+      {
+        "name": "青石村",
+        "day": null,
+        "arrive_transport": "小红船（巫山→培石方向）",
+        "arrive_cost": "10元",
+        "activities": [
+          "巫峡精华段（46km）",
+          "神女峰/十二峰",
+          "翠屏峰徒步（2小时登顶）"
+        ],
+        "lodging": {
+          "place": "神女山庄",
+          "price": "100元包两顿饭",
+          "notes": "仅此一家，不通网订，现场找"
+        },
+        "food": [],
+        "cost_notes": [],
+        "tips": [
+          "天黑前必须下山，防蛇（赖导摸黑下山1小时5分钟）"
+        ]
+      },
+      {
+        "name": "培石乡",
+        "day": null,
+        "arrive_transport": "小红船（青石→培石）",
+        "arrive_cost": "30元",
+        "activities": [
+          "换乘湖北小白船（船对船对接，等船约1小时）",
+          "镇上小车兜风"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [
+          "小车5元/单程"
+        ],
+        "tips": []
+      },
+      {
+        "name": "巴东县",
+        "day": null,
+        "arrive_transport": "湖北小白船",
+        "arrive_cost": null,
+        "activities": [
+          "县城闲逛"
+        ],
+        "lodging": {
+          "place": "巴东县住宿",
+          "price": null,
+          "notes": "带阳台看长江，比巫山升级"
+        },
+        "food": [],
+        "cost_notes": [
+          "巴东→秭归无客船，包船报价5000元+"
+        ],
+        "tips": []
+      },
+      {
+        "name": "秭归县",
+        "day": null,
+        "arrive_transport": "小客车（巴东→秭归，12点一班）",
+        "arrive_cost": null,
+        "activities": [
+          "湖北三峡移民博物馆（免费）",
+          "木鱼岛看三峡大坝正面（免费，可露营）"
+        ],
+        "lodging": null,
+        "food": [
+          "肉末南豆腐",
+          "炸辣椒",
+          "腊肉炒辣椒"
+        ],
+        "cost_notes": [
+          "县城房价1万+/平，比宜昌市区贵"
+        ],
+        "tips": [
+          "小客车坐左侧靠窗看长江"
+        ]
+      },
+      {
+        "name": "三峡大坝",
+        "day": null,
+        "arrive_transport": "茅坪渡口轮渡→太平溪港",
+        "arrive_cost": "8元",
+        "activities": [
+          "坛子岭（五级船闸全景）",
+          "185平台（平视坝顶）",
+          "升船机（垂直升降113米）"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [
+          "不收门票，收景区交通车票"
+        ],
+        "tips": []
+      },
+      {
+        "name": "宜昌市",
+        "day": null,
+        "arrive_transport": "西陵峡和谐号游轮",
+        "arrive_cost": "608元/人",
+        "activities": [
+          "升船机（40分钟）",
+          "葛洲坝船闸",
+          "西陵峡后半段（76km）",
+          "南津关（三峡东口）"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [
+          "可升级VIP舱送纪念币"
+        ],
+        "tips": [
+          "升船机下降10分钟无失重感"
+        ]
+      }
+    ],
+    "suitable_for": "低成本游三峡：全程水上公交+轮渡+小客车，不坐高价观光游轮也能玩全程",
+    "customization_notes": "顺流而下不回头；赶早班船需提前到码头；青石村住宿节假日可能满房"
+  },
+  "tips": [
+    "小红船班次固定",
+    "坐船看景怎么选",
+    "青石村住宿只能现场找",
+    "爬翠屏峰的教训",
+    "巴东→秭归只有一班车",
+    "三峡之巅进山限制",
+    "三峡之巅交通与温度",
+    "看夔门不用多花钱",
+    "茅坪渡口轮渡省钱",
+    "游轮升船机体验",
+    "培石换船要等",
+    "巫山美食清单",
+    "住宿省钱参考",
+    "大坝看点顺序"
+  ],
+  "highlights": [
+    "10元人民币背景夔门实景（白帝城门票区内）",
+    "三峡之巅看瞿塘峡全景+日落（赤甲山）",
+    "巫峡精华段+神女峰+翠屏峰徒步（赖导摸黑下山名场面）",
+    "三峡大坝五级船闸+升船机（113米巨型电梯）",
+    "茅坪渡口8元轮渡避开绕路30km",
+    "巫山美食：纸包鱼/麻辣菜包/烤面筋"
+  ],
+  "last_updated": "2026-08-18",
+  "data_status": "draft",
+  "source_note": "wang-er-1.github.io/share/赖导三峡线路还原与行程方案.html「一、赖导视频还原」部分（此前AI转写整理，转写全文未在本机）"
+}
