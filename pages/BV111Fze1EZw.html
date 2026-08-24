@@ -3,161 +3,110 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>小可追太阳·辽宁鞍山钢铁之城：6元东北炒菜+700米深矿坑</title>
+<title>小可追太阳·在中国钢铁之城吃6元东北炒菜，看见大地上的700米伤疤</title>
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: "Microsoft YaHei", "微软雅黑", sans-serif; background: #f8f9fa; color: #333; line-height: 1.7; }
-.container { max-width: 800px; margin: 0 auto; padding: 20px; background: white; min-height: 100vh; }
-.back-btn { display: inline-block; margin-bottom: 20px; color: #d35400; text-decoration: none; font-size: 14px; }
-.back-btn:hover { text-decoration: underline; }
-h1 { font-size: 24px; margin-bottom: 8px; color: #2c3e50; line-height: 1.4; }
-.subtitle { font-size: 15px; color: #7f8c8d; margin-bottom: 20px; }
-.stats { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; font-size: 13px; color: #7f8c8d; }
-.stats span { display: inline-flex; align-items: center; gap: 4px; }
-.stats .icon { font-size: 16px; }
-.bilibili-link { display: inline-block; background: #00a1d6; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; font-size: 14px; margin-bottom: 30px; }
-.bilibili-link:hover { background: #0088b8; }
-h2 { font-size: 20px; margin: 30px 0 16px; color: #2c3e50; border-left: 4px solid #d35400; padding-left: 12px; }
-h3 { font-size: 17px; margin: 20px 0 10px; color: #34495e; }
-.itinerary-item { margin-bottom: 24px; padding-left: 20px; border-left: 2px solid #ecf0f1; }
-.itinerary-item .time { font-size: 13px; color: #d35400; font-weight: bold; margin-bottom: 4px; }
-.itinerary-item .detail { font-size: 15px; color: #555; }
-.highlights { background: #fff9f0; border-left: 4px solid #f39c12; padding: 16px; margin: 20px 0; border-radius: 4px; }
-.highlights li { margin-bottom: 8px; font-size: 15px; }
-.tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 20px 0; }
-.tip-card { background: #f8f9fa; padding: 16px; border-radius: 6px; border: 1px solid #ecf0f1; }
-.tip-card .category { font-size: 13px; color: #d35400; font-weight: bold; margin-bottom: 6px; }
-.tip-card .content { font-size: 14px; color: #555; }
-.budget-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
-.budget-table th { background: #d35400; color: white; padding: 10px; text-align: left; }
-.budget-table td { padding: 10px; border-bottom: 1px solid #ecf0f1; }
-.budget-table .price { font-weight: bold; color: #d35400; }
-.footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ecf0f1; font-size: 13px; color: #95a5a6; }
-.footer .contact { margin-top: 12px; }
-.footer .contact a { color: #d35400; text-decoration: none; }
-.footer .contact a:hover { text-decoration: underline; }
-.source-note { background: #f8f9fa; padding: 12px; border-radius: 4px; font-size: 13px; color: #7f8c8d; margin-top: 20px; }
+* { box-sizing: border-box; }
+body { font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif; max-width: 880px; margin: 0 auto; padding: 32px 24px 80px; background: #faf9f7; color: #2b2b2b; line-height: 1.75; font-size: 15.5px; }
+h1 { font-size: 26px; border-bottom: 3px solid #e6502e; padding-bottom: 12px; margin-top: 8px; }
+h2 { font-size: 20px; margin-top: 36px; padding-left: 10px; border-left: 4px solid #e6502e; }
+h3 { font-size: 16.5px; color: #c23a1a; margin-top: 24px; }
+table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; background: #fff; }
+th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: #f5ede8; font-weight: 600; }
+tr:nth-child(even) td { background: #fcfaf8; }
+blockquote { border-left: 4px solid #e6502e; margin: 16px 0; padding: 4px 16px; background: #fdf6f2; color: #555; }
+a { color: #c23a1a; }
+ul, ol { padding-left: 26px; }
+li { margin: 4px 0; }
+strong { color: #c23a1a; }
+hr { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
+.meta { color: #888; font-size: 13px; }
+.statbar { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0; }
+.stat { background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 8px 16px; font-size: 13px; }
+.stat b { color: #c23a1a; font-size: 16px; }
+.btn { display: inline-block; background: #e6502e; color: #fff !important; text-decoration: none; padding: 8px 18px; border-radius: 6px; font-weight: 600; margin: 4px 0 16px; }
+.btn:hover { background: #c23a1a; }
+.note { font-size: 12.5px; color: #888; }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .container { padding: 16px; }
-  h1 { font-size: 20px; }
-  h2 { font-size: 18px; }
-  .tips-grid { grid-template-columns: 1fr; }
-  .budget-table { display: block; overflow-x: auto; }
+@media (max-width: 640px) {
+  body { padding: 20px 14px 60px; font-size: 14.5px; }
+  h1 { font-size: 22px; }
+  table { font-size: 13px; }
+  thead { display: none; }
+  .statbar { gap: 6px; }
+  .stat { padding: 6px 10px; font-size: 12px; }
+  .btn { width: 100%; text-align: center; }
+  /* 贴士表卡片化（仅此表） */
+  table.tips-card, table.tips-card tbody, table.tips-card tr, table.tips-card td { display: block; width: 100%; }
+  table.tips-card tr { margin: 0 0 14px; border: 1px solid #eee; border-radius: 10px; padding: 4px 0; background: #fff; }
+  table.tips-card td { border: none !important; padding: 7px 14px; }
+  table.tips-card td:first-child { font-weight: 600; color: #c23a1a; }
 }
+
 </style>
 </head>
 <body>
-<div class="container">
-  <a href="../index.html" class="back-btn">← 返回首页</a>
-  
-  <h1>在中国钢铁之城，吃6元一碟的东北炒菜，看见大地上的700米伤疤</h1>
-  <p class="subtitle">搭火车环游中国第5站：鞍山——鞍钢工人的6元午饭、小武康大楼、胜利广场鸽、大孤山700米深矿坑</p>
-  
-  <div class="stats">
-    <span><span class="icon">▶</span> 82.7万播放</span>
-    <span><span class="icon">👍</span> 1.8万点赞</span>
-    <span><span class="icon">⭐</span> 8543收藏</span>
-    <span><span class="icon">💬</span> 1760评论</span>
-    <span><span class="icon">⏱</span> 18:10</span>
-  </div>
-  
-  <a href="https://www.bilibili.com/video/BV111Fze1EZw" class="bilibili-link" target="_blank">▶ 观看B站原视频</a>
-  
-  <h2>📍 核心亮点</h2>
-  <div class="highlights">
-    <ul>
-      <li><strong>鞍钢附近小饭馆拼桌</strong>：6元一碟的东北炒菜，职工们的"另一个食堂"</li>
-      <li><strong>居民楼电梯上楼顶俯瞰鞍钢全貌</strong>：竖井传来的金属回声带有工业频率</li>
-      <li><strong>鞍山"小武康大楼"</strong>：1920年东京建筑会社建的昭和制钢所职员宿舍，三角形建筑，现为文物</li>
-      <li><strong>胜利广场喂鸽子</strong>：1917年仿巴黎戴高乐广场建造，广场鸽+圆形广场</li>
-      <li><strong>大孤山铁矿</strong>：人类挖出的690米深巨型矿坑，1911年发现10.2亿吨储量，2017年停止开采</li>
-      <li><strong>炭火烤肉</strong>：羊上脑+牛肋条，蘸料带酸甜味，守着炉子吃东北烤肉</li>
-    </ul>
-  </div>
-  
-  <h2>🗺 行程安排</h2>
-  
-  <div class="itinerary-item">
-    <div class="time">上午</div>
-    <h3>抵达鞍山 · 鞍钢小饭馆午饭</h3>
-    <p class="detail">零下7度的冬天抵达鞍山。中午11点去鞍钢附近路边菜馆，坐满穿工服的鞍钢职工，需要拼桌就餐。菜价惊人：烧茄子8块、拆骨肉14、尖椒干豆腐6块。一顿饭吃二三十很幸福。有工厂的地方都有自己的汽水，2块钱一瓶。</p>
-  </div>
-  
-  <div class="itinerary-item">
-    <div class="time">午后</div>
-    <h3>居民楼楼顶俯瞰鞍钢 + 小武康大楼</h3>
-    <p class="detail">想拍鞍钢全貌，网上说坐电梯上居民楼楼顶可以看到。一楼电梯厅被各家众筹出一个公共客厅，有茶几沙发。1933年日本人在鞍山成立昭和制钢所，至1945年累计产钢548万吨。之后去"小武康大楼"——1920年东京建筑会社建的日本职员宿舍，三角形围合建筑，现为文物保护。</p>
-  </div>
-  
-  <div class="itinerary-item">
-    <div class="time">下午</div>
-    <h3>胜利广场 · 广场鸽与明信片传递</h3>
-    <p class="detail">胜利广场建于1917年，仿巴黎戴高乐广场。大量广场鸽，跟在曼哈顿似的。请广场上喂鸽子的小男孩在明信片上写字留念，把上一站沈阳铁西区退休电风扇厂职工宋阿姨写的明信片转交给他。</p>
-  </div>
-  
-  <div class="itinerary-item">
-    <div class="time">傍晚</div>
-    <h3>大孤山铁矿 · 690米深巨型矿坑</h3>
-    <p class="detail">顺着胜利广场东南方向，卫星地图上看到一个巨大深坑。1911年日本南满铁道株式会社地质勘探员发现大孤山有10.2亿吨铁矿储量。采矿初期是隆起的山丘，20年后变平地，2017年停止开采时深度达近700米。碗状矿坑一圈圈运输道路如同地质年轮。</p>
-  </div>
-  
-  <div class="itinerary-item">
-    <div class="time">夜晚</div>
-    <h3>炭火烤肉 + 告别鞍山</h3>
-    <p class="detail">不想沉浸在宏大思考里，守着炉子吃炭火烤肉：羊上脑、牛肋条，蘸料带酸甜味。鞍山没什么景点但很特殊——只要中国有铁路的地方，就有鞍钢生产的钢铁。带着小男孩写的明信片，沿辽东半岛铁路线继续南下。</p>
-  </div>
-  
-  <h2>💡 实用贴士</h2>
-  <div class="tips-grid">
-    <div class="tip-card">
-      <div class="category">🚆 交通</div>
-      <div class="content">搭火车抵达鞍山，市内公交/打车。大孤山铁矿距市区有一定距离，建议打车或包车前往。</div>
-    </div>
-    <div class="tip-card">
-      <div class="category">🍽 餐饮</div>
-      <div class="content">鞍钢附近小饭馆：人均15-30元，6元一碟炒菜，拼桌就餐是常态。晚上吃炭火烤肉，蘸料有东北特色酸甜味。</div>
-    </div>
-    <div class="tip-card">
-      <div class="category">📷 拍摄</div>
-      <div class="content">想拍鞍钢全貌：去鞍钢对面居民楼坐电梯上楼顶。小武康大楼在东山街和五一路夹角处。</div>
-    </div>
-    <div class="tip-card">
-      <div class="category">🏛 人文</div>
-      <div class="content">大孤山铁矿是鞍山城市的原点，建议了解其殖民开采→新中国钢铁摇篮的完整历史。矿坑边缘的植被恢复（沙棘果等）值得关注。</div>
-    </div>
-    <div class="tip-card">
-      <div class="category">❄️ 最佳季节</div>
-      <div class="content">视频中是冬季（零下7度），东北冬天寒冷但工业城市氛围独特。夏天可配合鲅鱼圈海边行程。</div>
-    </div>
-  </div>
-  
-  <h2>💰 费用参考</h2>
-  <table class="budget-table">
-    <thead>
-      <tr><th>项目</th><th>金额</th><th>说明</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>鞍钢小饭馆午饭（3菜+汽水）</td>
-        <td class="price">约20-30元</td>
-        <td>烧茄子8元/拆骨肉14元/尖椒干豆腐6元/汽水2元</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  <div class="source-note">
-    <strong>📝 内容来源说明：</strong>本路线内容全部基于视频转写，ASR已人工纠错（安山→鞍山、昭和制钢索→昭和制钢所、南蛮铁道注视会社→南满铁道株式会社等）。548万吨产钢量、10.2亿吨储量、690米深度等数据均来自视频原声。
-  </div>
-  
-  <div class="footer">
-    <p><strong>下一站：</strong>鲅鱼圈（辽宁营口，中国罕见冻海+大集）</p>
-    <div class="contact">
-      <p>💌 联系站长：<a href="mailto:2799787505@qq.com">2799787505@qq.com</a></p>
-      <p>📺 视频原作者：<a href="https://space.bilibili.com/1066572839" target="_blank">小可追太阳（B站）</a></p>
-    </div>
-  </div>
+<p style="margin:0 0 18px;"><a href="../index.html" style="color:#c23a1a;text-decoration:none;font-weight:600;font-size:14px;">← 返回路线库首页</a></p>
+<h1>在中国钢铁之城，吃6元一碟的东北炒菜，看见大地上的700米伤疤</h1>
+<p>搭火车环游中国第5站：鞍山——鞍钢工人的6元午饭、小武康大楼、胜利广场鸽、大孤山700米深矿坑</p>
+<div class="statbar">
+<div class="stat">时长 <b>18:10</b></div>
+<div class="stat">播放 <b>82.7万</b></div>
+<div class="stat">点赞 <b>1.8万</b></div>
+<div class="stat">收藏 <b>8543</b></div>
+<div class="stat">发布 <b>2025-02-02</b></div>
 </div>
+<a class="btn" href="https://www.bilibili.com/video/BV111Fze1EZw" target="_blank">▶ 观看原视频（BV111Fze1EZw）</a>
+<blockquote><p>路线：抵达鞍山 → 鞍钢附近小饭馆拼桌午饭（6元一碟东北炒菜）→ 居民楼电梯上楼顶俯瞰鞍钢全貌 → 小武康大楼（1920年昭和制钢所职员宿舍）→ 胜利广场喂广场鸽 → 大孤山铁矿（690米深巨型矿坑）→ 炭火烤肉 → 沿辽东半岛铁路南下</p></blockquote>
+
+<h2>一、路线总览</h2>
+<table><thead><tr><th style="width:22%">时段 / 站点</th><th style="width:17%">交通方式</th><th style="width:16%">价格</th><th>看点</th></tr></thead>
+<tbody><tr><td><strong>鞍钢附近小饭馆</strong>（中午）</td><td>步行（鞍钢对面）</td><td>6-15元/碟</td><td>鞍钢职工的"另一个食堂"：11点坐满穿工服的职工、需要拼桌；烧茄子8元、拆骨肉14元、尖椒干豆腐6元；有工厂的地方都有自己的汽水，2元一瓶</td></tr><tr><td><strong>居民楼楼顶俯瞰鞍钢</strong>（午后）</td><td>步行/电梯</td><td>免费</td><td>鞍钢对面居民楼坐电梯上楼顶看全貌；一楼电梯厅被各家众筹成公共客厅（茶几沙发）；竖井传来的金属回声</td></tr><tr><td><strong>小武康大楼</strong>（午后）</td><td>步行（东山街×五一路）</td><td>免费</td><td>1920年东京建筑会社建造的昭和制钢所职员宿舍，三角形围合建筑，现为文物保护单位</td></tr><tr><td><strong>胜利广场</strong>（下午）</td><td>步行</td><td>免费</td><td>1917年仿巴黎戴高乐广场建造，圆形广场+大量广场鸽；请喂鸽子的小男孩在明信片上写字留念，传递上一站沈阳铁西区宋阿姨的明信片</td></tr><tr><td><strong>大孤山铁矿</strong>（傍晚）</td><td>打车/包车（市区东南）</td><td>视频未提及</td><td>人类挖出的690米深巨型矿坑：1911年南满铁道勘探发现10.2亿吨储量，2017年停止开采；碗状矿坑一圈圈运输道路如同地质年轮</td></tr><tr><td><strong>炭火烤肉</strong>（夜晚）</td><td>市区</td><td>视频未提及</td><td>羊上脑+牛肋条，蘸料带酸甜味，守着炉子吃东北烤肉</td></tr></tbody></table>
+
+<h2>二、行程详解</h2>
+<ol><li><strong>抵达鞍山·鞍钢小饭馆午饭</strong>：零下7度的冬天抵达鞍山。中午11点去鞍钢附近路边菜馆，坐满穿工服的鞍钢职工，需要拼桌就餐。菜价惊人：烧茄子8块、拆骨肉14、尖椒干豆腐6块，一顿饭吃二三十很幸福。有工厂的地方都有自己的汽水，2块钱一瓶。</li><li><strong>居民楼楼顶俯瞰鞍钢</strong>：想拍鞍钢全貌，网上说坐电梯上居民楼楼顶可以看到。一楼电梯厅被各家众筹出一个公共客厅，有茶几沙发。1933年日本人在鞍山成立昭和制钢所，至1945年累计产钢548万吨——竖井传来的金属回声带有工业频率。</li><li><strong>小武康大楼</strong>：1920年东京建筑会社建造的日本职员宿舍，三角形围合建筑，现为文物保护单位，位于东山街和五一路夹角处。</li><li><strong>胜利广场·广场鸽与明信片传递</strong>：胜利广场建于1917年，仿巴黎戴高乐广场，大量广场鸽。请广场上喂鸽子的小男孩在明信片上写字留念，把上一站沈阳铁西区退休电风扇厂职工宋阿姨写的明信片转交给他——用明信片串起整段旅程。</li><li><strong>大孤山铁矿·690米深巨型矿坑</strong>：顺着胜利广场东南方向，卫星地图上能看到一个巨大深坑。1911年日本南满铁道株式会社地质勘探员发现大孤山有10.2亿吨铁矿储量；采矿初期是隆起的山丘，20年后变平地，2017年停止开采时深度达近700米。碗状矿坑一圈圈运输道路如同地质年轮。</li><li><strong>炭火烤肉+告别鞍山</strong>：不想沉浸在宏大思考里，守着炉子吃炭火烤肉：羊上脑、牛肋条，蘸料带酸甜味。鞍山没什么景点但很特殊——只要中国有铁路的地方，就有鞍钢生产的钢铁。带着小男孩写的明信片，沿辽东半岛铁路线继续南下。</li></ol>
+
+<h2>三、费用清单</h2>
+<p class="note">注：以上为视频拍摄时（2025年2月）的价格信息，出行前请以实时信息为准。</p>
+<table><thead><tr><th style="width:34%">项目</th><th style="width:22%">金额</th><th>说明</th></tr></thead>
+<tbody><tr><td>鞍钢小饭馆午饭（3菜+汽水）</td><td><strong>约20-30元</strong></td><td>烧茄子8元 / 拆骨肉14元 / 尖椒干豆腐6元 / 汽水2元</td></tr><tr><td>大孤山铁矿 / 炭火烤肉</td><td><strong>视频未提及</strong></td><td>矿坑观景与烤肉店具体价格视频未细说</td></tr></tbody></table>
+
+
+<h2>四、路线实用贴士</h2>
+<table><thead><tr><th style="width:4%">#</th><th>贴士</th></tr></thead>
+<tbody><tr><td>1</td><td><strong>拍鞍钢全貌去居民楼楼顶</strong>：鞍钢对面居民楼坐电梯直达楼顶即可看到全貌，一楼电梯厅被众筹成公共客厅——进入居民区请注意礼貌、不打扰住户。 <em style="color:#999;font-style:normal;font-size:12px;">（拍摄）</em></td></tr><tr><td>2</td><td><strong>小武康大楼在路口夹角</strong>：1920年东京建筑会社建的昭和制钢所职员宿舍，三角形围合建筑、现为文物，位于东山街和五一路夹角，路过即见。 <em style="color:#999;font-style:normal;font-size:12px;">（人文）</em></td></tr><tr><td>3</td><td><strong>大孤山铁矿是鞍山城市原点</strong>：先了解殖民开采→新中国钢铁摇篮的完整历史，再看690米深坑更有感触；矿坑边缘已有植被恢复（沙棘果等）。 <em style="color:#999;font-style:normal;font-size:12px;">（人文）</em></td></tr><tr><td>4</td><td><strong>冬天去很冷但氛围独特</strong>：视频拍摄于冬季（零下7度），工业城市冬日氛围浓；东北防寒装备务必带足。 <em style="color:#999;font-style:normal;font-size:12px;">（天气）</em></td></tr><tr><td>5</td><td><strong>鞍钢小饭馆人均15-30元</strong>：6元一碟炒菜、拼桌就餐是常态；工厂标配汽水2元一瓶，值得一试。 <em style="color:#999;font-style:normal;font-size:12px;">（餐饮）</em></td></tr><tr><td>6</td><td><strong>可顺路南下鲅鱼圈</strong>：沿辽东半岛铁路继续南下到营口鲅鱼圈（中国罕见冻海+大集），适合接在鞍山之后连游。 <em style="color:#999;font-style:normal;font-size:12px;">（行程）</em></td></tr></tbody></table>
+
+
+<div style="margin-top:34px;padding:14px 18px;background:#fdf6f2;border:1px solid #f0d9cf;border-radius:8px;font-size:13.5px;color:#7a4a3a;">
+  <strong>联系站长</strong>：纠错、合作、交流均可 —— <a href="mailto:2799787505@qq.com" style="color:#c23a1a;">2799787505@qq.com</a>
+</div>
+
+
+<hr>
+
+
+<script>
+(function(){
+  if (window.innerWidth > 640) return;
+  document.querySelectorAll('table').forEach(function(t){
+    var heads = [];
+    t.querySelectorAll('thead th').forEach(function(th){ heads.push(th.textContent.trim()); });
+    var joined = heads.join('');
+    if (joined.indexOf('贴士') > -1 || joined.indexOf('小tips') > -1) {
+      t.className = 'tips-card';  // 贴士表：卡片化，不显示标签
+    } else {
+      // 其他表（路线总览/费用清单）：横向滑动
+      var w = document.createElement('div');
+      w.style.cssText = 'overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0;';
+      t.parentNode.insertBefore(w, t);
+      w.appendChild(t);
+    }
+  });
+})();
+</script>
+
+<p class="note">本页整理自 B 站公开视频《在中国钢铁之城，吃6元一碟的东北炒菜，看见大地上的700米伤疤》（创作者：小可追太阳，发布于 2025-02-02）。价格为视频拍摄时信息，出行前请以官方实时信息为准。完整内容请观看原视频。</p>
+<p class="note" style="margin-top:10px;padding-top:8px;border-top:none;">本页被访问 <b id="busuanzi_value_page_pv"></b> 次</p>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>
