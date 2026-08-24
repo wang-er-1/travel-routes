@@ -6,16 +6,28 @@
 
 ---
 
-## 决策结论（Codex 已确认）
+## 决策结论（Codex 已确认 + 15条收口）
 
-- **决策A —— 基准结构**：**不采用扁平结构**。以现有 14 条的 `episode / trip / stops` 嵌套结构为基础，**升级为 `schema_version: "2.0"`**；把鞍山（BV111Fze1EZw）扁平数据转换进新嵌套结构。
-  - 吸收鞍山结构的优点字段：`location`、`route_type`、`theme`、详细 `itinerary`、`practical_tips`、`budget`、`next_stop`、`source_note`
-  - **但不得丢失原 14 条的节点交通、费用、住宿、餐饮、提示信息**
-  - 后台会分别保存"原始 JSON"和"审核后标准版本"，**不要为方便建表而压扁或删减内容**（信息尽量全）
-- **决策B —— 系列/上下集**：用 `series`(对象) + `related_videos`(数组)。**博主与系列必须分开**（鞍山 blogger=小可追太阳，series.title=搭火车环游中国，episode_number=5，绝不能把"小可追太阳"当系列名）。
-- **决策C —— 状态**：`data_status` = `draft` / `verified`，仅表示整理与核验状态。**JSON 不含 published**；审核/发布/撤回/归档全部由后台管理。
-- **stats 字段统一**：`views / likes / favorites / danmaku / comments / captured_at`（数值为整数或 null，captured_at 为统计抓取时间）。
-- **本地路径清理**：递归删除所有 `D:\output\...` 绝对路径；`transcript_ref` 里的路径删除，但 `l3_hooks.suitable_for` 的"适合什么人"正文**迁移到 `trip.suitable_for` 保留**，不整列删。
+- **决策A —— 基准结构**：以 14 条嵌套 `episode/trip/stops` 为基础升级 `schema_version:"2.0"`，鞍山扁平数据转入。吸收鞍山的 locations/route_type/themes/详细itinerary(→stops.detail)/practical_tips/budget/next_stop/source_note，**不丢原14条节点交通/费用/住宿/餐饮/提示**。后台分别存原始JSON和审核版，**不为建表压扁删减**。
+- **决策B —— 系列/上下集**：`series`(对象:title/series_id/episode_number) + `related_videos`(数组)。**博主≠系列**（鞍山 blogger=小可追太阳，series.title=搭火车环游中国，episode_number=5）。
+- **决策C —— 状态**：`data_status`=draft/verified；**无published**（后台管发布）。
+
+### Codex 15条收口（均已落地，见 route.schema.v2.json / catalog.schema.v2.json）
+1. `trip.location`→`trip.locations`**数组**（跨城市多对象）
+2. `theme`→`themes`（复数，数组）
+3. 路线级贴士统一 `tips:[{category,text}]`（旧字符串→category="其他"，鞍山分类直接迁入）；`stops[].tips` 保留
+4. `stops[]` 每项加 `order`(从1)；`time` 可选；`lodging` 明确对象或null（旧字符串无损转对象）
+5. 费用统一进 `trip.budget`：total/per_person/note/price_as_of/items；旧 cost_total/per_person/cost_notes 迁入；`stops[].cost_notes` 保留
+6. `episode.part_number`（当前集自身是上/下集第几）
+7. `series` 带 `series_id`；catalog 的 series 也保留 series_id
+8. `catalog.updated_at` 来自 JSON `last_updated`（≠视频 publish_date）
+9. `catalog.source_type` = `bilibili_video`
+10. `content_hash` = `sha256:<hex>`（按最终JSON UTF-8文件内容算）
+11. catalog `related_videos` 保留对象 {bvid,relation,part_number}
+12. catalog 用 `regions:[]` + `destinations:[]`（非单一 region）
+13. `stats.captured_at` 带时区完整ISO（如 2026-08-24T23:00:00+08:00）
+14. 状态语义：draft=未核对原视频；verified=已对照原视频核对结构与内容（不代表票价/班次现时有效）；增 `last_checked_at` 记录事实最后复核日
+15. 双份 JSON Schema（route/catalog）+ 提交前校验脚本 validate.py
 
 ---
 
