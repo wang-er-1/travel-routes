@@ -1,245 +1,290 @@
 # -*- coding: utf-8 -*-
-"""schema v2.0 转换器 + 内容完整性校验
-- 嵌套版(v1) → v2.0：升级 stats 字段名、迁移 l3_hooks.suitable_for→trip.suitable_for、
-  清本地路径、related_episodes→related_videos、补 series/duration_seconds/captured_at 占位
-- 扁平版(鞍山) → v2.0：itinerary→trip.stops、practical_tips 保留、budget 保留、
-  next_stop 保留、扁平字段归位到 episode/trip
-只做样本转换（不落盘覆盖），输出转换后 JSON + 前后内容差异报告，人工确认后再批量。
+"""schema v2.0 转换器（按 Codex 15条收口意见）
+嵌套v1 / 扁平(鞍山) → v2.0 统一嵌套结构。
+支持 dry-run（输出到 _v2_samples/ 或内存，不覆盖 episodes/）。
+
+Codex 15条修订对照：
+ 1 trip.location→locations 数组   2 theme→themes   3 tips 统一 [{category,text}]
+ 4 stops[].order(从1) + lodging 字符串→对象   5 费用全进 budget(total/per_person/note/price_as_of/items)
+ 6 episode.part_number(当前集自身)   7 series 带 series_id
+ 8 catalog.updated_at 用 last_updated（转换器不管catalog，见 gen_catalog.py）
+ 9 source_type=bilibili_video(catalog)  10 content_hash SHA-256(catalog)
+ 11 catalog.related_videos 对象  12 catalog regions/destinations
+ 13 stats.captured_at 带时区ISO   14 data_status 语义 + last_checked_at
+ 15 JSON Schema + validate.py 另见独立文件
 """
 import json, os, re, copy, hashlib
+from datetime import datetime
 
 os.chdir(r"D:\output\routes-site-v2")
 
-LOCAL_PATH_RE = re.compile(r'[A-Za-z]:\\\\?[^"\']*|/[a-z]/output[^"\']*')
+TZ = "+08:00"
 
-def strip_local_paths(obj):
-    """递归删除含本地绝对路径的字符串值；返回清理后的对象+被删路径列表"""
-    removed = []
-    def walk(o):
-        if isinstance(o, dict):
-            return {k: walk(v) for k, v in o.items()}
-        if isinstance(o, list):
-            return [walk(x) for x in o]
-        if isinstance(o, str) and ('D:\\' in o or 'D:/' in o or re.search(r'[A-Za-z]:\\', o)):
-            removed.append(o[:60])
-            return None
-        return o
-    return walk(obj), removed
+def to_iso_tz(date_str):
+    """'2026-08-18' → '2026-08-18T00:00:00+08:00'；已是ISO则原样；None→None"""
+    if not date_str:
+        return None
+    if 'T' in date_str and re.search(r'[+-]\d{2}:\d{2}$', date_str):
+        return date_str
+    m = re.match(r'^(\d{4}-\d{2}-\d{2})$', date_str.strip())
+    if m:
+        return f"{m.group(1)}T00:00:00{TZ}"
+    return None
+
+def has_local_path(s):
+    return isinstance(s, str) and bool(re.search(r'[A-Za-z]:\\|/[a-z]/output', s))
+
+def strip_path_from_text(s):
+    """从一段文字里剥掉本地路径片段，保留正常文字"""
+    if not isinstance(s, str):
+        return s
+    cleaned = re.sub(r'[A-Za-z]:\\\\?[^\s，。；、)）"\']*', '', s)
+    cleaned = re.sub(r'/[a-z]/output[^\s，。；、)）"\']*', '', cleaned)
+    return cleaned.strip(' :：（(')
+
+def deep_strip_paths(obj, removed):
+    if isinstance(obj, dict):
+        return {k: deep_strip_paths(v, removed) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [deep_strip_paths(x, removed) for x in obj]
+    if isinstance(obj, str) and has_local_path(obj):
+        cleaned = strip_path_from_text(obj)
+        removed.append(obj[:70])
+        return cleaned or None
+    return obj
+
+def parse_dur_seconds(dur):
+    if not dur: return None
+    p = [int(x) for x in re.findall(r'\d+', dur)]
+    if len(p) == 2: return p[0]*60 + p[1]
+    if len(p) == 3: return p[0]*3600 + p[1]*60 + p[2]
+    return None
+
+def norm_stats_nested(st, captured):
+    return {
+        "views": st.get('plays') if st.get('plays') is not None else st.get('views'),
+        "likes": st.get('likes'),
+        "favorites": st.get('favorites'),
+        "danmaku": st.get('danmaku'),
+        "comments": st.get('comments') if st.get('comments') is not None else st.get('reply'),
+        "captured_at": captured,
+    }
+
+def tips_to_objs(raw_tips):
+    """旧字符串贴士 → [{category:'其他', text}]；已是对象则规整"""
+    out = []
+    for t in raw_tips or []:
+        if isinstance(t, str) and t.strip():
+            out.append({"category": "其他", "text": t.strip()})
+        elif isinstance(t, dict):
+            cat = t.get('category') or '其他'
+            txt = t.get('text') or t.get('tip') or ''
+            if txt: out.append({"category": cat, "text": txt})
+    return out
+
+def lodging_to_obj(l):
+    """住宿：字符串→对象；对象原样；None→None"""
+    if l is None: return None
+    if isinstance(l, dict): return l
+    if isinstance(l, str) and l.strip():
+        return {"place": l.strip(), "price": None, "notes": None}
+    return None
 
 
 def upgrade_nested(d):
-    """v1 嵌套 → v2.0 嵌套"""
+    """v1 嵌套 → v2.0"""
     d = copy.deepcopy(d)
     ep = d.get('episode', {})
     tr = d.get('trip', {})
+    removed = []
 
-    # 1) stats 字段名统一 plays→views, likes, favorites, danmaku, comments + captured_at
-    st = ep.get('stats', {})
-    new_st = {
-        'views': st.get('plays') if st.get('plays') is not None else st.get('views'),
-        'likes': st.get('likes'),
-        'favorites': st.get('favorites'),
-        'danmaku': st.get('danmaku'),
-        'comments': st.get('comments') if st.get('comments') is not None else st.get('reply'),
-        'captured_at': d.get('last_updated'),  # 用现有更新时间占位，后续抓取时更新
-    }
-    ep['stats'] = new_st
+    captured = to_iso_tz(d.get('last_updated'))
+    ep['stats'] = norm_stats_nested(ep.get('stats', {}), captured)
 
-    # 2) l3_hooks.suitable_for → trip.suitable_for（去路径），customization_notes 也迁移进 trip
+    # l3_hooks → trip.suitable_for / customization_notes（去路径）
     l3 = d.pop('l3_hooks', {}) or {}
-    suitable = l3.get('suitable_for')
-    if suitable and not ('D:\\' in suitable or 'D:/' in suitable):
-        tr['suitable_for'] = suitable
-    elif suitable:  # 含路径的，尝试剥离路径部分（一般路径在冒号后）
-        cleaned = re.sub(r'[A-Za-z]:\\[^\s，。；]*', '', suitable).strip()
-        tr['suitable_for'] = cleaned or None
+    if l3.get('suitable_for'):
+        v = l3['suitable_for']
+        tr['suitable_for'] = strip_path_from_text(v) if has_local_path(v) else v
     if l3.get('customization_notes'):
-        tr.setdefault('customization_notes', l3['customization_notes'])
+        tr['customization_notes'] = l3['customization_notes']
 
-    # 3) related_episodes → related_videos（保留下集完整元数据，不丢失）
-    rel_old = ep.pop('related_episodes', []) or []
+    # related_episodes → related_videos（保留下集完整元数据）
     related = []
-    for i, r in enumerate(rel_old, 2):
+    for i, r in enumerate(ep.pop('related_episodes', []) or [], 2):
         if isinstance(r, dict) and r.get('bvid'):
-            item = {
-                'bvid': r['bvid'], 'relation': 'part',
-                'note': r.get('title', '')[:40] or '关联视频', 'part_number': i
-            }
-            # 保留下集的完整元数据，避免信息丢失
-            for k_src, k_dst in [('url','url'),('publish_date','publish_date'),
-                                 ('duration','duration'),('title','title')]:
-                if r.get(k_src) is not None:
-                    item[k_dst] = r[k_src]
+            item = {"bvid": r['bvid'], "relation": "part",
+                    "note": (r.get('title') or '关联视频')[:40], "part_number": i}
+            for k in ('url', 'publish_date', 'duration', 'title'):
+                if r.get(k) is not None: item[k] = r[k]
             if r.get('stats'):
-                s = r['stats']
-                item['stats'] = {
-                    'views': s.get('plays') if s.get('plays') is not None else s.get('views'),
-                    'likes': s.get('likes'), 'favorites': s.get('favorites'),
-                    'danmaku': s.get('danmaku'),
-                    'comments': s.get('comments') if s.get('comments') is not None else s.get('reply'),
-                }
+                item['stats'] = norm_stats_nested(r['stats'], None)
+                item['stats'].pop('captured_at', None)
             related.append(item)
     ep['related_videos'] = related
+    # 当前集自身 part_number：有上集关系时它是第1集
+    ep['part_number'] = 1 if related else None
 
-    # 4) series 占位（嵌套版原本没有；小可追太阳系列后面人工/规则补，先置 null）
-    if 'series' not in ep:
-        ep['series'] = None
-
-    # 5) duration_seconds 占位（从 duration "mm:ss" 解析）
+    ep.setdefault('series', None)
     if 'duration_seconds' not in ep:
-        dur = ep.get('duration', '')
-        parts = [int(x) for x in re.findall(r'\d+', dur)]
-        if len(parts) == 2: ep['duration_seconds'] = parts[0]*60+parts[1]
-        elif len(parts) == 3: ep['duration_seconds'] = parts[0]*3600+parts[1]*60+parts[2]
+        ep['duration_seconds'] = parse_dur_seconds(ep.get('duration'))
 
-    # 6) 删除旧字段 transcript_ref / source_data，改用 source_note
-    tref = d.pop('transcript_ref', None)
+    # === trip 收口 ===
+    # location → locations 数组
+    loc = tr.pop('location', None)
+    if loc:
+        tr['locations'] = [loc]
+    else:
+        tr.setdefault('locations', [{"city": None, "province": None, "region": None, "country": "中国"}])
+    # theme → themes
+    if 'theme' in tr: tr['themes'] = tr.pop('theme')
+    tr.setdefault('themes', [])
+
+    # stops：加 order、lodging 转对象
+    for idx, s in enumerate(tr.get('stops', []), 1):
+        s['order'] = idx
+        s['lodging'] = lodging_to_obj(s.get('lodging'))
+        s.setdefault('time', None)
+        s.setdefault('detail', None)
+        for k in ('activities', 'food', 'cost_notes', 'tips'):
+            s.setdefault(k, [])
+
+    # 费用统一进 budget（旧 cost_total/per_person/cost_notes 迁入，不丢）
+    old_budget = tr.pop('budget', None) or {}
+    budget = {
+        "total": tr.pop('cost_total', None) or old_budget.get('total'),
+        "per_person": tr.pop('cost_per_person', None) or old_budget.get('per_person'),
+        "note": tr.pop('cost_notes', None) or old_budget.get('note'),
+        "price_as_of": tr.pop('price_as_of', None) or old_budget.get('price_as_of'),
+        "items": old_budget.get('items', []),
+    }
+    if any(v not in (None, [], '') for v in budget.values()):
+        tr['budget'] = budget
+    else:
+        tr['budget'] = None
+
+    # === 路线级 tips 统一 [{category,text}]，合并旧 tips + practical_tips ===
+    merged = tips_to_objs(d.pop('tips', [])) + tips_to_objs(d.pop('practical_tips', []))
+    d['tips'] = merged
+
+    # source_note（旧 source_data 去路径），删 transcript_ref
     sdata = d.pop('source_data', None)
-    if 'source_note' not in d:
-        # source_data 去路径后作为 source_note
-        sn = sdata or ''
-        sn = re.sub(r'[A-Za-z]:\\[^\s，。；)]*', '', sn).strip()
-        d['source_note'] = sn or None
+    d.pop('transcript_ref', None)
+    if not d.get('source_note'):
+        d['source_note'] = strip_path_from_text(sdata) if sdata else None
 
-    # 7) 清理任何残留本地路径
-    d, removed = strip_local_paths(d)
-
+    d.setdefault('next_stop', None)
+    d.setdefault('last_checked_at', None)
     d['schema_version'] = '2.0'
+    d['data_status'] = d.get('data_status', 'draft')
     d['episode'] = ep
     d['trip'] = tr
+
+    d = deep_strip_paths(d, removed)
     return d, removed
 
 
 def convert_flat(d):
-    """扁平版(鞍山) → v2.0 嵌套"""
+    """扁平(鞍山) → v2.0"""
     d = copy.deepcopy(d)
+    removed = []
     st = d.get('stats', {})
     stats = {
-        'views': st.get('view'), 'likes': st.get('like'),
-        'favorites': st.get('favorite'), 'danmaku': st.get('danmaku'),
-        'comments': st.get('reply'), 'captured_at': None,
+        "views": st.get('view'), "likes": st.get('like'),
+        "favorites": st.get('favorite'), "danmaku": st.get('danmaku'),
+        "comments": st.get('reply'), "captured_at": None,
     }
-    # 系列：从 series 字符串拆出（鞍山原 series="小可追太阳"是错的，按subtitle纠正）
-    # subtitle 里有"搭火车环游中国第5站：鞍山"
     sub = d.get('subtitle', '')
-    epnum = None
     m = re.search(r'第\s*(\d+)\s*站', sub)
-    if m: epnum = int(m.group(1))
-    series = {
-        'title': '搭火车环游中国',
-        'series_id': 'xiaoke-train-china',
-        'episode_number': epnum,
-    }
-    # itinerary → stops
+    series = {"title": "搭火车环游中国", "series_id": "xiaoke-train-china",
+              "episode_number": int(m.group(1)) if m else None}
+
     stops = []
-    for it in d.get('itinerary', []):
+    for i, it in enumerate(d.get('itinerary', []), 1):
         stops.append({
-            'name': it.get('title'), 'day': None, 'time': it.get('time'),
-            'arrive_transport': None, 'arrive_cost': None,
-            'detail': it.get('detail'),
-            'activities': [], 'lodging': None, 'food': [], 'cost_notes': [], 'tips': [],
+            "order": i, "name": it.get('title'), "day": None, "time": it.get('time'),
+            "arrive_transport": None, "arrive_cost": None, "detail": it.get('detail'),
+            "activities": [], "lodging": None, "food": [], "cost_notes": [], "tips": [],
         })
+
+    loc = d.get('location') or {}
+    budget_raw = d.get('budget')
+    budget = None
+    if budget_raw:
+        budget = {"total": None, "per_person": None, "note": budget_raw.get('note'),
+                  "price_as_of": None, "items": budget_raw.get('items', [])}
+
     out = {
-        'schema_version': '2.0',
-        'episode': {
-            'blogger': '小可追太阳',
-            'blogger_mid': None,
-            'title': d.get('title'),
-            'bvid': d.get('bvid') or d.get('id'),
-            'url': d.get('bilibili_url'),
-            'duration': d.get('duration_display'),
-            'duration_seconds': d.get('duration_seconds'),
-            'publish_date': d.get('pubdate'),
-            'stats': stats,
-            'tags': d.get('theme', []),
-            'series': series,
-            'related_videos': [],
-            'description': d.get('subtitle'),
+        "schema_version": "2.0",
+        "episode": {
+            "blogger": "小可追太阳", "blogger_mid": None,
+            "title": d.get('title'), "bvid": d.get('bvid') or d.get('id'),
+            "url": d.get('bilibili_url'), "duration": d.get('duration_display'),
+            "duration_seconds": d.get('duration_seconds'),
+            "publish_date": d.get('pubdate'), "part_number": None,
+            "stats": stats, "tags": d.get('theme', []),
+            "series": series, "related_videos": [],
+            "description": d.get('subtitle'),
         },
-        'trip': {
-            'title': d.get('subtitle') or d.get('title'),
-            'route_summary': d.get('subtitle'),
-            'route_type': d.get('route_type'),
-            'theme': d.get('theme', []),
-            'location': d.get('location'),
-            'direction': None, 'season': None, 'duration_days': None,
-            'transport_modes': [],
-            'cost_total': None, 'cost_per_person': None, 'cost_notes': None,
-            'price_as_of': None,
-            'suitable_for': None,
-            'stops': stops,
-            'budget': d.get('budget'),
+        "trip": {
+            "title": d.get('subtitle') or d.get('title'),
+            "route_summary": d.get('subtitle'),
+            "route_type": d.get('route_type'),
+            "themes": d.get('theme', []),
+            "locations": [loc] if loc else [{"city": None, "province": None, "region": None, "country": "中国"}],
+            "direction": None, "season": None, "duration_days": None,
+            "transport_modes": [], "suitable_for": None,
+            "stops": stops, "budget": budget,
         },
-        'tips': [],
-        'practical_tips': d.get('practical_tips', []),
-        'highlights': d.get('highlights', []),
-        'next_stop': d.get('next_stop'),
-        'source_note': d.get('source_note'),
-        'data_status': d.get('data_status', 'draft'),
-        'last_updated': '2026-08-24',
+        "tips": tips_to_objs(d.get('practical_tips', [])),
+        "highlights": d.get('highlights', []),
+        "next_stop": d.get('next_stop'),
+        "source_note": d.get('source_note'),
+        "data_status": d.get('data_status', 'draft'),
+        "last_updated": "2026-08-24",
+        "last_checked_at": None,
     }
-    out, removed = strip_local_paths(out)
+    out = deep_strip_paths(out, removed)
     return out, removed
 
 
+def convert_any(d):
+    """自动判断版本并转换"""
+    if 'itinerary' in d and 'episode' not in d:
+        return convert_flat(d)
+    return upgrade_nested(d)
+
+
+# ============ 内容完整性比对 ============
 def content_inventory(d):
-    """提取一条JSON的所有'内容文本'用于前后比对，证明无丢失"""
     texts = []
     def walk(o):
         if isinstance(o, dict):
             for k, v in o.items():
-                if k in ('schema_version','last_updated','captured_at'): continue
+                if k in ('schema_version', 'last_updated', 'captured_at', 'last_checked_at',
+                         'order', 'part_number', 'duration_seconds'): continue
                 walk(v)
         elif isinstance(o, list):
             for x in o: walk(x)
-        elif isinstance(o, str) and o.strip():
-            # 排除本地路径（那是要故意删的）
-            if not ('D:\\' in o or 'D:/' in o):
-                texts.append(o.strip())
+        elif isinstance(o, str) and o.strip() and not has_local_path(o):
+            texts.append(o.strip())
     walk(d)
     return texts
 
 
-# ============ 执行样本转换 ============
-samples = {
-    'BV1F9U8BzE3F': ('nested', '三峡(嵌套最全样本)'),
-    'BV111Fze1EZw': ('flat', '鞍山(扁平样本)'),
-}
-
-os.makedirs('_v2_samples', exist_ok=True)
-report = []
-for bv, (kind, label) in samples.items():
-    src = json.load(open(f'episodes/{bv}.json', encoding='utf-8'))
-    before_texts = set(content_inventory(src))
-    if kind == 'nested':
-        out, removed = upgrade_nested(src)
-    else:
-        out, removed = convert_flat(src)
-    after_texts = set(content_inventory(out))
-
-    lost = before_texts - after_texts   # 转换后丢失的内容文本
-    # 过滤掉纯粹因字段名/结构变化产生的噪音（如被拆分重组的），只报真正消失的完整句子
-    real_lost = [t for t in lost if len(t) > 4]
-
-    json.dump(out, open(f'_v2_samples/{bv}.json','w',encoding='utf-8'), ensure_ascii=False, indent=2)
-    report.append({
-        'bv': bv, 'label': label, 'kind': kind,
-        'before_text_count': len(before_texts),
-        'after_text_count': len(after_texts),
-        'removed_local_paths': removed,
-        'lost_content': real_lost,
-    })
-
-print("="*60)
-print("样本转换差异报告")
-print("="*60)
-for r in report:
-    print(f"\n【{r['label']}】 {r['bv']} ({r['kind']})")
-    print(f"  内容文本条数：转换前 {r['before_text_count']} → 转换后 {r['after_text_count']}")
-    print(f"  删除的本地路径 {len(r['removed_local_paths'])} 处：{r['removed_local_paths']}")
-    if r['lost_content']:
-        print(f"  ⚠️ 疑似丢失内容 {len(r['lost_content'])} 条：")
-        for t in r['lost_content'][:10]:
-            print(f"      - {t[:70]}")
-    else:
-        print(f"  ✅ 无内容丢失（除故意删除的本地路径外）")
+if __name__ == '__main__':
+    import sys
+    # 样本转换：鞍山(扁平) + 三峡(嵌套最全)
+    samples = {'BV1F9U8BzE3F': '三峡(嵌套最全)', 'BV111Fze1EZw': '鞍山(扁平)'}
+    os.makedirs('_v2_samples', exist_ok=True)
+    for bv, label in samples.items():
+        src = json.load(open(f'episodes/{bv}.json', encoding='utf-8'))
+        before = content_inventory(src)
+        out, removed = convert_any(src)
+        after = content_inventory(out)
+        json.dump(out, open(f'_v2_samples/{bv}.json', 'w', encoding='utf-8'),
+                  ensure_ascii=False, indent=2)
+        lost = [t for t in set(before) - set(after) if len(t) > 4]
+        print(f"[{label}] {bv}: 内容 {len(set(before))}→{len(set(after))} | 删路径{len(removed)} | 丢失{len(lost)}")
+        for t in lost[:8]: print("   LOST:", t[:70])
+    print("样本已写入 _v2_samples/（未覆盖 episodes/）")

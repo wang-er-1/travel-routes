@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://wang-er-1.github.io/travel-routes/catalog.schema.v2.json",
+  "title": "旅踪集路线清单 catalog v2.0",
+  "type": "object",
+  "required": ["schema_version", "generated_at", "count", "routes"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "2.0" },
+    "generated_at": { "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[+-]\\d{2}:\\d{2}$",
+      "description": "清单生成时间，带时区ISO" },
+    "count": { "type": "integer", "minimum": 0 },
+    "routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_id", "source_type", "content_hash", "blogger",
+                     "title", "data_status", "updated_at", "json_path", "page_path"],
+        "additionalProperties": false,
+        "properties": {
+          "source_id": { "type": "string", "pattern": "^BV[0-9A-Za-z]+$",
+            "description": "值为BV号" },
+          "source_type": { "const": "bilibili_video" },
+          "content_hash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$",
+            "description": "按最终JSON UTF-8文件内容计算的SHA-256" },
+          "blogger": { "type": "string", "minLength": 1 },
+          "series": {
+            "type": ["object", "null"],
+            "required": ["title", "series_id", "episode_number"],
+            "additionalProperties": false,
+            "properties": {
+              "title": { "type": "string" },
+              "series_id": { "type": "string" },
+              "episode_number": { "type": ["integer", "null"] }
+            }
+          },
+          "title": { "type": "string", "minLength": 1 },
+          "regions": { "type": "array", "items": { "type": "string" },
+            "description": "跨省路线可多个，如 [\"东北\"]" },
+          "destinations": { "type": "array", "items": { "type": "string" },
+            "description": "目的地城市，如 [\"鞍山\"]" },
+          "data_status": { "enum": ["draft", "verified"] },
+          "updated_at": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "description": "必须来自JSON的last_updated，不是视频publish_date" },
+          "json_path": { "type": "string", "pattern": "^episodes/BV[0-9A-Za-z]+\\.json$" },
+          "page_path": { "type": ["string", "null"], "pattern": "^pages/BV[0-9A-Za-z]+\\.html$" },
+          "related_videos": {
+            "type": "array",
+            "description": "保留对象，后台无需再拉单条JSON即可判断上下集",
+            "items": {
+              "type": "object",
+              "required": ["bvid", "relation"],
+              "additionalProperties": false,
+              "properties": {
+                "bvid": { "type": "string", "pattern": "^BV[0-9A-Za-z]+$" },
+                "relation": { "enum": ["part", "series"] },
+                "part_number": { "type": ["integer", "null"], "minimum": 1 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://wang-er-1.github.io/travel-routes/route.schema.v2.json",
+  "title": "旅踪集路线数据 v2.0",
+  "type": "object",
+  "required": ["schema_version", "episode", "trip", "data_status", "last_updated"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "2.0" },
+    "episode": {
+      "type": "object",
+      "required": ["blogger", "title", "bvid", "url", "publish_date", "stats"],
+      "additionalProperties": false,
+      "properties": {
+        "blogger": { "type": "string", "minLength": 1 },
+        "blogger_mid": { "type": ["string", "null"] },
+        "title": { "type": "string", "minLength": 1 },
+        "bvid": { "type": "string", "pattern": "^BV[0-9A-Za-z]+$" },
+        "url": { "type": "string", "pattern": "^https://www\\.bilibili\\.com/video/BV" },
+        "duration": { "type": ["string", "null"] },
+        "duration_seconds": { "type": ["integer", "null"], "minimum": 0 },
+        "publish_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "part_number": { "type": ["integer", "null"], "minimum": 1,
+          "description": "当前视频在上下集中的序号；非上下集则 null" },
+        "stats": {
+          "type": "object",
+          "required": ["views", "likes", "favorites", "danmaku", "comments", "captured_at"],
+          "additionalProperties": false,
+          "properties": {
+            "views": { "type": ["integer", "null"], "minimum": 0 },
+            "likes": { "type": ["integer", "null"], "minimum": 0 },
+            "favorites": { "type": ["integer", "null"], "minimum": 0 },
+            "danmaku": { "type": ["integer", "null"], "minimum": 0 },
+            "comments": { "type": ["integer", "null"], "minimum": 0 },
+            "captured_at": { "type": ["string", "null"],
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[+-]\\d{2}:\\d{2}$",
+              "description": "带时区的完整ISO时间" }
+          }
+        },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "series": {
+          "type": ["object", "null"],
+          "required": ["title", "series_id", "episode_number"],
+          "additionalProperties": false,
+          "properties": {
+            "title": { "type": "string", "minLength": 1,
+              "description": "系列名，不含博主名" },
+            "series_id": { "type": "string", "minLength": 1 },
+            "episode_number": { "type": ["integer", "null"], "minimum": 1 }
+          }
+        },
+        "related_videos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["bvid", "relation"],
+            "additionalProperties": true,
+            "properties": {
+              "bvid": { "type": "string", "pattern": "^BV[0-9A-Za-z]+$" },
+              "relation": { "enum": ["part", "series"] },
+              "note": { "type": "string" },
+              "part_number": { "type": ["integer", "null"], "minimum": 1 },
+              "url": { "type": "string" },
+              "publish_date": { "type": "string" },
+              "duration": { "type": "string" },
+              "title": { "type": "string" },
+              "stats": { "type": "object" }
+            }
+          }
+        },
+        "description": { "type": ["string", "null"] }
+      }
+    },
+    "trip": {
+      "type": "object",
+      "required": ["title", "route_summary", "locations", "stops"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "route_summary": { "type": "string", "minLength": 1 },
+        "route_type": { "type": ["string", "null"] },
+        "themes": { "type": "array", "items": { "type": "string" } },
+        "locations": {
+          "type": "array",
+          "minItems": 1,
+          "description": "单城市放一个对象，跨城市/跨省放多个",
+          "items": {
+            "type": "object",
+            "required": ["city"],
+            "additionalProperties": false,
+            "properties": {
+              "city": { "type": ["string", "null"] },
+              "province": { "type": ["string", "null"] },
+              "region": { "type": ["string", "null"] },
+              "country": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "direction": { "type": ["string", "null"] },
+        "season": { "type": ["string", "null"] },
+        "duration_days": { "type": ["integer", "null"], "minimum": 0 },
+        "transport_modes": { "type": "array", "items": { "type": "string" } },
+        "suitable_for": { "type": ["string", "null"] },
+        "customization_notes": { "type": ["string", "null"] },
+        "stops": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["order", "name"],
+            "additionalProperties": false,
+            "properties": {
+              "order": { "type": "integer", "minimum": 1 },
+              "name": { "type": "string", "minLength": 1 },
+              "day": { "type": ["integer", "null"] },
+              "time": { "type": ["string", "null"] },
+              "arrive_transport": { "type": ["string", "null"] },
+              "arrive_cost": { "type": ["string", "null"] },
+              "detail": { "type": ["string", "null"] },
+              "activities": { "type": "array", "items": { "type": "string" } },
+              "lodging": {
+                "type": ["object", "null"],
+                "additionalProperties": true,
+                "properties": {
+                  "place": { "type": ["string", "null"] },
+                  "price": { "type": ["string", "null"] },
+                  "notes": { "type": ["string", "null"] }
+                }
+              },
+              "food": { "type": "array", "items": { "type": "string" } },
+              "cost_notes": { "type": "array", "items": { "type": "string" } },
+              "tips": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        },
+        "budget": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "properties": {
+            "total": { "type": ["string", "number", "null"] },
+            "per_person": { "type": ["string", "number", "null"] },
+            "note": { "type": ["string", "null"] },
+            "price_as_of": { "type": ["string", "null"] },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["item"],
+                "additionalProperties": true,
+                "properties": {
+                  "item": { "type": "string" },
+                  "price": { "type": ["string", "null"] },
+                  "note": { "type": ["string", "null"] }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "tips": {
+      "type": "array",
+      "description": "路线级贴士，统一 {category, text}",
+      "items": {
+        "type": "object",
+        "required": ["category", "text"],
+        "additionalProperties": false,
+        "properties": {
+          "category": { "type": "string", "minLength": 1 },
+          "text": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "highlights": { "type": "array", "items": { "type": "string" } },
+    "next_stop": { "type": ["string", "null"] },
+    "source_note": { "type": ["string", "null"] },
+    "data_status": { "enum": ["draft", "verified"] },
+    "last_updated": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "last_checked_at": { "type": ["string", "null"],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "票价/班次/营业时间等事实最后复核日期" }
+  }
+}
