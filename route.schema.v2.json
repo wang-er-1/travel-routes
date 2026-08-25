@@ -85,13 +85,18 @@
           "description": "单城市放一个对象，跨城市/跨省放多个；无法确认时可为空数组（待补数据在转换报告中提示）",
           "items": {
             "type": "object",
-            "required": ["city"],
             "additionalProperties": false,
             "properties": {
-              "city": { "type": ["string", "null"] },
               "province": { "type": ["string", "null"] },
+              "city": { "type": ["string", "null"] },
+              "district": { "type": ["string", "null"] },
+              "county": { "type": ["string", "null"] },
+              "town": { "type": ["string", "null"] },
+              "village": { "type": ["string", "null"] },
               "region": { "type": ["string", "null"] },
-              "country": { "type": ["string", "null"] }
+              "country": { "type": ["string", "null"] },
+              "verification_note": { "type": ["string", "null"],
+                "description": "行政归属核实说明（原 location.verified 迁移至此）" }
             }
           }
         },

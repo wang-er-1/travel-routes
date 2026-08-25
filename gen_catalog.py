@@ -49,20 +49,25 @@ def main():
         tr = d.get('trip', {})
         bv = ep.get('bvid') or os.path.basename(f).replace('.json', '')
 
-        # regions / destinations 从 locations 提取
+        # regions / destinations 从 locations 提取（destinations 按 city→district→town→village 层级）
         regions, destinations = [], []
         for loc in tr.get('locations', []):
             if loc.get('region') and loc['region'] not in regions:
                 regions.append(loc['region'])
-            if loc.get('city') and loc['city'] not in destinations:
-                destinations.append(loc['city'])
-            if loc.get('province') and loc['province'] not in destinations:
-                destinations.append(loc['province'])
-        # 兜底：从 route_summary / stops 提取粗粒度目的地
+            # 最细粒度的行政层级作为目的地（city 优先，其次 district/town/village）
+            for level in ('city', 'district', 'town', 'village'):
+                v = loc.get(level)
+                if v and v not in destinations:
+                    destinations.append(v)
+                    break
+        # 兜底：从 route_summary / stops 提取粗粒度目的地（负向前瞻排除"北关市场"这类"市+场"误匹配）
         if not destinations:
-            m = re.search(r'([\u4e00-\u9fff]{2,4}市|[\u4e00-\u9fff]{2,4}县|[\u4e00-\u9fff]{2,4}镇)', tr.get('route_summary') or '')
-            if m and m.group(1) not in destinations:
-                destinations.append(m.group(1))
+            for m in re.finditer(r'([\u4e00-\u9fff]{2,4}(?:市|县|镇|乡))(?![场集区])', tr.get('route_summary') or ''):
+                cand = m.group(1)
+                if cand not in destinations:
+                    destinations.append(cand)
+                if len(destinations) >= 3:
+                    break
 
         # related_videos 对象（不简化成 BV 字符串）
         related = []

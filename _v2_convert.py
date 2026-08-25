@@ -105,18 +105,38 @@ def lodging_to_obj(l):
         return {"place": l.strip(), "price": None, "notes": None}
     return None
 
+_LOC_KEYS = ('province', 'city', 'district', 'county', 'town', 'village',
+             'region', 'country', 'verification_note')
+
+def normalize_location(loc):
+    """把一个 location 原始对象规整为 schema 允许的字段；verified→verification_note；
+    丢弃空值与非法附加字段（但内容不丢：verified 的核实说明迁到 verification_note）"""
+    if not isinstance(loc, dict):
+        return None
+    out = {}
+    for k in _LOC_KEYS:
+        v = loc.get(k)
+        if v not in (None, '', []):
+            out[k] = v
+    # 旧字段 verified → verification_note（若 verification_note 未占用）
+    if loc.get('verified') and 'verification_note' not in out:
+        out['verification_note'] = loc['verified']
+    return out if out else None
+
 def extract_locations(tr):
-    """修7：locations 优先取 trip.location；否则从 stops 提取；再否则空数组+报告"""
+    """修7：locations 优先取 trip.location（规整全字段）；否则空数组+从 stops 记录待补"""
     loc = tr.pop('location', None)
-    if loc and any(loc.get(k) for k in ('city','province','region')):
-        return [loc], []
-    # 从 stops 的 name / arrive_transport 提取候选地名（启发式：排除明显非地名的站名）
+    if loc:
+        norm = normalize_location(loc)
+        # 至少含一个行政层级（非仅 verification_note）才算有效
+        if norm and any(k in norm for k in _LOC_KEYS if k != 'verification_note'):
+            return [norm], []
+    # 从 stops 的 name 提取候选地名（启发式：排除明显非地名的站名）
     pending = []
     for s in tr.get('stops', []):
         nm = s.get('name') or ''
         if nm and not re.search(r'酒店|饭店|公园|广场|餐厅|景区|博物馆|村$|镇$|码头', nm):
             pending.append(nm)
-    # 只在确有把握时填充：这里仅记录待补，不瞎猜行政归属
     return [], pending
 
 def is_explicit_part(d):
@@ -185,6 +205,9 @@ def upgrade_nested(d):
     ep.setdefault('series', None)
     if 'duration_seconds' not in ep:
         ep['duration_seconds'] = parse_dur_seconds(ep.get('duration'))
+    # 修1：blogger_mid 统一为字符串或 null（schema 要求）
+    if ep.get('blogger_mid') is not None:
+        ep['blogger_mid'] = str(ep['blogger_mid'])
 
     # 修7：locations
     tr['locations'], pending_locs = extract_locations(tr)
@@ -331,19 +354,51 @@ def leaf_inventory(d):
     return leaves
 
 
+# ---- 修3：严格多重集差值（Counter），并识别"允许的结构去重"与"主动移除的转写引用" ----
+from collections import Counter
+
+def strict_diff(src, out):
+    """多重集差值：before/after 用 Counter，能抓到"原2次→转换后1次"这类丢失。
+    返回 (real_lost, allowed) —— allowed 是可解释的：结构去重(id=bvid) / 主动移除转写引用。
+    """
+    before = Counter(leaf_inventory(src))
+    after = Counter(leaf_inventory(out))
+    missing = before - after            # 多重集差：值在 before 出现次数 > after 的部分
+
+    real_lost, allowed = [], []
+    # src 里的 bvid（用于识别 id==bvid 的合理去重）
+    src_bvid = (src.get('episode', {}) or src).get('bvid') or src.get('bvid') or src.get('id')
+    for (kind, val), cnt in missing.items():
+        # 允许0：数字→字符串类型规整（如 blogger_mid 480670664 → '480670664'），内容未丢
+        if kind == 'num' and ('str', val) in after:
+            allowed.append((kind, val, cnt, "数字→字符串类型规整"))
+            continue
+        # 允许1：id 与 bvid 同值，转换后只保留一次 → 结构去重
+        if val == src_bvid:
+            allowed.append((kind, val, cnt, "结构去重(id=bvid)"))
+            continue
+        # 允许2：转写稿引用（transcripts/*.txt 或含"转写"字样的本地引用）主动移除
+        if ('transcripts/' in val or 'transcript' in val.lower()
+                or (val.endswith('.txt') and 'BV' in val)):
+            allowed.append((kind, val, cnt, "主动移除转写引用"))
+            continue
+        real_lost.append((kind, val, cnt))
+    return real_lost, allowed
+
+
 if __name__ == '__main__':
     # 样本转换：鞍山(扁平) + 三峡(嵌套最全)
     samples = {'BV1F9U8BzE3F': '三峡(嵌套最全)', 'BV111Fze1EZw': '鞍山(扁平)'}
     os.makedirs('_v2_samples', exist_ok=True)
     for bv, label in samples.items():
         src = json.load(open(f'episodes/{bv}.json', encoding='utf-8'))
-        before = leaf_inventory(src)
         out, removed, pending = convert_any(src)
-        after = leaf_inventory(out)
         json.dump(out, open(f'_v2_samples/{bv}.json', 'w', encoding='utf-8'),
                   ensure_ascii=False, indent=2)
-        lost = [t for t in before if t not in after]
-        print(f"[{label}] {bv}: 叶子 {len(before)}→{len(after)} | 删路径{len(removed)} | 丢失{len(lost)} | 待补locations={len(pending)}")
-        for kind, t in lost[:10]: print("   LOST:", t[:60])
+        real_lost, allowed = strict_diff(src, out)
+        b, a = len(leaf_inventory(src)), len(leaf_inventory(out))
+        print(f"[{label}] {bv}: 叶子 {b}→{a} | 删路径{len(removed)} | 真实丢失{len(real_lost)} | 允许差异{len(allowed)} | 待补locations={len(pending)}")
+        for kind, t, c in real_lost[:10]: print(f"   LOST x{c}:", t[:60])
+        for kind, t, c, why in allowed: print(f"   允许 x{c} [{why}]:", t[:50])
         if pending: print("   待补地点:", pending[:5])
     print("样本已写入 _v2_samples/（未覆盖 episodes/）")

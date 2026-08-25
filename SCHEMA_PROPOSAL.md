@@ -49,7 +49,7 @@
     "stats": {                       // 统一字段名
       "views": 826717, "likes": 17940, "favorites": 8543,
       "danmaku": 2272, "comments": 1760,
-      "captured_at": "2026-08-24"    // 统计抓取时间
+      "captured_at": null    // 历史数据无真实抓取时间填 null；真实刷新时写带时区ISO，如 2026-08-24T23:00:00+08:00
     },
     "tags": ["工业遗产", "东北美食"],
 

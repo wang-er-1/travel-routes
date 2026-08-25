@@ -4,13 +4,13 @@ import json, os, sys
 BASE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, BASE)
 os.chdir(BASE)
-from _v2_convert import convert_any, leaf_inventory
+from _v2_convert import convert_any, leaf_inventory, strict_diff
 
 def report(bv, label):
     src = json.load(open(f'episodes/{bv}.json', encoding='utf-8'))
     out = json.load(open(f'_v2_samples/{bv}.json', encoding='utf-8'))
     before, after = leaf_inventory(src), leaf_inventory(out)
-    lost = [t for t in before if t not in after]
+    real_lost, allowed = strict_diff(src, out)
 
     ep, tr = out['episode'], out['trip']
     print(f"\n{'='*64}\n【{label}】 {bv}\n{'='*64}")
@@ -53,10 +53,11 @@ def report(bv, label):
     # 7 无法自动归类字段（源里有但没映射进去的顶层键）
     print(f"⑦ locations(原location): {tr['locations']} | themes(原theme): {tr.get('themes')}")
 
-    # 8 内容丢失
-    print(f"⑧ 内容文本: {len(before)}→{len(after)} | 丢失(>4字): {len(lost)}")
-    for t in lost[:10]: print(f"      LOST: {t[:70]}")
-    if not lost: print("      ✅ 除故意删除的本地路径外，无任何文字内容丢失")
+    # 8 叶子数据差异（严格多重集差值）
+    print(f"⑧ 叶子数据: {len(before)}→{len(after)} | 真实丢失: {len(real_lost)} | 允许差异: {len(allowed)}")
+    for kind, t, c in real_lost[:10]: print(f"      LOST x{c}: {t[:70]}")
+    for kind, t, c, why in allowed: print(f"      允许 x{c} [{why}]: {t[:50]}")
+    if not real_lost: print("      ✅ 除允许差异（结构去重/移除转写引用）外，无叶子数据丢失")
 
 report('BV111Fze1EZw', '鞍山（扁平样本）')
 report('BV1F9U8BzE3F', '三峡（嵌套最完整样本，含上下集）')

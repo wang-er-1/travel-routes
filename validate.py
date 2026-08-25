@@ -104,7 +104,8 @@ def validate_catalog():
 if __name__ == '__main__':
     target = sys.argv[1] if len(sys.argv) > 1 else "episodes"
     ok, total = validate_routes(target)
-    if target == "episodes":
+    catalog_checked = (target == "episodes")
+    if catalog_checked:
         validate_catalog()
     print("=" * 50)
     if errors:
@@ -113,5 +114,9 @@ if __name__ == '__main__':
         if len(errors) > 40: print(f"  ...还有{len(errors)-40}个")
         sys.exit(1)
     else:
-        print(f"✅ 全部通过：{ok}/{total} 条路线 + catalog 一致")
+        # 修6：只有实际校验过 catalog 才提示"catalog 一致"
+        if catalog_checked:
+            print(f"✅ 全部通过：{ok}/{total} 条路线 + catalog 一致")
+        else:
+            print(f"✅ 样本通过：{ok}/{total} 条（样本模式，未校验 catalog）")
         sys.exit(0)
