@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-08-25T14:25:38+08:00",
-  "count": 15,
+  "generated_at": "2026-08-25T16:09:49+08:00",
+  "count": 16,
   "routes": [
     {
       "source_id": "BV111Fze1EZw",
@@ -305,6 +305,36 @@
       "updated_at": "2026-08-24",
       "json_path": "episodes/BV1k1421Q7W9.json",
       "page_path": "pages/BV1k1421Q7W9.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV1tF3M6vEoq",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:601066408dfd328e5d34a998d1006b42a935a8be242d0f9b761734e41d33348e",
+      "blogger": "期末77",
+      "series": null,
+      "title": "西北边境·伊犁环线自驾（伊宁→伊昭公路→昭苏→喀拉峻→夏塔）",
+      "regions": [
+        "西北"
+      ],
+      "destinations": [
+        "伊犁哈萨克自治州",
+        "昭苏县",
+        "特克斯县",
+        "新疆维吾尔自治区"
+      ],
+      "location_terms": [
+        "中国",
+        "西北",
+        "新疆维吾尔自治区",
+        "伊犁哈萨克自治州",
+        "昭苏县",
+        "特克斯县"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-08-25",
+      "json_path": "episodes/BV1tF3M6vEoq.json",
+      "page_path": "pages/BV1tF3M6vEoq.html",
       "related_videos": []
     },
     {
