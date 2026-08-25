@@ -80,8 +80,10 @@ def validate_routes(ep_dir="episodes"):
     return ok, len(files)
 
 def validate_catalog():
+    # 严格模式：catalog.json 必须存在，缺失即失败（不再跳过）
     if not os.path.exists("catalog.json"):
-        print("catalog.json 不存在（尚未生成，跳过）"); return
+        err("catalog", "catalog.json 不存在（正式模式必须生成）")
+        return
     cat_schema = json.load(open("catalog.schema.v2.json", encoding='utf-8'))
     cat = json.load(open("catalog.json", encoding='utf-8'))
     for e in Draft7Validator(cat_schema).iter_errors(cat):
@@ -90,8 +92,31 @@ def validate_catalog():
     routes = cat.get('routes', [])
     if cat.get('count') != len(routes):
         err("catalog", f"count={cat.get('count')} 但routes有{len(routes)}条")
+
+    # 覆盖检查：catalog.source_id 集合必须 == episodes 目录全部 BV 文件（少一条或多一条都失败）
+    ep_bvs = {os.path.basename(f).replace('.json', '')
+              for f in glob.glob("episodes/*.json") if f.endswith('.json')}
+    cat_bvs = [r.get('source_id') for r in routes]
+    # 重复检查：source_id 重复必须失败
+    seen = set()
+    for sid in cat_bvs:
+        if sid in seen:
+            err("catalog", f"source_id 重复: {sid}")
+        seen.add(sid)
+    cat_set = set(cat_bvs)
+    missing = ep_bvs - cat_set
+    extra = cat_set - ep_bvs
+    if missing:
+        err("catalog", f"覆盖不全，episodes 有但 catalog 缺 {len(missing)} 条: {sorted(missing)[:5]}")
+    if extra:
+        err("catalog", f"catalog 多了 {len(extra)} 条不在 episodes: {sorted(extra)[:5]}")
+
     for r in routes:
         bv = r.get('source_id'); jp = r.get('json_path', '')
+        # json_path 指向的文件名必须与 source_id 一致
+        jp_bv = os.path.basename(jp).replace('.json', '') if jp else ''
+        if jp and jp_bv != bv:
+            err("catalog", f"{bv}: json_path 文件名与 source_id 不符: {jp}")
         if not os.path.exists(jp):
             err("catalog", f"{bv}: json_path不存在 {jp}"); continue
         real_hash = sha256_file(jp)
