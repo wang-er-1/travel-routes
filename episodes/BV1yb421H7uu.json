@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "episode": {
     "blogger": "小V的奇幻旅程",
     "title": "【4K】旅居15天～去大理所有网红景点扫街一圈都能拍到啥～丨大理旅行Vlog",
@@ -8,11 +8,12 @@
     "duration": "36:33",
     "publish_date": "2024-07-01",
     "stats": {
-      "plays": 990301,
+      "views": 990301,
       "likes": 10964,
       "favorites": 12402,
       "danmaku": 1260,
-      "comments": 517
+      "comments": 517,
+      "captured_at": null
     },
     "tags": [
       "大理",
@@ -25,7 +26,10 @@
       "4K"
     ],
     "description": "走马观花绝对不是大理的正确打开方式，所以我决定来一次半个月的深度体验。半个月扫遍大理网红景点：苍山（三塔、寂照庵、洗马潭、云游玉带路、白石溪）、大理古城及周边、洱海环海（生态廊道、双廊古镇、才村、三圣岛、小普陀、文笔村、理想邦）、喜洲古镇及周边、周城。",
-    "related_episodes": []
+    "related_videos": [],
+    "part_number": null,
+    "series": null,
+    "duration_seconds": 2193
   },
   "trip": {
     "title": "大理旅居15天·网红景点打卡路线",
@@ -40,10 +44,6 @@
       "打车",
       "船（登岛）"
     ],
-    "cost_total": null,
-    "cost_per_person": null,
-    "cost_notes": null,
-    "price_as_of": null,
     "stops": [
       {
         "name": "大理古城",
@@ -62,7 +62,10 @@
         },
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 1,
+        "time": null,
+        "detail": null
       },
       {
         "name": "苍山（三塔/寂照庵/洗马潭）",
@@ -81,7 +84,10 @@
         "cost_notes": [],
         "tips": [
           "按想去的高度选索道"
-        ]
+        ],
+        "order": 2,
+        "time": null,
+        "detail": null
       },
       {
         "name": "洱海生态廊道（才村/文笔村/理想邦）",
@@ -99,7 +105,10 @@
         "cost_notes": [],
         "tips": [
           "清晨出片人少"
-        ]
+        ],
+        "order": 3,
+        "time": null,
+        "detail": null
       },
       {
         "name": "小普陀 / 三圣岛",
@@ -114,7 +123,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 4,
+        "time": null,
+        "detail": null
       },
       {
         "name": "喜洲古镇",
@@ -132,7 +144,10 @@
           "喜洲破酥粑粑"
         ],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 5,
+        "time": null,
+        "detail": null
       },
       {
         "name": "双廊古镇",
@@ -147,7 +162,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 6,
+        "time": null,
+        "detail": null
       },
       {
         "name": "周城",
@@ -161,18 +179,18 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 7,
+        "time": null,
+        "detail": null
       }
-    ]
+    ],
+    "suitable_for": "想旅居式深度玩大理、拍同款出片Vlog的人；假期充裕（半个月最佳，压缩版3-4天）",
+    "customization_notes": "以古城为中心分片区玩；环海骑行清晨出片；苍山按索道选路线；喜洲+周城+双廊可连成北部一天",
+    "locations": [],
+    "themes": [],
+    "budget": null
   },
-  "tips": [
-    "旅居式玩法更适合大理",
-    "洱海环海怎么玩",
-    "苍山按索道选路线",
-    "喜洲、周城、双廊连着玩",
-    "理想邦“小圣托里尼”",
-    "最佳拍摄时间"
-  ],
   "highlights": [
     "大理旅居15天：走马观花不是大理的正确打开方式",
     "苍山三条线：三塔/寂照庵/洗马潭+玉带云游路徒步",
@@ -180,12 +198,35 @@
     "喜洲古镇+周城扎染+双廊古镇北部一条线",
     "小普陀登岛、才村日出经典出片机位"
   ],
-  "transcript_ref": null,
-  "source_data": "B站 BV1yb421H7uu 视频简介公开的拍摄地点清单（本期为4K画面Vlog无口播，未做逐字转写）",
   "last_updated": "2026-08-23",
   "data_status": "draft",
-  "l3_hooks": {
-    "suitable_for": "想旅居式深度玩大理、拍同款出片Vlog的人；假期充裕（半个月最佳，压缩版3-4天）",
-    "customization_notes": "以古城为中心分片区玩；环海骑行清晨出片；苍山按索道选路线；喜洲+周城+双廊可连成北部一天"
-  }
+  "source_note": "B站 BV1yb421H7uu 视频简介公开的拍摄地点清单（本期为4K画面Vlog无口播，未做逐字转写）",
+  "tips": [
+    {
+      "category": "其他",
+      "text": "旅居式玩法更适合大理"
+    },
+    {
+      "category": "其他",
+      "text": "洱海环海怎么玩"
+    },
+    {
+      "category": "其他",
+      "text": "苍山按索道选路线"
+    },
+    {
+      "category": "其他",
+      "text": "喜洲、周城、双廊连着玩"
+    },
+    {
+      "category": "其他",
+      "text": "理想邦“小圣托里尼”"
+    },
+    {
+      "category": "其他",
+      "text": "最佳拍摄时间"
+    }
+  ],
+  "next_stop": null,
+  "last_checked_at": null
 }

@@ -1,0 +1,273 @@
+{
+  "schema_version": "2.0",
+  "generated_at": "2026-08-25T09:52:16+08:00",
+  "count": 15,
+  "routes": [
+    {
+      "source_id": "BV111Fze1EZw",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:c649e1d098b41c0f1391dc8c695e4d4d0ac6118f46f4649dc40be4098568f4f4",
+      "blogger": "小可追太阳",
+      "series": {
+        "title": "搭火车环游中国",
+        "series_id": "xiaoke-train-china",
+        "episode_number": 5
+      },
+      "title": "搭火车环游中国第5站：鞍山——鞍钢工人的6元午饭、小武康大楼、胜利广场鸽、大孤山700米深矿坑",
+      "regions": [
+        "东北"
+      ],
+      "destinations": [
+        "鞍山"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-08-24",
+      "json_path": "episodes/BV111Fze1EZw.json",
+      "page_path": "pages/BV111Fze1EZw.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV15yXGBxE9U",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:46cb6e8899f9c53d9ccf421174282c6a15db306f2379daa907bd2062425c1ee6",
+      "blogger": "赖导AboutLai",
+      "series": null,
+      "title": "云南最南边境小城·勐腊自驾（3天）",
+      "regions": [],
+      "destinations": [
+        "勐腊县",
+        "星光夜市"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-08-23",
+      "json_path": "episodes/BV15yXGBxE9U.json",
+      "page_path": "pages/BV15yXGBxE9U.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV16NpQznEXC",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:802334809fa59abc70120232fe4422f6596ea3ba4339cc80d3aed2fe37bff134",
+      "blogger": "赖导AboutLai",
+      "series": null,
+      "title": "一个人自驾河西走廊·武威+张掖（2天）",
+      "regions": [],
+      "destinations": [
+        "高台县"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-08-19",
+      "json_path": "episodes/BV16NpQznEXC.json",
+      "page_path": "pages/BV16NpQznEXC.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV19PGwzrEvW",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:bb105ed6a3706df7fe3a2f45be8a03767d1c2a6a48ef225008f1a198b6daed3a",
+      "blogger": "赖导AboutLai",
+      "series": null,
+      "title": "从漠河穿越大兴安岭去呼伦贝尔（夏至独行）",
+      "regions": [],
+      "destinations": [],
+      "data_status": "draft",
+      "updated_at": "2026-08-18",
+      "json_path": "episodes/BV19PGwzrEvW.json",
+      "page_path": "pages/BV19PGwzrEvW.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV19jfPY9Eot",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:6b8fdf62ef04a7acd1960109f0336ec9f97296799ef6864147c3e19e218170d9",
+      "blogger": "赖导AboutLai",
+      "series": null,
+      "title": "玉门老市区·资源枯竭小城探访（4天）",
+      "regions": [],
+      "destinations": [
+        "大环岛市",
+        "赤金镇",
+        "王进喜家乡"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-08-23",
+      "json_path": "episodes/BV19jfPY9Eot.json",
+      "page_path": "pages/BV19jfPY9Eot.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV19vzvBXEYb",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:fa25ee385a78e2454cd5eedd43c19c2177b640ef690c8d20502143fdfef6369e",
+      "blogger": "小可追太阳",
+      "series": null,
+      "title": "搭火车环游中国·第33站：满洲里（上/下两集，中俄蒙边境百年商埠）",
+      "regions": [],
+      "destinations": [],
+      "data_status": "draft",
+      "updated_at": "2026-08-19",
+      "json_path": "episodes/BV19vzvBXEYb.json",
+      "page_path": "pages/BV19vzvBXEYb.html",
+      "related_videos": [
+        {
+          "bvid": "BV1bicgzaEQp",
+          "relation": "part",
+          "part_number": 2
+        }
+      ]
+    },
+    {
+      "source_id": "BV1F9U8BzE3F",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:2c57e57ab26b23922dc3c71469a7402410b718c85f83eb16bae8a5aa44a1939b",
+      "blogger": "赖导AboutLai",
+      "series": null,
+      "title": "坐水上公交游长江三峡（上/下两集）",
+      "regions": [],
+      "destinations": [],
+      "data_status": "draft",
+      "updated_at": "2026-08-18",
+      "json_path": "episodes/BV1F9U8BzE3F.json",
+      "page_path": "pages/BV1F9U8BzE3F.html",
+      "related_videos": [
+        {
+          "bvid": "BV1TwS7BmETP",
+          "relation": "part",
+          "part_number": 2
+        }
+      ]
+    },
+    {
+      "source_id": "BV1Hj1jYKECK",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:a48f9acdd42555824b9eefdf454e21d9c79ed1cf47ca559618a71ccf69f7b197",
+      "blogger": "赖导AboutLai",
+      "series": null,
+      "title": "云南复古小城·个旧旅行（3天）",
+      "regions": [],
+      "destinations": [],
+      "data_status": "draft",
+      "updated_at": "2026-08-23",
+      "json_path": "episodes/BV1Hj1jYKECK.json",
+      "page_path": "pages/BV1Hj1jYKECK.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV1UJ4m1M7vd",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:f578c1ed44df6c4b58d12fe4c15003b9f15df9354076fc4aee7ab976d7b949eb",
+      "blogger": "赖导AboutLai",
+      "series": null,
+      "title": "山东最北海岛·北隍城岛慢旅行（3天）",
+      "regions": [],
+      "destinations": [],
+      "data_status": "draft",
+      "updated_at": "2026-08-23",
+      "json_path": "episodes/BV1UJ4m1M7vd.json",
+      "page_path": "pages/BV1UJ4m1M7vd.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV1UetHeTEsH",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:a4519068cf8af145c42552b15998e17e386407f1e92bd6da7a98bfd22f304f61",
+      "blogger": "赖导AboutLai",
+      "series": null,
+      "title": "去中国房价最低城市鹤岗旅行（2天）",
+      "regions": [],
+      "destinations": [
+        "世纪广场市"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-08-19",
+      "json_path": "episodes/BV1UetHeTEsH.json",
+      "page_path": "pages/BV1UetHeTEsH.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV1Yu4y1L7rL",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:3399401198f9550e77475bf9f79678793c6261f6747dc9d59f0930f2221abee8",
+      "blogger": "赖导AboutLai",
+      "series": null,
+      "title": "中国最北·漠河县城（2天）",
+      "regions": [],
+      "destinations": [],
+      "data_status": "draft",
+      "updated_at": "2026-08-23",
+      "json_path": "episodes/BV1Yu4y1L7rL.json",
+      "page_path": "pages/BV1Yu4y1L7rL.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV1cD3bzwEVm",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:0e7711f1744b101001db644b8d649004eaacdbd5bdf1d4c716c9a0c2ce86b1d0",
+      "blogger": "小可追太阳",
+      "series": null,
+      "title": "搭火车环游中国·第21站：佳木斯（市井美食+松花江）",
+      "regions": [],
+      "destinations": [
+        "晋江早市"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-08-19",
+      "json_path": "episodes/BV1cD3bzwEVm.json",
+      "page_path": "pages/BV1cD3bzwEVm.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV1eh9YBUEYp",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:c94b36a62aca7bfe6ee9b6bfa1c9e00d86961c5da34e13769f0fb59ec9fe5fca",
+      "blogger": "赖导AboutLai",
+      "series": null,
+      "title": "探访中国“最孤独”的城市茫崖（2天）",
+      "regions": [],
+      "destinations": [
+        "花土沟镇",
+        "冷湖镇"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-08-19",
+      "json_path": "episodes/BV1eh9YBUEYp.json",
+      "page_path": "pages/BV1eh9YBUEYp.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV1k1421Q7W9",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:59e2593be9f304d8c0cf625113c72dec91206003cc31bffdc2aac155058f68c6",
+      "blogger": "小可追太阳",
+      "series": null,
+      "title": "浙江湖州·荻港村「一元茶馆」——凌晨老茶客的江南水乡早茶",
+      "regions": [],
+      "destinations": [
+        "浙江省湖州市"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-08-24",
+      "json_path": "episodes/BV1k1421Q7W9.json",
+      "page_path": "pages/BV1k1421Q7W9.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV1yb421H7uu",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:618527ce20654a840ebefaf670ea27910a6a4ee731168bbaf02fe6fe01e02710",
+      "blogger": "小V的奇幻旅程",
+      "series": null,
+      "title": "大理旅居15天·网红景点打卡路线",
+      "regions": [],
+      "destinations": [
+        "喜洲古镇",
+        "双廊古镇"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-08-23",
+      "json_path": "episodes/BV1yb421H7uu.json",
+      "page_path": "pages/BV1yb421H7uu.html",
+      "related_videos": []
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "episode": {
     "blogger": "赖导AboutLai",
     "title": "坐绿皮火车去中国最北，一个人在小城漠河的日与夜",
@@ -8,11 +8,12 @@
     "duration": "31:54",
     "publish_date": "2023-11-18",
     "stats": {
-      "plays": 2648340,
+      "views": 2648340,
       "likes": 125764,
       "favorites": 45399,
       "danmaku": 17481,
-      "comments": null
+      "comments": null,
+      "captured_at": null
     },
     "tags": [
       "漠河",
@@ -24,7 +25,10 @@
       "五六火灾"
     ],
     "description": "从哈尔滨坐19小时绿皮火车到中国最北端的城市漠河：五六火灾纪念馆、振兴街、最北电影院、漠河舞厅——一个人在小城的日与夜。",
-    "related_episodes": []
+    "related_videos": [],
+    "part_number": null,
+    "series": null,
+    "duration_seconds": 1914
   },
   "trip": {
     "title": "中国最北·漠河县城（2天）",
@@ -38,10 +42,6 @@
       "拼车",
       "步行"
     ],
-    "cost_total": null,
-    "cost_per_person": null,
-    "cost_notes": "视频内明确价格：绿皮火车硬卧280+/软卧390+、拼车10元、一路向北极地宾馆124元、猪肉面12元、漠河舞厅20元/小时、电影票25元、房价最贵3000+/平",
-    "price_as_of": "2023-11",
     "stops": [
       {
         "name": "哈尔滨 → 漠河（绿皮火车）",
@@ -56,7 +56,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 1,
+        "time": null,
+        "detail": null
       },
       {
         "name": "一路向北极地宾馆",
@@ -74,7 +77,10 @@
         },
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 2,
+        "time": null,
+        "detail": null
       },
       {
         "name": "猪肉面+市区早餐",
@@ -89,7 +95,10 @@
           "猪肉面12元"
         ],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 3,
+        "time": null,
+        "detail": null
       },
       {
         "name": "大兴安岭五六火灾纪念馆",
@@ -104,7 +113,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 4,
+        "time": null,
+        "detail": null
       },
       {
         "name": "市区闲逛（老潮河/彩色平房）",
@@ -120,7 +132,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 5,
+        "time": null,
+        "detail": null
       },
       {
         "name": "振兴街→北极星广场",
@@ -135,7 +150,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 6,
+        "time": null,
+        "detail": null
       },
       {
         "name": "家常菜馆",
@@ -151,7 +169,10 @@
           "北三星茄子"
         ],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 7,
+        "time": null,
+        "detail": null
       },
       {
         "name": "漠河舞厅",
@@ -165,7 +186,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 8,
+        "time": null,
+        "detail": null
       },
       {
         "name": "顶泰电影院（最北电影院）",
@@ -179,7 +203,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 9,
+        "time": null,
+        "detail": null
       },
       {
         "name": "拼车去北极村",
@@ -193,19 +220,24 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 10,
+        "time": null,
+        "detail": null
       }
-    ]
+    ],
+    "suitable_for": "想去中国最北、坐绿皮火车、体验极北小城的人；北极村/北红村可拼车2天",
+    "customization_notes": "哈尔滨12:55发车；淡季11月白天零下4度；去北极村拼车无固定班车",
+    "locations": [],
+    "themes": [],
+    "budget": {
+      "total": null,
+      "per_person": null,
+      "note": "视频内明确价格：绿皮火车硬卧280+/软卧390+、拼车10元、一路向北极地宾馆124元、猪肉面12元、漠河舞厅20元/小时、电影票25元、房价最贵3000+/平",
+      "price_as_of": "2023-11",
+      "items": []
+    }
   },
-  "tips": [
-    "绿皮火车没餐车",
-    "季节：冬天看雪夏天避暑",
-    "住宿选一路向北极地宾馆",
-    "五六火灾纪念馆值得去",
-    "老城就一平方公里",
-    "漠河舞厅打卡须知",
-    "去北极村要拼车"
-  ],
   "highlights": [
     "19小时绿皮火车去中国最北（硬卧280+，没餐车）",
     "大兴安岭五六火灾纪念馆：烧了约8个东京的震撼历史",
@@ -214,12 +246,39 @@
     "振兴街1平方公里老城：银行/书店/蜜雪冰城五脏俱全",
     "房价实录：最贵3000+/平，小别墅20多万一套"
   ],
-  "transcript_ref": "D:\\output\\赖导路线库\\赖导_漠河\\transcript\\BV1Yu4y1L7rL.txt",
-  "source_data": "B站 BV1Yu4y1L7rL 全文转写（SenseVoice，约1.1万字）+ B站view API元数据",
   "last_updated": "2026-08-23",
   "data_status": "draft",
-  "l3_hooks": {
-    "suitable_for": "想去中国最北、坐绿皮火车、体验极北小城的人；北极村/北红村可拼车2天",
-    "customization_notes": "哈尔滨12:55发车；淡季11月白天零下4度；去北极村拼车无固定班车"
-  }
+  "source_note": "B站 BV1Yu4y1L7rL 全文转写（SenseVoice，约1.1万字）+ B站view API元数据",
+  "tips": [
+    {
+      "category": "其他",
+      "text": "绿皮火车没餐车"
+    },
+    {
+      "category": "其他",
+      "text": "季节：冬天看雪夏天避暑"
+    },
+    {
+      "category": "其他",
+      "text": "住宿选一路向北极地宾馆"
+    },
+    {
+      "category": "其他",
+      "text": "五六火灾纪念馆值得去"
+    },
+    {
+      "category": "其他",
+      "text": "老城就一平方公里"
+    },
+    {
+      "category": "其他",
+      "text": "漠河舞厅打卡须知"
+    },
+    {
+      "category": "其他",
+      "text": "去北极村要拼车"
+    }
+  ],
+  "next_stop": null,
+  "last_checked_at": null
 }

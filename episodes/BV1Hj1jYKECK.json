@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "episode": {
     "blogger": "赖导AboutLai",
     "title": "云南这个“复古小城”，好像停在了旧时光里",
@@ -8,11 +8,12 @@
     "duration": "38:28",
     "publish_date": "2024-10-28",
     "stats": {
-      "plays": 4011570,
+      "views": 4011570,
       "likes": 69908,
       "favorites": 32670,
       "danmaku": 13141,
-      "comments": 3928
+      "comments": 3928,
+      "captured_at": null
     },
     "tags": [
       "个旧",
@@ -23,7 +24,10 @@
       "躺平"
     ],
     "description": "个旧传言房价低廉，又因为地处云南四季如春，被很多人当做了心中的躺平圣地。这座城市到底怎么样？这次我决定亲身去感受一下。",
-    "related_episodes": []
+    "related_videos": [],
+    "part_number": null,
+    "series": null,
+    "duration_seconds": 2308
   },
   "trip": {
     "title": "云南复古小城·个旧旅行（3天）",
@@ -37,10 +41,6 @@
       "打车",
       "地轨缆车/索道"
     ],
-    "cost_total": null,
-    "cost_per_person": null,
-    "cost_notes": "视频内明确价格：红河大酒店120元/晚、拼车15元/客车10元、打车起步7元、地轨缆车1元、老阴山索道往返40元、动物园12元、法国楼（普洱小炒鸡18元+鸡汤白菜22元）、糖粉小肉串人均20-40元、山上小区房价约3000元/平",
-    "price_as_of": "2024-10",
     "stops": [
       {
         "name": "昆明 → 个旧",
@@ -54,7 +54,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 1,
+        "time": null,
+        "detail": null
       },
       {
         "name": "红河大酒店",
@@ -72,7 +75,10 @@
         },
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 2,
+        "time": null,
+        "detail": null
       },
       {
         "name": "金湖（环湖+巴金广场）",
@@ -88,7 +94,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 3,
+        "time": null,
+        "detail": null
       },
       {
         "name": "选矿场遗址+市博物馆",
@@ -102,7 +111,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 4,
+        "time": null,
+        "detail": null
       },
       {
         "name": "老火车站美食街",
@@ -120,7 +132,10 @@
           "凉粉米线"
         ],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 5,
+        "time": null,
+        "detail": null
       },
       {
         "name": "地轨缆车（小香港全景）",
@@ -134,7 +149,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 6,
+        "time": null,
+        "detail": null
       },
       {
         "name": "法国楼餐厅",
@@ -151,7 +169,10 @@
           "鸡汤白菜22元"
         ],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 7,
+        "time": null,
+        "detail": null
       },
       {
         "name": "老阴山（4A景区）",
@@ -169,7 +190,10 @@
         "cost_notes": [],
         "tips": [
           "下午16:00前必须下山"
-        ]
+        ],
+        "order": 8,
+        "time": null,
+        "detail": null
       },
       {
         "name": "个旧动物园",
@@ -183,7 +207,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 9,
+        "time": null,
+        "detail": null
       },
       {
         "name": "街头慢走",
@@ -198,20 +225,24 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 10,
+        "time": null,
+        "detail": null
       }
-    ]
+    ],
+    "suitable_for": "想去个旧看看“南方鹤岗”真相、低成本小城躺平体验的人；昆明中转，2-3天",
+    "customization_notes": "昆明南站18:30火车；住金湖南部；老阴山16:00前下山；糖粉小肉串在老火车站美食街",
+    "locations": [],
+    "themes": [],
+    "budget": {
+      "total": null,
+      "per_person": null,
+      "note": "视频内明确价格：红河大酒店120元/晚、拼车15元/客车10元、打车起步7元、地轨缆车1元、老阴山索道往返40元、动物园12元、法国楼（普洱小炒鸡18元+鸡汤白菜22元）、糖粉小肉串人均20-40元、山上小区房价约3000元/平",
+      "price_as_of": "2024-10",
+      "items": []
+    }
   },
-  "tips": [
-    "交通：个旧没有机场",
-    "住金湖边最方便",
-    "天气多变，一天四季",
-    "糖粉小肉串是灵魂",
-    "老阴山能走就别坐索道？不",
-    "房价要看到底",
-    "个旧市博物馆别错过",
-    "地轨缆车1块钱体验山城"
-  ],
   "highlights": [
     "“南方鹤岗”真相：曾是云南第二大城市的世界锡都，如今房价60平10-20万",
     "糖粉小肉串：白砂糖粉蘸烤串的甜辣味",
@@ -219,12 +250,43 @@
     "老阴山2700级台阶/索道登顶，山顶宝华寺",
     "个旧市博物馆：汉代青铜器+锡矿产业史（免费）"
   ],
-  "transcript_ref": "D:\\output\\赖导路线库\\赖导_个旧\\transcript\\BV1Hj1jYKECK.txt",
-  "source_data": "B站 BV1Hj1jYKECK 全文转写（faster-whisper，7375字）+ B站view API元数据",
   "last_updated": "2026-08-23",
   "data_status": "draft",
-  "l3_hooks": {
-    "suitable_for": "想去个旧看看“南方鹤岗”真相、低成本小城躺平体验的人；昆明中转，2-3天",
-    "customization_notes": "昆明南站18:30火车；住金湖南部；老阴山16:00前下山；糖粉小肉串在老火车站美食街"
-  }
+  "source_note": "B站 BV1Hj1jYKECK 全文转写（faster-whisper，7375字）+ B站view API元数据",
+  "tips": [
+    {
+      "category": "其他",
+      "text": "交通：个旧没有机场"
+    },
+    {
+      "category": "其他",
+      "text": "住金湖边最方便"
+    },
+    {
+      "category": "其他",
+      "text": "天气多变，一天四季"
+    },
+    {
+      "category": "其他",
+      "text": "糖粉小肉串是灵魂"
+    },
+    {
+      "category": "其他",
+      "text": "老阴山能走就别坐索道？不"
+    },
+    {
+      "category": "其他",
+      "text": "房价要看到底"
+    },
+    {
+      "category": "其他",
+      "text": "个旧市博物馆别错过"
+    },
+    {
+      "category": "其他",
+      "text": "地轨缆车1块钱体验山城"
+    }
+  ],
+  "next_stop": null,
+  "last_checked_at": null
 }

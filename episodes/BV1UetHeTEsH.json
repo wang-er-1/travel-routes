@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "episode": {
     "blogger": "赖导AboutLai",
     "title": "去中国房价最低城市鹤岗旅行，和想象中很不一样",
@@ -8,11 +8,12 @@
     "duration": "34:07",
     "publish_date": "2024-09-19",
     "stats": {
-      "plays": 6693722,
+      "views": 6693722,
       "likes": 108766,
       "favorites": 37521,
       "danmaku": 26344,
-      "comments": null
+      "comments": null,
+      "captured_at": null
     },
     "tags": [
       "鹤岗",
@@ -22,7 +23,10 @@
       "东北"
     ],
     "description": "鹤岗因为房价常年处在全国最低位，所以被人们所熟知。花两三万就能买套房的传说流传于互联网。所以我就很感兴趣，鹤岗这座城市到底怎么样？为了亲身感受一下，我在9月初买好了机票+火车票，来到了鹤岗旅行。",
-    "related_episodes": []
+    "related_videos": [],
+    "part_number": null,
+    "series": null,
+    "duration_seconds": 2047
   },
   "trip": {
     "title": "去中国房价最低城市鹤岗旅行（2天）",
@@ -35,10 +39,6 @@
       "打车",
       "公交"
     ],
-    "cost_total": null,
-    "cost_per_person": null,
-    "cost_notes": "视频内明确价格：酒店169元/晚、出租车3公里内7元、公交1元、13元自助盒饭、台湾大叔租房5800元/年（包物业取暖宽带）、卖房参考44平3.5万起/二中学区81平20万",
-    "price_as_of": "2024-09",
     "stops": [
       {
         "name": "哈尔滨 → 鹤岗",
@@ -51,7 +51,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 1,
+        "time": null,
+        "detail": null
       },
       {
         "name": "新世纪广场（市中心）",
@@ -64,7 +67,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 2,
+        "time": null,
+        "detail": null
       },
       {
         "name": "鹤岗小串（出租车司机推荐）",
@@ -77,7 +83,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 3,
+        "time": null,
+        "detail": null
       },
       {
         "name": "松鹤小区（台湾大叔租住房）",
@@ -90,7 +99,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 4,
+        "time": null,
+        "detail": null
       },
       {
         "name": "平安宝塔",
@@ -103,7 +115,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 5,
+        "time": null,
+        "detail": null
       },
       {
         "name": "鹤岗二中（学区房广告墙）",
@@ -116,7 +131,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 6,
+        "time": null,
+        "detail": null
       },
       {
         "name": "儿童公园",
@@ -129,7 +147,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 7,
+        "time": null,
+        "detail": null
       },
       {
         "name": "鹤岗国家矿山公园",
@@ -142,19 +163,24 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 8,
+        "time": null,
+        "detail": null
       }
-    ]
+    ],
+    "suitable_for": "好奇中国房价最低城市、想低成本体验东北小城生活的人；哈尔滨出发1-2天可往返",
+    "customization_notes": "B站 BV1UetHeTEsH 全文转写（SenseVoice，6638字）+ 视频原话",
+    "locations": [],
+    "themes": [],
+    "budget": {
+      "total": null,
+      "per_person": null,
+      "note": "视频内明确价格：酒店169元/晚、出租车3公里内7元、公交1元、13元自助盒饭、台湾大叔租房5800元/年（包物业取暖宽带）、卖房参考44平3.5万起/二中学区81平20万",
+      "price_as_of": "2024-09",
+      "items": []
+    }
   },
-  "tips": [
-    "住市中心最方便",
-    "出租车便宜",
-    "看房价别只看传单",
-    "鹤岗小串认准三分熟",
-    "13元自助盒饭性价比王",
-    "矿山公园看煤城兴衰",
-    "儿童公园是老年大本营"
-  ],
   "highlights": [
     "两三万买房传说的真相：44平3.5万起，市中心学区房81平20万",
     "台湾46岁大叔5800元/年租房生活实录",
@@ -162,12 +188,39 @@
     "鹤岗国家矿山公园：130米深废弃露天矿坑",
     "儿童公园：原美海公园，孔雀黑熊的熊园遗址"
   ],
-  "transcript_ref": "好奇中国房价最低城市、想低成本体验东北小城生活的人；哈尔滨出发1-2天可往返",
-  "source_data": "鹤岗站在市中心（1.8公里）；9月初秋高气爽；矿山公园在市区最北，需打车",
   "last_updated": "2026-08-19",
   "data_status": "draft",
-  "l3_hooks": {
-    "suitable_for": "D:\\output\\赖导路线库\\赖导_鹤岗\\transcript\\BV1UetHeTEsH.txt",
-    "customization_notes": "B站 BV1UetHeTEsH 全文转写（SenseVoice，6638字）+ 视频原话"
-  }
+  "source_note": "鹤岗站在市中心（1.8公里）；9月初秋高气爽；矿山公园在市区最北，需打车",
+  "tips": [
+    {
+      "category": "其他",
+      "text": "住市中心最方便"
+    },
+    {
+      "category": "其他",
+      "text": "出租车便宜"
+    },
+    {
+      "category": "其他",
+      "text": "看房价别只看传单"
+    },
+    {
+      "category": "其他",
+      "text": "鹤岗小串认准三分熟"
+    },
+    {
+      "category": "其他",
+      "text": "13元自助盒饭性价比王"
+    },
+    {
+      "category": "其他",
+      "text": "矿山公园看煤城兴衰"
+    },
+    {
+      "category": "其他",
+      "text": "儿童公园是老年大本营"
+    }
+  ],
+  "next_stop": null,
+  "last_checked_at": null
 }

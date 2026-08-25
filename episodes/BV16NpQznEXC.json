@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "episode": {
     "blogger": "赖导AboutLai",
     "title": "一个人自驾河西走廊武威、张掖，甘肃“小城”都这么宜居！？",
@@ -8,11 +8,12 @@
     "duration": "1:43:17",
     "publish_date": "2025-09-20",
     "stats": {
-      "plays": 4016550,
+      "views": 4016550,
       "likes": 261150,
       "favorites": 84317,
       "danmaku": 35674,
-      "comments": null
+      "comments": null,
+      "captured_at": null
     },
     "tags": [
       "河西走廊",
@@ -23,7 +24,10 @@
       "石窟"
     ],
     "description": "在中国的西北地区有这样一个神奇的地带，它位于甘肃省内，由东南向西北呈现出了一个狭长区域，东西长达1000公里，南北最窄处却只有数几公里，两边高高隆起的山脉把中间夹得像一条走廊一般，再加上这里又地处黄河以西，所以它被人们称之为“河西走廊”。",
-    "related_episodes": []
+    "related_videos": [],
+    "part_number": null,
+    "series": null,
+    "duration_seconds": 6197
   },
   "trip": {
     "title": "一个人自驾河西走廊·武威+张掖（2天）",
@@ -34,10 +38,6 @@
     "transport_modes": [
       "自驾（零跑C10）"
     ],
-    "cost_total": null,
-    "cost_per_person": null,
-    "cost_notes": "视频内明确价格：武威酒店130多元/晚、张掖酒店170-180元/晚、三套车26元、面皮6元、杏皮茶5-6元、外星谷100元、甘州区房价80多平15-16万",
-    "price_as_of": "2025-09",
     "stops": [
       {
         "name": "兰州 → 乌鞘岭",
@@ -50,7 +50,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 1,
+        "time": null,
+        "detail": null
       },
       {
         "name": "天梯山石窟",
@@ -63,7 +66,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 2,
+        "time": null,
+        "detail": null
       },
       {
         "name": "武威（河西四郡第一城）",
@@ -76,7 +82,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 3,
+        "time": null,
+        "detail": null
       },
       {
         "name": "山丹军马场",
@@ -89,7 +98,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 4,
+        "time": null,
+        "detail": null
       },
       {
         "name": "马蹄寺石窟（肃南）",
@@ -102,7 +114,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 5,
+        "time": null,
+        "detail": null
       },
       {
         "name": "张掖（甘州）",
@@ -115,7 +130,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 6,
+        "time": null,
+        "detail": null
       },
       {
         "name": "外星谷/七彩丹霞",
@@ -128,7 +146,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 7,
+        "time": null,
+        "detail": null
       },
       {
         "name": "高台县花墙子村",
@@ -141,21 +162,24 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 8,
+        "time": null,
+        "detail": null
       }
-    ]
+    ],
+    "suitable_for": "自驾爱好者、石窟/历史人文控；河西走廊全程（兰州→敦煌四郡）自驾党的东段样板",
+    "customization_notes": "B站 BV16NpQznEXC 全文转写（SenseVoice，18785字）+ 百度百科核实",
+    "locations": [],
+    "themes": [],
+    "budget": {
+      "total": null,
+      "per_person": null,
+      "note": "视频内明确价格：武威酒店130多元/晚、张掖酒店170-180元/晚、三套车26元、面皮6元、杏皮茶5-6元、外星谷100元、甘州区房价80多平15-16万",
+      "price_as_of": "2025-09",
+      "items": []
+    }
   },
-  "tips": [
-    "乌鞘岭天气极端",
-    "天梯山石窟去之前知道这些",
-    "武威三套车必吃",
-    "雷台汉墓看点",
-    "马蹄寺石窟要爬",
-    "张掖大佛寺卧佛震撼",
-    "外星谷小众玩法",
-    "花墙子村顺路打卡",
-    "河西走廊自驾节奏"
-  ],
   "highlights": [
     "乌鞘岭：河西走廊起点，8月飞冰雹",
     "天梯山石窟「石窟鼻祖」：28米大佛+凉州模式",
@@ -164,12 +188,47 @@
     "张掖大佛寺：34.5米亚洲最大室内卧佛",
     "外星谷100元自驾+飞无人机，人少景野"
   ],
-  "transcript_ref": "自驾爱好者、石窟/历史人文控；河西走廊全程（兰州→敦煌四郡）自驾党的东段样板",
-  "source_data": "乌鞘岭天气极端需防寒；马蹄寺要爬85.5°陡梯；外星谷自备水粮；花墙子村顺路在去酒泉方向",
   "last_updated": "2026-08-19",
   "data_status": "draft",
-  "l3_hooks": {
-    "suitable_for": "D:\\output\\赖导路线库\\赖导_河西走廊\\transcript\\BV16NpQznEXC.txt",
-    "customization_notes": "B站 BV16NpQznEXC 全文转写（SenseVoice，18785字）+ 百度百科核实"
-  }
+  "source_note": "乌鞘岭天气极端需防寒；马蹄寺要爬85.5°陡梯；外星谷自备水粮；花墙子村顺路在去酒泉方向",
+  "tips": [
+    {
+      "category": "其他",
+      "text": "乌鞘岭天气极端"
+    },
+    {
+      "category": "其他",
+      "text": "天梯山石窟去之前知道这些"
+    },
+    {
+      "category": "其他",
+      "text": "武威三套车必吃"
+    },
+    {
+      "category": "其他",
+      "text": "雷台汉墓看点"
+    },
+    {
+      "category": "其他",
+      "text": "马蹄寺石窟要爬"
+    },
+    {
+      "category": "其他",
+      "text": "张掖大佛寺卧佛震撼"
+    },
+    {
+      "category": "其他",
+      "text": "外星谷小众玩法"
+    },
+    {
+      "category": "其他",
+      "text": "花墙子村顺路打卡"
+    },
+    {
+      "category": "其他",
+      "text": "河西走廊自驾节奏"
+    }
+  ],
+  "next_stop": null,
+  "last_checked_at": null
 }

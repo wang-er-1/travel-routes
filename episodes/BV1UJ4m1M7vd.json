@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "episode": {
     "blogger": "赖导AboutLai",
     "title": "去山东最北海岛旅行，我找到了让时间变慢的方法",
@@ -8,11 +8,12 @@
     "duration": "48:39",
     "publish_date": "2024-06-14",
     "stats": {
-      "plays": 2785522,
+      "views": 2785522,
       "likes": 110780,
       "favorites": 59987,
       "danmaku": 19683,
-      "comments": null
+      "comments": null,
+      "captured_at": null
     },
     "tags": [
       "北隍城岛",
@@ -25,7 +26,10 @@
       "灯塔"
     ],
     "description": "山东最北端的海岛北隍城岛，面积仅2.72平方公里，常住人口不到2000人。赶在酷暑前去一个相对僻静、不那么商业化的海岛上慢节奏待几天——坐4小时客船，去钓鱼、赶海、看日落。",
-    "related_episodes": []
+    "related_videos": [],
+    "part_number": null,
+    "series": null,
+    "duration_seconds": 2919
   },
   "trip": {
     "title": "山东最北海岛·北隍城岛慢旅行（3天）",
@@ -39,10 +43,6 @@
       "步行",
       "搭车"
     ],
-    "cost_total": null,
-    "cost_per_person": null,
-    "cost_notes": "视频内明确价格：渔家乐吃住一体320元/天管三餐、客船升舱30元、山前村理发15元；船票/包船钓鱼价格未明",
-    "price_as_of": "2024-06",
     "stops": [
       {
         "name": "蓬莱（出发港）",
@@ -63,7 +63,10 @@
           "蓬莱小面"
         ],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 1,
+        "time": null,
+        "detail": null
       },
       {
         "name": "巡仙十二号客船",
@@ -80,7 +83,10 @@
         "cost_notes": [],
         "tips": [
           "只有早上有船"
-        ]
+        ],
+        "order": 2,
+        "time": null,
+        "detail": null
       },
       {
         "name": "北隍城岛·渔家乐",
@@ -103,7 +109,10 @@
           "皮皮虾"
         ],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 3,
+        "time": null,
+        "detail": null
       },
       {
         "name": "山后村",
@@ -119,7 +128,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 4,
+        "time": null,
+        "detail": null
       },
       {
         "name": "出海钓鱼",
@@ -136,7 +148,10 @@
         "cost_notes": [],
         "tips": [
           "钓鱼船鹅卵石坡滑着下水"
-        ]
+        ],
+        "order": 5,
+        "time": null,
+        "detail": null
       },
       {
         "name": "北隍城灯塔（日落）",
@@ -151,7 +166,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 6,
+        "time": null,
+        "detail": null
       },
       {
         "name": "赶海",
@@ -168,7 +186,10 @@
         "cost_notes": [],
         "tips": [
           "每天退潮比前一天晚约1小时"
-        ]
+        ],
+        "order": 7,
+        "time": null,
+        "detail": null
       },
       {
         "name": "山前村",
@@ -184,7 +205,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 8,
+        "time": null,
+        "detail": null
       },
       {
         "name": "离岛",
@@ -197,20 +221,24 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 9,
+        "time": null,
+        "detail": null
       }
-    ]
+    ],
+    "suitable_for": "想找一个人少、不商业化的北方海岛慢节奏待几天的人；蓬莱中转，周末+1天",
+    "customization_notes": "只有早上8点一班船；住渔家乐320元/天含三餐；5月底海水仍凉",
+    "locations": [],
+    "themes": [],
+    "budget": {
+      "total": null,
+      "per_person": null,
+      "note": "视频内明确价格：渔家乐吃住一体320元/天管三餐、客船升舱30元、山前村理发15元；船票/包船钓鱼价格未明",
+      "price_as_of": "2024-06",
+      "items": []
+    }
   },
-  "tips": [
-    "只有早上有船，提前住蓬莱",
-    "岛上住宿：渔家乐吃住一体",
-    "单行隧道要注意",
-    "赶海看退潮时间",
-    "钓鱼要早起",
-    "灯塔日落路线",
-    "5月底水还凉",
-    "山前村更“发达”"
-  ],
   "highlights": [
     "山东最北端海岛北隍城岛：2.72平方公里、两个村不到2000人，渤海内海的“功臣”",
     "渔家乐320元/天吃住一体：鲍鱼水饺、海菜包子、炸虾酱",
@@ -219,12 +247,43 @@
     "赶海：退潮后石头下全是螃蟹海星",
     "山前村“我在北方很想你”打卡牌+15元理发"
   ],
-  "transcript_ref": "D:\\output\\赖导路线库\\赖导_长岛\\transcript\\BV1UJ4m1M7vd.txt",
-  "source_data": "B站 BV1UJ4m1M7vd 全文转写（SenseVoice，7535字）+ B站view API元数据",
   "last_updated": "2026-08-23",
   "data_status": "draft",
-  "l3_hooks": {
-    "suitable_for": "想找一个人少、不商业化的北方海岛慢节奏待几天的人；蓬莱中转，周末+1天",
-    "customization_notes": "只有早上8点一班船；住渔家乐320元/天含三餐；5月底海水仍凉"
-  }
+  "source_note": "B站 BV1UJ4m1M7vd 全文转写（SenseVoice，7535字）+ B站view API元数据",
+  "tips": [
+    {
+      "category": "其他",
+      "text": "只有早上有船，提前住蓬莱"
+    },
+    {
+      "category": "其他",
+      "text": "岛上住宿：渔家乐吃住一体"
+    },
+    {
+      "category": "其他",
+      "text": "单行隧道要注意"
+    },
+    {
+      "category": "其他",
+      "text": "赶海看退潮时间"
+    },
+    {
+      "category": "其他",
+      "text": "钓鱼要早起"
+    },
+    {
+      "category": "其他",
+      "text": "灯塔日落路线"
+    },
+    {
+      "category": "其他",
+      "text": "5月底水还凉"
+    },
+    {
+      "category": "其他",
+      "text": "山前村更“发达”"
+    }
+  ],
+  "next_stop": null,
+  "last_checked_at": null
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "episode": {
     "blogger": "赖导AboutLai",
     "title": "20年前“人去楼空”的甘肃小城，现在是什么样？",
@@ -8,11 +8,12 @@
     "duration": "51:46",
     "publish_date": "2025-04-02",
     "stats": {
-      "plays": 2940071,
+      "views": 2940071,
       "likes": 88936,
       "favorites": 31877,
       "danmaku": 18933,
-      "comments": null
+      "comments": null,
+      "captured_at": null
     },
     "tags": [
       "玉门",
@@ -25,7 +26,10 @@
       "河西走廊"
     ],
     "description": "玉门市因石油而兴，2003年市委市政府搬迁到70公里外的新市区，老市区荒废原地。曾经的20多万人口只剩不到2万。20年过去了，玉门老市区现在什么样？",
-    "related_episodes": []
+    "related_videos": [],
+    "part_number": null,
+    "series": null,
+    "duration_seconds": 3106
   },
   "trip": {
     "title": "玉门老市区·资源枯竭小城探访（4天）",
@@ -39,10 +43,6 @@
       "面包车",
       "自驾"
     ],
-    "cost_total": null,
-    "cost_per_person": null,
-    "cost_notes": "视频内明确价格：嘉峪关→老市区客车20元、老君庙面包车5-10元、网购椰子44.89元/小海鲜16.63元/冲锋衣59.9元、房价七八万一套（七八十平）、月租一两百；酒店/和乐面价格未明",
-    "price_as_of": "2025-03",
     "stops": [
       {
         "name": "上海 → 嘉峪关 → 老市区",
@@ -57,7 +57,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 1,
+        "time": null,
+        "detail": null
       },
       {
         "name": "浩宇大酒店",
@@ -75,7 +78,10 @@
         },
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 2,
+        "time": null,
+        "detail": null
       },
       {
         "name": "解放门/大环岛市中心",
@@ -90,7 +96,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 3,
+        "time": null,
+        "detail": null
       },
       {
         "name": "解放路购物街（金玉宾馆）",
@@ -109,7 +118,10 @@
         },
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 4,
+        "time": null,
+        "detail": null
       },
       {
         "name": "游城学校+棋牌广场",
@@ -124,7 +136,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 5,
+        "time": null,
+        "detail": null
       },
       {
         "name": "游城公园",
@@ -139,7 +154,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 6,
+        "time": null,
+        "detail": null
       },
       {
         "name": "老君庙油田",
@@ -157,7 +175,10 @@
         "cost_notes": [],
         "tips": [
           "整个景区游客极少"
-        ]
+        ],
+        "order": 7,
+        "time": null,
+        "detail": null
       },
       {
         "name": "赤金镇（铁人王进喜家乡）",
@@ -172,7 +193,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 8,
+        "time": null,
+        "detail": null
       },
       {
         "name": "清泉乡",
@@ -190,20 +214,24 @@
           "羊羔肉"
         ],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 9,
+        "time": null,
+        "detail": null
       }
-    ]
+    ],
+    "suitable_for": "对资源枯竭型城市、老工业基地、铁人精神感兴趣的人；河西走廊自驾可顺路",
+    "customization_notes": "嘉峪关9点客车一天两班；晚上饭店才开；老君庙油田在老市区最南端",
+    "locations": [],
+    "themes": [],
+    "budget": {
+      "total": null,
+      "per_person": null,
+      "note": "视频内明确价格：嘉峪关→老市区客车20元、老君庙面包车5-10元、网购椰子44.89元/小海鲜16.63元/冲锋衣59.9元、房价七八万一套（七八十平）、月租一两百；酒店/和乐面价格未明",
+      "price_as_of": "2025-03",
+      "items": []
+    }
   },
-  "tips": [
-    "交通：先到嘉峪关",
-    "住宿选金玉宾馆",
-    "别被“空城”吓到",
-    "老君庙油田必去",
-    "网购也能到，包邮",
-    "天气与季节",
-    "吃和乐面认准半干半汤",
-    "资源枯竭城市看什么"
-  ],
   "highlights": [
     "中国石油工业摇篮：1939年第一口油井+老一井旧址+石油工人窑洞",
     "铁人王进喜故乡：赤金镇铁人村故居纪念馆",
@@ -212,12 +240,43 @@
     "20年没人整理的废弃三室一厅+墙上的《钗头凤》",
     "油田姐姐的留守故事：矿区禁酒、红工服的地狱梗"
   ],
-  "transcript_ref": "D:\\output\\赖导路线库\\赖导_玉门\\transcript\\BV19jfPY9Eot.txt",
-  "source_data": "B站 BV19jfPY9Eot 全文转写（SenseVoice，约1万字）+ B站view API元数据",
   "last_updated": "2026-08-23",
   "data_status": "draft",
-  "l3_hooks": {
-    "suitable_for": "对资源枯竭型城市、老工业基地、铁人精神感兴趣的人；河西走廊自驾可顺路",
-    "customization_notes": "嘉峪关9点客车一天两班；晚上饭店才开；老君庙油田在老市区最南端"
-  }
+  "source_note": "B站 BV19jfPY9Eot 全文转写（SenseVoice，约1万字）+ B站view API元数据",
+  "tips": [
+    {
+      "category": "其他",
+      "text": "交通：先到嘉峪关"
+    },
+    {
+      "category": "其他",
+      "text": "住宿选金玉宾馆"
+    },
+    {
+      "category": "其他",
+      "text": "别被“空城”吓到"
+    },
+    {
+      "category": "其他",
+      "text": "老君庙油田必去"
+    },
+    {
+      "category": "其他",
+      "text": "网购也能到，包邮"
+    },
+    {
+      "category": "其他",
+      "text": "天气与季节"
+    },
+    {
+      "category": "其他",
+      "text": "吃和乐面认准半干半汤"
+    },
+    {
+      "category": "其他",
+      "text": "资源枯竭城市看什么"
+    }
+  ],
+  "next_stop": null,
+  "last_checked_at": null
 }

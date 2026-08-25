@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "episode": {
     "blogger": "小可追太阳",
     "blogger_mid": "1066572839",
@@ -9,11 +9,12 @@
     "duration": "36:44",
     "publish_date": "2025-07-03",
     "stats": {
-      "plays": 261917,
+      "views": 261917,
       "likes": 6453,
       "favorites": 2011,
       "danmaku": 2331,
-      "comments": 700
+      "comments": 700,
+      "captured_at": null
     },
     "tags": [
       "佳木斯",
@@ -24,7 +25,10 @@
       "松花江"
     ],
     "description": "搭火车环游中国的第21站，到达松花江畔的冰雪小城佳木斯，这里能遇到多种多样接地气的美食。有东北版的omakase，独特风格的拌冷面，还有筋饼和烤串的搭配满足不同人的味蕾。从热腾腾的早市一直吃到胡同的夜市，松花江的风徐徐吹过知青广场，也许历史正在悄悄说话。",
-    "related_episodes": []
+    "related_videos": [],
+    "part_number": null,
+    "series": null,
+    "duration_seconds": 2204
   },
   "trip": {
     "title": "搭火车环游中国·第21站：佳木斯（市井美食+松花江）",
@@ -37,10 +41,6 @@
       "步行",
       "打车"
     ],
-    "cost_total": null,
-    "cost_per_person": null,
-    "cost_notes": "视频内明确价格：串串1元/串吃一顿十几块、牛肉包子约1.1元/个、拌冷面小菜8元/盘、旧书15元、暖鸟书店免费阅读（房租一年2万）等",
-    "price_as_of": "2025",
     "stops": [
       {
         "name": "佳木斯市区（到达）",
@@ -57,7 +57,10 @@
         "cost_notes": [],
         "tips": [
           "哈佳快铁：哈尔滨—佳木斯343km、200km/h，高寒地区最长快铁"
-        ]
+        ],
+        "order": 1,
+        "time": null,
+        "detail": null
       },
       {
         "name": "佳木斯夜市",
@@ -83,7 +86,10 @@
         ],
         "tips": [
           "店主站桌中按人控制煮制时间；吃完举手示意数签结账"
-        ]
+        ],
+        "order": 2,
+        "time": null,
+        "detail": null
       },
       {
         "name": "三江省公署旧址",
@@ -99,7 +105,10 @@
         "cost_notes": [],
         "tips": [
           "周一闭馆，正门锁了，别从后门溜进去"
-        ]
+        ],
+        "order": 3,
+        "time": null,
+        "detail": null
       },
       {
         "name": "大世界包子铺（新谊街）",
@@ -120,7 +129,10 @@
         ],
         "tips": [
           "包子皮筋道，蘸醋辣椒油"
-        ]
+        ],
+        "order": 4,
+        "time": null,
+        "detail": null
       },
       {
         "name": "暖鸟书店",
@@ -141,7 +153,10 @@
         ],
         "tips": [
           "藏在建材城里，导航到了别怀疑走错"
-        ]
+        ],
+        "order": 5,
+        "time": null,
+        "detail": null
       },
       {
         "name": "新兴冷面（向阳路）",
@@ -162,7 +177,10 @@
         ],
         "tips": [
           "配料堆成小山，甜辣味浓"
-        ]
+        ],
+        "order": 6,
+        "time": null,
+        "detail": null
       },
       {
         "name": "松花江沿江公园",
@@ -179,7 +197,10 @@
         "cost_notes": [],
         "tips": [
           "松花江第三次相遇：吉林（丰满水电站不冻江）→哈尔滨（冰雪游乐场）→佳木斯"
-        ]
+        ],
+        "order": 7,
+        "time": null,
+        "detail": null
       },
       {
         "name": "知青广场",
@@ -196,7 +217,10 @@
         "cost_notes": [],
         "tips": [
           "2008年建成，纪念上山下乡运动"
-        ]
+        ],
+        "order": 8,
+        "time": null,
+        "detail": null
       },
       {
         "name": "杨大厨筋饼卷肉串（生平街一带）",
@@ -215,7 +239,10 @@
         "cost_notes": [],
         "tips": [
           "不加葱酱，肉香面香纯享，和徐州/淄博卷饼不一样"
-        ]
+        ],
+        "order": 9,
+        "time": null,
+        "detail": null
       },
       {
         "name": "晋江早市（大早市）",
@@ -235,22 +262,24 @@
         ],
         "tips": [
           "早市尽头旧书摊大爷84岁很健谈，可留言接力"
-        ]
+        ],
+        "order": 10,
+        "time": null,
+        "detail": null
       }
-    ]
+    ],
+    "suitable_for": "火车旅行爱好者、东北市井美食控：双鸭山/哈尔滨出发1-2天低成本逛吃佳木斯",
+    "customization_notes": "市内全部步行/打车可达；冬季需防寒；早市要天亮去；三江省公署旧址避开周一",
+    "locations": [],
+    "themes": [],
+    "budget": {
+      "total": null,
+      "per_person": null,
+      "note": "视频内明确价格：串串1元/串吃一顿十几块、牛肉包子约1.1元/个、拌冷面小菜8元/盘、旧书15元、暖鸟书店免费阅读（房租一年2万）等",
+      "price_as_of": "2025",
+      "items": []
+    }
   },
-  "tips": [
-    "哈佳快铁方便",
-    "东北版omakase怎么吃",
-    "三江省公署旧址周一闭馆",
-    "佳木斯必吃：拌冷面",
-    "暖鸟书店值得逛",
-    "松花江冬天看什么",
-    "知青广场看点",
-    "筋饼卷肉串怎么点",
-    "逛早市淘书",
-    "冬季穿衣提醒"
-  ],
   "highlights": [
     "东北版omakase：一元一串的市井串串店，店主站桌中控全局",
     "佳木斯必吃拌冷面：甜辣口配料堆成小山（新兴冷面）",
@@ -259,12 +288,51 @@
     "知青广场「广阔天地大有作为」：姜昆、濮存昕的北大荒青春",
     "筋饼卷肉串：不加葱酱的肉香面香纯享"
   ],
-  "transcript_ref": "D:\\output\\赖导路线库\\小可追太阳_佳木斯\\transcript\\BV1cD3bzwEVm.txt",
-  "source_data": "B站 BV1cD3bzwEVm 全文转写（SenseVoice，37段5223字）+ 百度百科/公开资料核实地名史实",
   "last_updated": "2026-08-19",
   "data_status": "draft",
-  "l3_hooks": {
-    "suitable_for": "火车旅行爱好者、东北市井美食控：双鸭山/哈尔滨出发1-2天低成本逛吃佳木斯",
-    "customization_notes": "市内全部步行/打车可达；冬季需防寒；早市要天亮去；三江省公署旧址避开周一"
-  }
+  "source_note": "B站 BV1cD3bzwEVm 全文转写（SenseVoice，37段5223字）+ 百度百科/公开资料核实地名史实",
+  "tips": [
+    {
+      "category": "其他",
+      "text": "哈佳快铁方便"
+    },
+    {
+      "category": "其他",
+      "text": "东北版omakase怎么吃"
+    },
+    {
+      "category": "其他",
+      "text": "三江省公署旧址周一闭馆"
+    },
+    {
+      "category": "其他",
+      "text": "佳木斯必吃：拌冷面"
+    },
+    {
+      "category": "其他",
+      "text": "暖鸟书店值得逛"
+    },
+    {
+      "category": "其他",
+      "text": "松花江冬天看什么"
+    },
+    {
+      "category": "其他",
+      "text": "知青广场看点"
+    },
+    {
+      "category": "其他",
+      "text": "筋饼卷肉串怎么点"
+    },
+    {
+      "category": "其他",
+      "text": "逛早市淘书"
+    },
+    {
+      "category": "其他",
+      "text": "冬季穿衣提醒"
+    }
+  ],
+  "next_stop": null,
+  "last_checked_at": null
 }

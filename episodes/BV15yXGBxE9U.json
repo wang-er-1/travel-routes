@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "episode": {
     "blogger": "赖导AboutLai",
     "title": "自驾1400公里去云南最南边境县城，探索热带雨林里的独特风物",
@@ -8,11 +8,12 @@
     "duration": "68:05",
     "publish_date": "2026-03-28",
     "stats": {
-      "plays": 3817807,
+      "views": 3817807,
       "likes": 93760,
       "favorites": 35058,
       "danmaku": 17645,
-      "comments": null
+      "comments": null,
+      "captured_at": null
     },
     "tags": [
       "勐腊",
@@ -25,7 +26,10 @@
       "自驾"
     ],
     "description": "勐腊县是云南边境线最长的县城，分布着成片热带雨林，是国际学界公认的中国热带雨林核心地区。这次自驾1400多公里，从重庆一路向南，去探索这座边境小城的独特风物。",
-    "related_episodes": []
+    "related_videos": [],
+    "part_number": null,
+    "series": null,
+    "duration_seconds": 4085
   },
   "trip": {
     "title": "云南最南边境小城·勐腊自驾（3天）",
@@ -37,10 +41,6 @@
       "自驾（深蓝S07纯电）",
       "皮划艇漂流"
     ],
-    "cost_total": null,
-    "cost_per_person": null,
-    "cost_notes": "视频内明确价格：景兰大酒店246元/晚、老城中心酒店169元/晚、佐料牛肉盖饭约20元、赶摆烤鸡+五花肉+烤鱼共160元、望天树无人机拍摄另付费、门票/漂流票价未明",
-    "price_as_of": "2026-03",
     "stops": [
       {
         "name": "重庆 → 景洪 → 勐腊",
@@ -55,7 +55,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 1,
+        "time": null,
+        "detail": null
       },
       {
         "name": "景兰大酒店（《边水往事》取景地）",
@@ -73,7 +76,10 @@
         },
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 2,
+        "time": null,
+        "detail": null
       },
       {
         "name": "牛乐乐老挝火锅",
@@ -90,7 +96,10 @@
           "老挝火锅（涮烤一体）"
         ],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 3,
+        "time": null,
+        "detail": null
       },
       {
         "name": "望天树景区",
@@ -108,7 +117,10 @@
         "cost_notes": [],
         "tips": [
           "随身物品放好防掉落"
-        ]
+        ],
+        "order": 4,
+        "time": null,
+        "detail": null
       },
       {
         "name": "老城中心+星光夜市",
@@ -128,7 +140,10 @@
           "佐料牛肉盖饭约20元"
         ],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 5,
+        "time": null,
+        "detail": null
       },
       {
         "name": "布过村（布过族）",
@@ -143,7 +158,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 6,
+        "time": null,
+        "detail": null
       },
       {
         "name": "小徐家橡胶林",
@@ -157,7 +175,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 7,
+        "time": null,
+        "detail": null
       },
       {
         "name": "曼龙勒村雨林赶摆",
@@ -183,7 +204,10 @@
         ],
         "tips": [
           "只有周六举办"
-        ]
+        ],
+        "order": 8,
+        "time": null,
+        "detail": null
       },
       {
         "name": "南腊河雨林漂流",
@@ -199,7 +223,10 @@
         "cost_notes": [],
         "tips": [
           "会湿裤子"
-        ]
+        ],
+        "order": 9,
+        "time": null,
+        "detail": null
       },
       {
         "name": "曼东村龙脑香禅院",
@@ -216,20 +243,24 @@
         "cost_notes": [],
         "tips": [
           "建议白天去"
-        ]
+        ],
+        "order": 10,
+        "time": null,
+        "detail": null
       }
-    ]
+    ],
+    "suitable_for": "喜欢热带雨林、边境小城、异域风情市集的人；西双版纳深度游可加勐腊2-3天",
+    "customization_notes": "赶摆只在周六；望天树+漂流可同天；泼水节（4月中）最热闹",
+    "locations": [],
+    "themes": [],
+    "budget": {
+      "total": null,
+      "per_person": null,
+      "note": "视频内明确价格：景兰大酒店246元/晚、老城中心酒店169元/晚、佐料牛肉盖饭约20元、赶摆烤鸡+五花肉+烤鱼共160元、望天树无人机拍摄另付费、门票/漂流票价未明",
+      "price_as_of": "2026-03",
+      "items": []
+    }
   },
-  "tips": [
-    "自驾路线和时间",
-    "纯电自驾无压力",
-    "树冠走廊的教训",
-    "赶摆只有周六",
-    "漂流会湿裤子",
-    "龙脑香禅院别晚上去",
-    "勐腊口味和赶摆美食",
-    "泼水节来最热闹"
-  ],
   "highlights": [
     "望天树树冠走廊：500米长、36米高，世界最高的树冠走廊",
     "中国唯一的热带雨林赶摆（曼龙勒村，每周六）",
@@ -238,12 +269,43 @@
     "曼东村龙脑香禅院：废弃禅院的释迦牟尼涅槃像+那伽护法像",
     "《边水往事》取景地景兰大酒店246元/晚"
   ],
-  "transcript_ref": "D:\\output\\赖导路线库\\赖导_勐腊\\transcript\\BV15yXGBxE9U.txt",
-  "source_data": "B站 BV15yXGBxE9U 全文转写（SenseVoice，12162字）+ B站view API元数据",
   "last_updated": "2026-08-23",
   "data_status": "draft",
-  "l3_hooks": {
-    "suitable_for": "喜欢热带雨林、边境小城、异域风情市集的人；西双版纳深度游可加勐腊2-3天",
-    "customization_notes": "赶摆只在周六；望天树+漂流可同天；泼水节（4月中）最热闹"
-  }
+  "source_note": "B站 BV15yXGBxE9U 全文转写（SenseVoice，12162字）+ B站view API元数据",
+  "tips": [
+    {
+      "category": "其他",
+      "text": "自驾路线和时间"
+    },
+    {
+      "category": "其他",
+      "text": "纯电自驾无压力"
+    },
+    {
+      "category": "其他",
+      "text": "树冠走廊的教训"
+    },
+    {
+      "category": "其他",
+      "text": "赶摆只有周六"
+    },
+    {
+      "category": "其他",
+      "text": "漂流会湿裤子"
+    },
+    {
+      "category": "其他",
+      "text": "龙脑香禅院别晚上去"
+    },
+    {
+      "category": "其他",
+      "text": "勐腊口味和赶摆美食"
+    },
+    {
+      "category": "其他",
+      "text": "泼水节来最热闹"
+    }
+  ],
+  "next_stop": null,
+  "last_checked_at": null
 }

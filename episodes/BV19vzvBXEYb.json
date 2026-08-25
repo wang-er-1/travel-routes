@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "episode": {
     "blogger": "小可追太阳",
     "blogger_mid": "1066572839",
@@ -9,11 +9,12 @@
     "duration": "41:28",
     "publish_date": "2026-01-26",
     "stats": {
-      "plays": 261396,
+      "views": 261396,
       "likes": 5403,
       "favorites": 2669,
       "danmaku": 950,
-      "comments": null
+      "comments": null,
+      "captured_at": null
     },
     "tags": [
       "满洲里",
@@ -24,21 +25,28 @@
       "中俄边境"
     ],
     "description": "搭火车环游中国的第33站，抵达中蒙俄三国交界处的边境小城——满洲里。这座草原中生长出的百年商埠，曾是西伯利亚铁路进入中国的第一站，如今依然是欧亚大陆桥的交通要冲，这里承担着中俄贸易陆路运输一半以上的份额，满街的俄式建筑和俄国人让人产生了身在异国的错觉。历史与当下交织的满洲里，正在站台的另一端等着我。",
-    "related_episodes": [
+    "related_videos": [
       {
-        "title": "从满洲里到呼伦湖，中国边境小城挤满了来购物的俄罗斯人",
         "bvid": "BV1bicgzaEQp",
+        "relation": "part",
+        "note": "从满洲里到呼伦湖，中国边境小城挤满了来购物的俄罗斯人",
+        "part_number": 2,
         "url": "https://www.bilibili.com/video/BV1bicgzaEQp",
-        "duration": "56:18",
         "publish_date": "2026-02-09",
+        "duration": "56:18",
+        "title": "从满洲里到呼伦湖，中国边境小城挤满了来购物的俄罗斯人",
         "stats": {
-          "plays": 248117,
+          "views": 248117,
           "likes": 5288,
           "favorites": 2146,
-          "danmaku": 1555
+          "danmaku": 1555,
+          "comments": null
         }
       }
-    ]
+    ],
+    "part_number": 1,
+    "series": null,
+    "duration_seconds": 2488
   },
   "trip": {
     "title": "搭火车环游中国·第33站：满洲里（上/下两集，中俄蒙边境百年商埠）",
@@ -51,10 +59,6 @@
       "步行",
       "租车自驾"
     ],
-    "cost_total": null,
-    "cost_per_person": null,
-    "cost_notes": "视频内明确价格：公寓房130元/晚、国门门票60元、旋转餐厅400元/人（未去）、卢布里奶酪包39元/炭烤香肠59元/冷熏三文鱼56元/莫尔斯18元、波罗的海三号啤酒7元、鹿肉罐头35元、玛瑙3元/块、外卖12元等",
-    "price_as_of": "2026-01",
     "stops": [
       {
         "name": "海拉尔站 → 满洲里（火车）",
@@ -72,7 +76,10 @@
         "cost_notes": [],
         "tips": [
           "草原天气看头顶云，天气预报失效"
-        ]
+        ],
+        "order": 1,
+        "time": null,
+        "detail": null
       },
       {
         "name": "满洲里火车站周边老建筑",
@@ -97,7 +104,10 @@
         "cost_notes": [],
         "tips": [
           "老建筑大多空置；旺季仅七八月"
-        ]
+        ],
+        "order": 2,
+        "time": null,
+        "detail": null
       },
       {
         "name": "沙俄监狱旧址",
@@ -115,7 +125,10 @@
         "cost_notes": [],
         "tips": [
           "需带身份证；地下室阴森，墙上有百年刻字"
-        ]
+        ],
+        "order": 3,
+        "time": null,
+        "detail": null
       },
       {
         "name": "苏联红军烈士公园",
@@ -132,7 +145,10 @@
         "cost_notes": [],
         "tips": [
           "「上有天堂，下有苏杭，不如满洲里灯火辉煌」"
-        ]
+        ],
+        "order": 4,
+        "time": null,
+        "detail": null
       },
       {
         "name": "铁路天桥",
@@ -149,7 +165,10 @@
         "cost_notes": [],
         "tips": [
           "中国1435mm标准轨 vs 俄罗斯1520mm宽轨"
-        ]
+        ],
+        "order": 5,
+        "time": null,
+        "detail": null
       },
       {
         "name": "国门景区",
@@ -168,7 +187,10 @@
         ],
         "tips": [
           "禁飞无人机；周一博物馆闭馆"
-        ]
+        ],
+        "order": 6,
+        "time": null,
+        "detail": null
       },
       {
         "name": "中苏金街",
@@ -185,7 +207,10 @@
         "cost_notes": [],
         "tips": [
           "周末中/俄/蒙各占三分之一"
-        ]
+        ],
+        "order": 7,
+        "time": null,
+        "detail": null
       },
       {
         "name": "卢布里西餐厅（三道街）",
@@ -210,7 +235,10 @@
         "cost_notes": [],
         "tips": [
           "俄餐天花板，必点奶酪包"
-        ]
+        ],
+        "order": 8,
+        "time": null,
+        "detail": null
       },
       {
         "name": "呼伦湖·成吉思汗拴马桩",
@@ -227,7 +255,10 @@
         "cost_notes": [],
         "tips": [
           "观景台免费，是否开放需自把握"
-        ]
+        ],
+        "order": 9,
+        "time": null,
+        "detail": null
       },
       {
         "name": "新巴尔虎右旗·阿拉坦额莫勒",
@@ -244,24 +275,24 @@
         "cost_notes": [],
         "tips": [
           "阿拉坦额莫勒=黄金马鞍；阿尔泰同源同义"
-        ]
+        ],
+        "order": 10,
+        "time": null,
+        "detail": null
       }
-    ]
+    ],
+    "suitable_for": "火车旅行爱好者、历史人文控、俄餐控：海拉尔出发2天逛遍中俄蒙边境小城，可延伸到呼伦湖/阿尔山",
+    "customization_notes": "冬季去穿厚；国门禁航拍；博物馆避开周一；呼伦湖建议自驾；旺季仅七八月，淡季店铺多关",
+    "locations": [],
+    "themes": [],
+    "budget": {
+      "total": null,
+      "per_person": null,
+      "note": "视频内明确价格：公寓房130元/晚、国门门票60元、旋转餐厅400元/人（未去）、卢布里奶酪包39元/炭烤香肠59元/冷熏三文鱼56元/莫尔斯18元、波罗的海三号啤酒7元、鹿肉罐头35元、玛瑙3元/块、外卖12元等",
+      "price_as_of": "2026-01",
+      "items": []
+    }
   },
-  "tips": [
-    "草原列车值得坐",
-    "草原天气看头顶的云",
-    "住宿住铁道北",
-    "沙俄监狱免费但要带身份证",
-    "博物馆周一闭馆",
-    "国门景区须知",
-    "国门看五代变迁",
-    "呼伦湖捡玛瑙的正确姿势",
-    "拴马桩是免费观景台",
-    "中苏街周末最热闹",
-    "卢布里必点清单",
-    "宽轨/准轨冷知识"
-  ],
   "highlights": [
     "草原列车：海拉尔→满洲里2小时穿呼伦贝尔，六月绿野+彩虹",
     "中东铁路第一站：百年木刻楞老房群与谢拉菲姆教堂（国保）",
@@ -270,12 +301,59 @@
     "中苏金街：周末中/俄/蒙各占三分之一的步行街",
     "呼伦湖：中国第四大淡水湖，拴马桩免费观景+捡玛瑙"
   ],
-  "transcript_ref": "D:\\output\\赖导路线库\\小可追太阳_满洲里\\transcript\\BV19vzvBXEYb.txt, BV1bicgzaEQp.txt",
-  "source_data": "B站 BV19vzvBXEYb + BV1bicgzaEQp 全文转写（SenseVoice，上集7410字+下集9177字）+ 百度百科/公开资料核实",
   "last_updated": "2026-08-19",
   "data_status": "draft",
-  "l3_hooks": {
-    "suitable_for": "火车旅行爱好者、历史人文控、俄餐控：海拉尔出发2天逛遍中俄蒙边境小城，可延伸到呼伦湖/阿尔山",
-    "customization_notes": "冬季去穿厚；国门禁航拍；博物馆避开周一；呼伦湖建议自驾；旺季仅七八月，淡季店铺多关"
-  }
+  "source_note": "B站 BV19vzvBXEYb + BV1bicgzaEQp 全文转写（SenseVoice，上集7410字+下集9177字）+ 百度百科/公开资料核实",
+  "tips": [
+    {
+      "category": "其他",
+      "text": "草原列车值得坐"
+    },
+    {
+      "category": "其他",
+      "text": "草原天气看头顶的云"
+    },
+    {
+      "category": "其他",
+      "text": "住宿住铁道北"
+    },
+    {
+      "category": "其他",
+      "text": "沙俄监狱免费但要带身份证"
+    },
+    {
+      "category": "其他",
+      "text": "博物馆周一闭馆"
+    },
+    {
+      "category": "其他",
+      "text": "国门景区须知"
+    },
+    {
+      "category": "其他",
+      "text": "国门看五代变迁"
+    },
+    {
+      "category": "其他",
+      "text": "呼伦湖捡玛瑙的正确姿势"
+    },
+    {
+      "category": "其他",
+      "text": "拴马桩是免费观景台"
+    },
+    {
+      "category": "其他",
+      "text": "中苏街周末最热闹"
+    },
+    {
+      "category": "其他",
+      "text": "卢布里必点清单"
+    },
+    {
+      "category": "其他",
+      "text": "宽轨/准轨冷知识"
+    }
+  ],
+  "next_stop": null,
+  "last_checked_at": null
 }

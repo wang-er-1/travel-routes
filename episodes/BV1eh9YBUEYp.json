@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "episode": {
     "blogger": "赖导AboutLai",
     "title": "探访中国“最孤独”的城市茫崖，当地人生活啥样？",
@@ -8,11 +8,12 @@
     "duration": "48:15",
     "publish_date": "2026-04-30",
     "stats": {
-      "plays": 5065462,
+      "views": 5065462,
       "likes": 137127,
       "favorites": 44835,
       "danmaku": 19397,
-      "comments": null
+      "comments": null,
+      "captured_at": null
     },
     "tags": [
       "茫崖",
@@ -23,7 +24,10 @@
       "冷湖"
     ],
     "description": "茫崖位于青海省海西蒙古族藏族自治州的西北边陲，是一座2018年底才新建立的县级市。之所以被称为“中国最孤独的城市”，是因为它地处柴达木盆地的最西端，被三大无人区所包裹（北边是罗布泊无人区，西边是阿尔金无人区，南边是可可西里无人区），方圆350公里内没有其他建制城市。",
-    "related_episodes": []
+    "related_videos": [],
+    "part_number": null,
+    "series": null,
+    "duration_seconds": 2895
   },
   "trip": {
     "title": "探访中国“最孤独”的城市茫崖（2天）",
@@ -35,10 +39,6 @@
       "飞机",
       "自驾"
     ],
-    "cost_total": null,
-    "cost_per_person": null,
-    "cost_notes": "视频内明确价格：酒店124元/晚（花土沟/冷湖）、小炒牦牛肉/羊羔肉68元、炒炮仗10元（内部价）、共享电车2.5元起步",
-    "price_as_of": "2026-04",
     "stops": [
       {
         "name": "西宁 → 德令哈 → 茫崖（花土沟机场）",
@@ -51,7 +51,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 1,
+        "time": null,
+        "detail": null
       },
       {
         "name": "花土沟镇（市中心）",
@@ -64,7 +67,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 2,
+        "time": null,
+        "detail": null
       },
       {
         "name": "艾肯泉（恶魔之眼）",
@@ -77,7 +83,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 3,
+        "time": null,
+        "detail": null
       },
       {
         "name": "茫崖翡翠湖",
@@ -90,7 +99,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 4,
+        "time": null,
+        "detail": null
       },
       {
         "name": "冷湖石油基地遗址",
@@ -103,7 +115,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 5,
+        "time": null,
+        "detail": null
       },
       {
         "name": "赛什腾山天文台",
@@ -116,7 +131,10 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 6,
+        "time": null,
+        "detail": null
       },
       {
         "name": "冷湖镇",
@@ -129,19 +147,24 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 7,
+        "time": null,
+        "detail": null
       }
-    ]
+    ],
+    "suitable_for": "自驾爱好者、石油工业史/废墟爱好者；敦煌出发可顺路（茫崖距敦煌390公里）",
+    "customization_notes": "B站 BV1eh9YBUEYp 全文转写（SenseVoice，10521字）+ 百度百科核实",
+    "locations": [],
+    "themes": [],
+    "budget": {
+      "total": null,
+      "per_person": null,
+      "note": "视频内明确价格：酒店124元/晚（花土沟/冷湖）、小炒牦牛肉/羊羔肉68元、炒炮仗10元（内部价）、共享电车2.5元起步",
+      "price_as_of": "2026-04",
+      "items": []
+    }
   },
-  "tips": [
-    "茫崖很大，别低估路程",
-    "看艾肯泉必须有无人机",
-    "翡翠湖人少景美",
-    "冷湖遗址值得专门跑一趟",
-    "赛什腾山天文台大概率白跑",
-    "当地物价不高",
-    "戈壁天气多变"
-  ],
   "highlights": [
     "中国最孤独的城市：4.99万平方公里只有1.9万人，被三大无人区包裹",
     "石油工人张哥请客：68元小炒牦牛肉/羊羔肉",
@@ -149,12 +172,39 @@
     "冷湖石油基地废墟：西北小香港变鬼城",
     "戈壁里偶遇疑似UFO、赛什腾山顶级天文台"
   ],
-  "transcript_ref": "自驾爱好者、石油工业史/废墟爱好者；敦煌出发可顺路（茫崖距敦煌390公里）",
-  "source_data": "茫崖镇与镇之间300公里+；艾肯泉必须有无人机；赛什腾山常因积雪关闭；戈壁天气多变",
   "last_updated": "2026-08-19",
   "data_status": "draft",
-  "l3_hooks": {
-    "suitable_for": "D:\\output\\赖导路线库\\赖导_茫崖\\transcript\\BV1eh9YBUEYp.txt",
-    "customization_notes": "B站 BV1eh9YBUEYp 全文转写（SenseVoice，10521字）+ 百度百科核实"
-  }
+  "source_note": "茫崖镇与镇之间300公里+；艾肯泉必须有无人机；赛什腾山常因积雪关闭；戈壁天气多变",
+  "tips": [
+    {
+      "category": "其他",
+      "text": "茫崖很大，别低估路程"
+    },
+    {
+      "category": "其他",
+      "text": "看艾肯泉必须有无人机"
+    },
+    {
+      "category": "其他",
+      "text": "翡翠湖人少景美"
+    },
+    {
+      "category": "其他",
+      "text": "冷湖遗址值得专门跑一趟"
+    },
+    {
+      "category": "其他",
+      "text": "赛什腾山天文台大概率白跑"
+    },
+    {
+      "category": "其他",
+      "text": "当地物价不高"
+    },
+    {
+      "category": "其他",
+      "text": "戈壁天气多变"
+    }
+  ],
+  "next_stop": null,
+  "last_checked_at": null
 }

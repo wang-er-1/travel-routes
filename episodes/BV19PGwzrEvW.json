@@ -1,19 +1,20 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "episode": {
     "blogger": "赖导AboutLai",
-    "blogger_mid": 480670664,
+    "blogger_mid": "480670664",
     "title": "从漠河穿越大兴安岭去呼伦贝尔，在夏至的东北来一场独行之旅",
     "bvid": "BV19PGwzrEvW",
     "url": "https://www.bilibili.com/video/BV19PGwzrEvW",
     "duration": "50:41",
     "publish_date": "2025-07-09",
     "stats": {
-      "plays": 1665568,
+      "views": 1665568,
       "likes": 63247,
       "favorites": 19791,
       "danmaku": 12825,
-      "comments": 3037
+      "comments": 3037,
+      "captured_at": null
     },
     "tags": [
       "漠河",
@@ -25,7 +26,11 @@
       "大兴安岭",
       "夏至"
     ],
-    "description": "每年6月21日左右，是中国24节气中的“夏至”。夏至这天，太阳直射地面的位置到达一年中的最北端，几乎直射北回归线。此时，北半球各地的白昼时间达到全年最长，比如中国最北端的城市漠河，夏至的白天时长会达到将近20个小时。为了体验下这种超长白昼的新奇感，也为了迎接即将到来的盛夏。我决定在夏至这几天去大兴安岭旅行，而起点就选在了我曾经去过的漠河。"
+    "description": "每年6月21日左右，是中国24节气中的“夏至”。夏至这天，太阳直射地面的位置到达一年中的最北端，几乎直射北回归线。此时，北半球各地的白昼时间达到全年最长，比如中国最北端的城市漠河，夏至的白天时长会达到将近20个小时。为了体验下这种超长白昼的新奇感，也为了迎接即将到来的盛夏。我决定在夏至这几天去大兴安岭旅行，而起点就选在了我曾经去过的漠河。",
+    "related_videos": [],
+    "part_number": null,
+    "series": null,
+    "duration_seconds": 3041
   },
   "trip": {
     "title": "从漠河穿越大兴安岭去呼伦贝尔（夏至独行）",
@@ -38,10 +43,6 @@
       "绿皮慢车4182次（牙林线）",
       "自驾（根河租车，异地还车）"
     ],
-    "cost_total": null,
-    "cost_per_person": null,
-    "cost_notes": "视频内明确价格：漠河住宿100-180元/晚、满归住宿78元/晚、满归出租车6/10元、百花蜜40元/斤、牧场仿牧50元、滑草+小火车143元；大巴/火车/租车票价片中未明",
-    "price_as_of": "2025-06",
     "stops": [
       {
         "name": "漠河县城",
@@ -64,7 +65,10 @@
         "cost_notes": [],
         "tips": [
           "漠河租车不能异地还车，需开回漠河"
-        ]
+        ],
+        "order": 1,
+        "time": null,
+        "detail": null
       },
       {
         "name": "满归镇",
@@ -90,7 +94,10 @@
           "凝翠山建议车上去走下来",
           "夏天20度/冬天零下50度",
           "森林蚊虫多"
-        ]
+        ],
+        "order": 2,
+        "time": null,
+        "detail": null
       },
       {
         "name": "根河市",
@@ -105,7 +112,10 @@
         "cost_notes": [
           "租最便宜的车，可异地还车（额尔古纳/海拉尔）"
         ],
-        "tips": []
+        "tips": [],
+        "order": 3,
+        "time": null,
+        "detail": null
       },
       {
         "name": "室韦镇",
@@ -122,7 +132,10 @@
         "cost_notes": [],
         "tips": [
           "边境不能飞无人机"
-        ]
+        ],
+        "order": 4,
+        "time": null,
+        "detail": null
       },
       {
         "name": "黑山头镇",
@@ -142,7 +155,10 @@
         "cost_notes": [
           "百花蜜40元/斤（路边）"
         ],
-        "tips": []
+        "tips": [],
+        "order": 5,
+        "time": null,
+        "detail": null
       },
       {
         "name": "额尔古纳市",
@@ -155,25 +171,24 @@
         "lodging": null,
         "food": [],
         "cost_notes": [],
-        "tips": []
+        "tips": [],
+        "order": 6,
+        "time": null,
+        "detail": null
       }
-    ]
+    ],
+    "suitable_for": "独行/火车迷/自驾爱好者；夏季避暑路线（夏至极昼体验）",
+    "customization_notes": "3天紧凑行程；若时间充裕可在满归、室韦各加1天；全程约需5-7天走宽",
+    "locations": [],
+    "themes": [],
+    "budget": {
+      "total": null,
+      "per_person": null,
+      "note": "视频内明确价格：漠河住宿100-180元/晚、满归住宿78元/晚、满归出租车6/10元、百花蜜40元/斤、牧场仿牧50元、滑草+小火车143元；大巴/火车/租车票价片中未明",
+      "price_as_of": "2025-06",
+      "items": []
+    }
   },
-  "tips": [
-    "夏至极昼",
-    "租车异地的坑",
-    "漠河→满归大巴",
-    "凝翠山怎么玩",
-    "满归实用信息",
-    "4182次慢车",
-    "森林防蚊虫",
-    "卡线公路禁飞",
-    "蜂蜜吃法",
-    "滑草攻略",
-    "仿牧体验",
-    "湿地公园看点",
-    "赖导的旅行观"
-  ],
   "highlights": [
     "夏至极昼：凌晨2点天亮、白天近20小时",
     "4182次绿皮慢车：兴安林海里的摆渡车",
@@ -183,12 +198,63 @@
     "额尔古纳湿地：森林→草原过渡带（亚洲第一湿地）",
     "荣耀Magic V5 AI（YOYO）规划路线的完整实践"
   ],
-  "transcript_ref": "transcripts/BV19PGwzrEvW.txt",
-  "source_data": "B站音频 yt-dlp下载(m4a,39MB) → faster-whisper large-v3 转写",
   "last_updated": "2026-08-18",
   "data_status": "draft",
-  "l3_hooks": {
-    "suitable_for": "独行/火车迷/自驾爱好者；夏季避暑路线（夏至极昼体验）",
-    "customization_notes": "3天紧凑行程；若时间充裕可在满归、室韦各加1天；全程约需5-7天走宽"
-  }
+  "source_note": "B站音频 yt-dlp下载(m4a,39MB) → faster-whisper large-v3 转写",
+  "tips": [
+    {
+      "category": "其他",
+      "text": "夏至极昼"
+    },
+    {
+      "category": "其他",
+      "text": "租车异地的坑"
+    },
+    {
+      "category": "其他",
+      "text": "漠河→满归大巴"
+    },
+    {
+      "category": "其他",
+      "text": "凝翠山怎么玩"
+    },
+    {
+      "category": "其他",
+      "text": "满归实用信息"
+    },
+    {
+      "category": "其他",
+      "text": "4182次慢车"
+    },
+    {
+      "category": "其他",
+      "text": "森林防蚊虫"
+    },
+    {
+      "category": "其他",
+      "text": "卡线公路禁飞"
+    },
+    {
+      "category": "其他",
+      "text": "蜂蜜吃法"
+    },
+    {
+      "category": "其他",
+      "text": "滑草攻略"
+    },
+    {
+      "category": "其他",
+      "text": "仿牧体验"
+    },
+    {
+      "category": "其他",
+      "text": "湿地公园看点"
+    },
+    {
+      "category": "其他",
+      "text": "赖导的旅行观"
+    }
+  ],
+  "next_stop": null,
+  "last_checked_at": null
 }
