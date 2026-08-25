@@ -16,7 +16,8 @@
       "items": {
         "type": "object",
         "required": ["source_id", "source_type", "content_hash", "blogger",
-                     "title", "data_status", "updated_at", "json_path", "page_path"],
+                     "title", "data_status", "updated_at", "json_path", "page_path",
+                     "destinations", "location_terms"],
         "additionalProperties": false,
         "properties": {
           "source_id": { "type": "string", "pattern": "^BV[0-9A-Za-z]+$",
@@ -38,8 +39,16 @@
           "title": { "type": "string", "minLength": 1 },
           "regions": { "type": "array", "items": { "type": "string" },
             "description": "跨省路线可多个，如 [\"东北\"]" },
-          "destinations": { "type": "array", "items": { "type": "string" },
-            "description": "目的地城市，如 [\"鞍山\"]" },
+          "destinations": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "uniqueItems": true,
+            "description": "面向展示。每个 location 取最细且最有辨识度的非空层级(village→town→county/district→city→province→region→country)；locations 无可用值时从有序 stops[].name 取前3个不重复名称忠实兜底。如荻港村期 [\"荻港村\"]" },
+          "location_terms": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "uniqueItems": true,
+            "description": "面向搜索/筛选。locations 中全部非空层级去重后的集合。如荻港村期 [\"浙江省\",\"湖州市\",\"南浔区\",\"和孚镇\",\"荻港村\"]；locations 为空时为 []" },
           "data_status": { "enum": ["draft", "verified"] },
           "updated_at": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
             "description": "必须来自JSON的last_updated，不是视频publish_date" },

@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-08-25T11:36:51+08:00",
+  "generated_at": "2026-08-25T14:25:38+08:00",
   "count": 15,
   "routes": [
     {
@@ -20,6 +20,12 @@
       "destinations": [
         "鞍山"
       ],
+      "location_terms": [
+        "中国",
+        "东北",
+        "辽宁",
+        "鞍山"
+      ],
       "data_status": "draft",
       "updated_at": "2026-08-24",
       "json_path": "episodes/BV111Fze1EZw.json",
@@ -35,9 +41,11 @@
       "title": "云南最南边境小城·勐腊自驾（3天）",
       "regions": [],
       "destinations": [
-        "勐腊县",
-        "星光夜市"
+        "重庆 → 景洪 → 勐腊",
+        "景兰大酒店（《边水往事》取景地）",
+        "牛乐乐老挝火锅"
       ],
+      "location_terms": [],
       "data_status": "draft",
       "updated_at": "2026-08-23",
       "json_path": "episodes/BV15yXGBxE9U.json",
@@ -53,8 +61,11 @@
       "title": "一个人自驾河西走廊·武威+张掖（2天）",
       "regions": [],
       "destinations": [
-        "高台县"
+        "兰州 → 乌鞘岭",
+        "天梯山石窟",
+        "武威（河西四郡第一城）"
       ],
+      "location_terms": [],
       "data_status": "draft",
       "updated_at": "2026-08-19",
       "json_path": "episodes/BV16NpQznEXC.json",
@@ -69,7 +80,12 @@
       "series": null,
       "title": "从漠河穿越大兴安岭去呼伦贝尔（夏至独行）",
       "regions": [],
-      "destinations": [],
+      "destinations": [
+        "漠河县城",
+        "满归镇",
+        "根河市"
+      ],
+      "location_terms": [],
       "data_status": "draft",
       "updated_at": "2026-08-18",
       "json_path": "episodes/BV19PGwzrEvW.json",
@@ -85,10 +101,11 @@
       "title": "玉门老市区·资源枯竭小城探访（4天）",
       "regions": [],
       "destinations": [
-        "大环岛市",
-        "赤金镇",
-        "王进喜家乡"
+        "上海 → 嘉峪关 → 老市区",
+        "浩宇大酒店",
+        "解放门/大环岛市中心"
       ],
+      "location_terms": [],
       "data_status": "draft",
       "updated_at": "2026-08-23",
       "json_path": "episodes/BV19jfPY9Eot.json",
@@ -103,7 +120,12 @@
       "series": null,
       "title": "搭火车环游中国·第33站：满洲里（上/下两集，中俄蒙边境百年商埠）",
       "regions": [],
-      "destinations": [],
+      "destinations": [
+        "海拉尔站 → 满洲里（火车）",
+        "满洲里火车站周边老建筑",
+        "沙俄监狱旧址"
+      ],
+      "location_terms": [],
       "data_status": "draft",
       "updated_at": "2026-08-19",
       "json_path": "episodes/BV19vzvBXEYb.json",
@@ -124,7 +146,12 @@
       "series": null,
       "title": "坐水上公交游长江三峡（上/下两集）",
       "regions": [],
-      "destinations": [],
+      "destinations": [
+        "奉节县",
+        "巫山县",
+        "青石村"
+      ],
+      "location_terms": [],
       "data_status": "draft",
       "updated_at": "2026-08-18",
       "json_path": "episodes/BV1F9U8BzE3F.json",
@@ -145,7 +172,12 @@
       "series": null,
       "title": "云南复古小城·个旧旅行（3天）",
       "regions": [],
-      "destinations": [],
+      "destinations": [
+        "昆明 → 个旧",
+        "红河大酒店",
+        "金湖（环湖+巴金广场）"
+      ],
+      "location_terms": [],
       "data_status": "draft",
       "updated_at": "2026-08-23",
       "json_path": "episodes/BV1Hj1jYKECK.json",
@@ -160,7 +192,12 @@
       "series": null,
       "title": "山东最北海岛·北隍城岛慢旅行（3天）",
       "regions": [],
-      "destinations": [],
+      "destinations": [
+        "蓬莱（出发港）",
+        "巡仙十二号客船",
+        "北隍城岛·渔家乐"
+      ],
+      "location_terms": [],
       "data_status": "draft",
       "updated_at": "2026-08-23",
       "json_path": "episodes/BV1UJ4m1M7vd.json",
@@ -176,8 +213,11 @@
       "title": "去中国房价最低城市鹤岗旅行（2天）",
       "regions": [],
       "destinations": [
-        "世纪广场市"
+        "哈尔滨 → 鹤岗",
+        "新世纪广场（市中心）",
+        "鹤岗小串（出租车司机推荐）"
       ],
+      "location_terms": [],
       "data_status": "draft",
       "updated_at": "2026-08-19",
       "json_path": "episodes/BV1UetHeTEsH.json",
@@ -192,7 +232,12 @@
       "series": null,
       "title": "中国最北·漠河县城（2天）",
       "regions": [],
-      "destinations": [],
+      "destinations": [
+        "哈尔滨 → 漠河（绿皮火车）",
+        "一路向北极地宾馆",
+        "猪肉面+市区早餐"
+      ],
+      "location_terms": [],
       "data_status": "draft",
       "updated_at": "2026-08-23",
       "json_path": "episodes/BV1Yu4y1L7rL.json",
@@ -208,8 +253,11 @@
       "title": "搭火车环游中国·第21站：佳木斯（市井美食+松花江）",
       "regions": [],
       "destinations": [
-        "晋江早市"
+        "佳木斯市区（到达）",
+        "佳木斯夜市",
+        "三江省公署旧址"
       ],
+      "location_terms": [],
       "data_status": "draft",
       "updated_at": "2026-08-19",
       "json_path": "episodes/BV1cD3bzwEVm.json",
@@ -225,9 +273,11 @@
       "title": "探访中国“最孤独”的城市茫崖（2天）",
       "regions": [],
       "destinations": [
-        "花土沟镇",
-        "冷湖镇"
+        "西宁 → 德令哈 → 茫崖（花土沟机场）",
+        "花土沟镇（市中心）",
+        "艾肯泉（恶魔之眼）"
       ],
+      "location_terms": [],
       "data_status": "draft",
       "updated_at": "2026-08-19",
       "json_path": "episodes/BV1eh9YBUEYp.json",
@@ -243,7 +293,13 @@
       "title": "浙江湖州·荻港村「一元茶馆」——凌晨老茶客的江南水乡早茶",
       "regions": [],
       "destinations": [
-        "浙江省湖州市"
+        "荻港村（荻港古村/荻港渔庄一带）"
+      ],
+      "location_terms": [
+        "浙江省湖州市",
+        "南浔区",
+        "和孚镇",
+        "荻港村（荻港古村/荻港渔庄一带）"
       ],
       "data_status": "draft",
       "updated_at": "2026-08-24",
@@ -260,9 +316,11 @@
       "title": "大理旅居15天·网红景点打卡路线",
       "regions": [],
       "destinations": [
-        "喜洲古镇",
-        "双廊古镇"
+        "大理古城",
+        "苍山（三塔/寂照庵/洗马潭）",
+        "洱海生态廊道（才村/文笔村/理想邦）"
       ],
+      "location_terms": [],
       "data_status": "draft",
       "updated_at": "2026-08-23",
       "json_path": "episodes/BV1yb421H7uu.json",

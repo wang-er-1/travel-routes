@@ -122,6 +122,21 @@ def validate_catalog():
         jp_bv = os.path.basename(jp).replace('.json', '') if jp else ''
         if jp and jp_bv != bv:
             err("catalog", f"{bv}: json_path 文件名与 source_id 不符: {jp}")
+        # destinations / location_terms：类型、空字符串、重复值（Codex 要求校验器显式查）
+        for field in ("destinations", "location_terms"):
+            val = r.get(field)
+            if not isinstance(val, list):
+                err("catalog", f"{bv}: {field} 必须是数组（当前 {type(val).__name__}）"); continue
+            seen_terms = set()
+            for i, t in enumerate(val):
+                if not isinstance(t, str):
+                    err("catalog", f"{bv}: {field}[{i}] 非字符串: {t!r}")
+                elif not t.strip():
+                    err("catalog", f"{bv}: {field}[{i}] 为空字符串")
+                elif t in seen_terms:
+                    err("catalog", f"{bv}: {field} 有重复值: {t}")
+                else:
+                    seen_terms.add(t)
         if not os.path.exists(jp):
             err("catalog", f"{bv}: json_path不存在 {jp}"); continue
         real_hash = sha256_file(jp)

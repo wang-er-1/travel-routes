@@ -23,7 +23,11 @@
 ## 字段要点（详见 route.schema.v2.json）
 
 - **stats** 字段名统一：`views / likes / favorites / danmaku / comments / captured_at`。数值为整数或 null。`captured_at` 用带时区的完整 ISO 时间，如 `2026-08-24T23:00:00+08:00`。
-- **地点** 用 `trip.locations` **数组**（单城市放一个对象，跨城市/跨省放多个）：`{city, province, region, country}`。
+- **地点** 用 `trip.locations` **数组**，**忠实于原视频/转写/明确核验的信息，不为填模板补猜**。允许为空数组（一个村/镇/景区/单一区域也可构成完整路线，不存在"必须有城市"或"必须跨城市"的约束）。每个 location 可含 `{province, city, district, county, town, village, region, country, verification_note}`，**均非必填**，有值就填、没有就留空/省略。单城市放一个对象，跨城市/跨省放多个。
+- **catalog 目的地字段**（由 `gen_catalog.py` 自动生成，整理方无需手填，但要理解语义）：
+  - `destinations`（面向展示）：每个 location 取**最细且最有辨识度**的非空层级，优先级 `village→town→county/district→city→province→region→country`；`locations` 无可用值时，从有序 `stops[].name` 取前 3 个不重复名称**忠实兜底**（不再用 `route_summary` 后缀正则猜地点——那会误判出"大环岛市/世纪广场市/晋江早市"这类假地名）。例：荻港村期 → `["荻港村"]`。
+  - `location_terms`（面向搜索/筛选）：`locations` 中**全部非空层级**去重集合。例：荻港村期 → `["浙江省","湖州市","南浔区","和孚镇","荻港村"]`；`locations` 为空时为 `[]`。
+  - ⚠️ 因此**要让 catalog 的地点又准又全，关键是把 episode 的 `trip.locations` 各行政层级尽量填全**（省市区县镇村分开填，别把"浙江省湖州市"塞进一个 city 字段）。locations 为空只能靠 stops 名兜底，会带出非纯地名。
 - **主题** 用 `trip.themes`（复数，字符串数组）。
 - **路线级贴士** 统一 `tips: [{category, text}]`（分类如 交通/餐饮/住宿/拍摄/季节/人文/其他）。站点内部 `stops[].tips` 是字符串数组，保留。
 - **站点** `trip.stops[]` 每项有 `order`（从1连续递增）；`time` 可选；`lodging` 是对象 `{place, price, notes}` 或 null；`arrive_transport`（交通）、`food`、`cost_notes`、`activities`、`detail`、`tips` 按实填。

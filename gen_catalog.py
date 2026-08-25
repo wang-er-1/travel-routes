@@ -8,7 +8,7 @@
 - related_videos 保留对象 {bvid, relation, part_number}
 生成时机：路线 JSON 写入后 → 生成 catalog → 最后跑 schema + catalog + 一致性校验
 """
-import json, os, glob, hashlib, re, sys
+import json, os, glob, hashlib, sys
 from datetime import datetime
 
 BASE = os.path.dirname(os.path.abspath(__file__))
@@ -42,6 +42,52 @@ def series_to_cat(series):
         "episode_number": series.get("episode_number"),
     }
 
+# location 层级：从最细最有辨识度 → 最粗。destinations 取每个 location 第一个命中的层级。
+LOC_LEVELS_FINE_FIRST = ("village", "town", "county", "district",
+                         "city", "province", "region", "country")
+# location_terms 收集顺序：从粗到细，保证同一 location 内 terms 有稳定行政顺序
+LOC_LEVELS_COARSE_FIRST = ("country", "region", "province", "city",
+                           "district", "county", "town", "village")
+
+
+def extract_destinations_and_terms(tr):
+    """按 Codex C 方案（职责分离）从 trip 提取：
+      destinations: 面向展示，每个 location 取最细且最有辨识度的非空层级
+                    (village→town→county/district→city→province→region→country)；
+                    locations 无可用值时，从有序 stops[].name 取前3个不重复名称忠实兜底。
+      location_terms: locations 中全部非空层级，去重，供搜索/筛选。
+    不再从 route_summary 用后缀正则猜地点（曾误判"大环岛市/世纪广场市/晋江早市"）。"""
+    locations = tr.get("locations", []) or []
+    destinations, seen_d = [], set()
+    location_terms, seen_t = [], set()
+
+    for loc in locations:
+        # destinations：该 location 取最细有辨识度层级
+        for lv in LOC_LEVELS_FINE_FIRST:
+            v = loc.get(lv)
+            if v and v not in seen_d:
+                destinations.append(v)
+                seen_d.add(v)
+                break
+        # location_terms：该 location 全部非空层级（粗→细），去重
+        for lv in LOC_LEVELS_COARSE_FIRST:
+            v = loc.get(lv)
+            if v and v not in seen_t:
+                location_terms.append(v)
+                seen_t.add(v)
+
+    # locations 无任何可用值 → 从有序 stops[].name 取前3个不重复名称忠实兜底
+    if not destinations:
+        for s in tr.get("stops", []):
+            nm = s.get("name")
+            if nm and nm not in seen_d:
+                destinations.append(nm)
+                seen_d.add(nm)
+            if len(destinations) >= 3:
+                break
+
+    return destinations, location_terms
+
 def main():
     files = sorted(glob.glob("episodes/*.json"))
     routes = []
@@ -54,25 +100,14 @@ def main():
         tr = d.get('trip', {})
         bv = ep.get('bvid') or os.path.basename(f).replace('.json', '')
 
-        # regions / destinations 从 locations 提取（destinations 按 city→district→town→village 层级）
-        regions, destinations = [], []
+        # regions 从 locations 提取
+        regions = []
         for loc in tr.get('locations', []):
             if loc.get('region') and loc['region'] not in regions:
                 regions.append(loc['region'])
-            # 最细粒度的行政层级作为目的地（city 优先，其次 district/town/village）
-            for level in ('city', 'district', 'town', 'village'):
-                v = loc.get(level)
-                if v and v not in destinations:
-                    destinations.append(v)
-                    break
-        # 兜底：从 route_summary / stops 提取粗粒度目的地（负向前瞻排除"北关市场"这类"市+场"误匹配）
-        if not destinations:
-            for m in re.finditer(r'([\u4e00-\u9fff]{2,4}(?:市|县|镇|乡))(?![场集区])', tr.get('route_summary') or ''):
-                cand = m.group(1)
-                if cand not in destinations:
-                    destinations.append(cand)
-                if len(destinations) >= 3:
-                    break
+        # destinations（展示，取最细层级）+ location_terms（搜索，全层级去重）
+        # 职责分离，不再用 route_summary 后缀正则猜地点
+        destinations, location_terms = extract_destinations_and_terms(tr)
 
         # related_videos 对象（不简化成 BV 字符串）
         related = []
@@ -91,6 +126,7 @@ def main():
             "title": tr.get('title') or ep.get('title'),
             "regions": regions,
             "destinations": destinations,
+            "location_terms": location_terms,
             "data_status": d.get('data_status', 'draft'),
             "updated_at": d.get('last_updated'),          # 必须来自 last_updated
             "json_path": f"episodes/{bv}.json",
