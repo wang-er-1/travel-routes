@@ -1,1 +1,13 @@
-_work_xiaoke/
+# 旅踪集 travel-routes 仓库 —— 本地工作产物（严禁提交）
+# 铁律：只提交 episodes/*.json + catalog.json + 治理文件；以下本地杂项一律不提交
+
+# Python
+__pycache__/
+*.pyc
+
+# 本地调试/截图/一次性脚本（不进数据仓库）
+_diag.js
+_render_shot.js
+_sample_*.png
+beautify_v3.py
+product-card.html
