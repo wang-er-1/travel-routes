@@ -32,15 +32,25 @@
 
 ## 提交前自检
 
+> **日常正式规则（谁改 episodes，谁生成 catalog）**：全量转换已完成，`catalog.json` 不再由主电脑集中生成。任何一台电脑只要改了 `episodes/`，就必须在本机重新生成 catalog、跑严格校验，并把 `catalog.json` 连同改动的 episode 一起提交——否则 `validate.py` 会因 catalog 与 episodes 不一致（覆盖/`content_hash`）而失败，push 被阻断。
+
 ```bash
-git pull origin main            # 先同步
-python validate.py              # 校验全部 episodes + catalog（必须通过）
-git add episodes/BV号.json pages/BV号.html
+git pull origin main            # 1. 先同步
+python gen_catalog.py           # 2. 改完 episodes 后重新生成 catalog（必须！）
+python validate.py              # 3. 严格校验全部 episodes + catalog（必须通过）
+git add episodes/BV号.json catalog.json   # 4. episode 与 catalog 一起提交
+# 如有 HTML 展示页： git add pages/BV号.html
 git commit -m "新增/更新 <地点>（BV号）"
 git push origin main
 ```
 
-`validate.py` 会检查：符合 route.schema.v2.json、无本地绝对路径、枚举值合法（data_status/relation/source_type）、必填项齐全、catalog 与 episodes 一致。**不通过不要 push。**
+**顺序不能颠倒**：先 `gen_catalog.py` 再 `validate.py`——校验器会比对 catalog 与 episodes 的一一对应和 `content_hash`，跳过生成直接校验必然失败。
+
+**遇到 push 冲突时**：先 `git pull` 合并 episodes，再**重新** `python gen_catalog.py` + `python validate.py`，然后重新提交。**catalog.json 冲突不要人工拼接**（它是全量重生成的产物），也**绝不 `git push -f` 强推覆盖**。
+
+`validate.py` 会检查：符合 route.schema.v2.json、无本地绝对路径、枚举值合法（data_status/relation/source_type）、必填项齐全、catalog 与 episodes 一致（覆盖完整、无重复、`content_hash`、`updated_at=last_updated`）。**不通过不要 push。**
+
+> **换行一致性**：仓库根 `.gitattributes` 已把 `episodes/*.json`、`catalog.json`、`*.py`、`*.md` 固定为 LF；`gen_catalog.py` 与 `validate.py` 的 `content_hash` 采用换行无关的 canonical 算法（读字节后 CRLF/CR→LF 归一再算）。因此 Windows(CRLF) 与 Linux/远端(LF) 对同一内容得到**相同哈希**，不会出现"本地校验通过、远端哈希却变"的漂移。clone 后无需额外设置；若本地历史文件仍是 CRLF，可 `git add --renormalize .` 一次归一。
 
 ## 参考样本
 

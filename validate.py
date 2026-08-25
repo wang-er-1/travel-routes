@@ -48,8 +48,13 @@ def find_local_paths(obj, path=""):
     return hits
 
 def sha256_file(fp):
+    """换行无关的 canonical 哈希：与 gen_catalog.py 的 sha256_of 必须字节级一致。
+    读原始字节后 CRLF/CR → LF 归一再算，保证 Windows(CRLF) 与远端(LF)
+    对同一内容得到相同哈希，杜绝"本地通过、远端红"的跨机漂移。"""
     with open(fp, 'rb') as f:
-        return "sha256:" + hashlib.sha256(f.read()).hexdigest()
+        data = f.read()
+    data = data.replace(b'\r\n', b'\n').replace(b'\r', b'\n')
+    return "sha256:" + hashlib.sha256(data).hexdigest()
 
 def validate_routes(ep_dir="episodes"):
     route_schema = json.load(open("route.schema.v2.json", encoding='utf-8'))

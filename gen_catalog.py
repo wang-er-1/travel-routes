@@ -21,8 +21,13 @@ if sys.stdout and hasattr(sys.stdout, 'reconfigure'):
         pass
 
 def sha256_of(path):
+    """换行无关的 canonical 哈希：读原始字节后把 CRLF/CR 统一成 LF 再算。
+    保证 Windows(CRLF) 与 Linux/远端(LF) 对同一内容得到相同 content_hash，
+    避免"本地通过、远端哈希变化"。validate.py 必须用同一函数。"""
     with open(path, 'rb') as f:
-        return "sha256:" + hashlib.sha256(f.read()).hexdigest()
+        data = f.read()
+    data = data.replace(b'\r\n', b'\n').replace(b'\r', b'\n')
+    return "sha256:" + hashlib.sha256(data).hexdigest()
 
 def load_bv(filepath):
     with open(filepath, encoding='utf-8') as f:
@@ -99,8 +104,11 @@ def main():
         "count": len(routes),
         "routes": routes,
     }
-    with open("catalog.json", "w", encoding='utf-8') as f:
-        json.dump(catalog, f, ensure_ascii=False, indent=2)
+    # 固定 UTF-8 + LF 输出（newline='' 关闭 Python 文本层的行尾翻译，
+    # 手动以 \n 结尾），确保 Windows 上也写出纯 LF 字节，与 .gitattributes 一致。
+    text = json.dumps(catalog, ensure_ascii=False, indent=2) + "\n"
+    with open("catalog.json", "w", encoding='utf-8', newline='') as f:
+        f.write(text)
     print(f"catalog.json 生成: {len(routes)} 条 (schema v2.0, generated_at={catalog['generated_at']})")
 
 

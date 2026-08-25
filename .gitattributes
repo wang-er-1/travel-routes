@@ -1,0 +1,22 @@
+# 旅踪集 travel-routes —— 换行一致性约束
+# 目的：数据与校验脚本在所有机器（Windows/Linux/macOS）上字节一致，
+#       避免"本地校验通过、远端 content_hash 变化"的跨机哈希漂移。
+
+# 数据文件：强制 LF，且当作文本（提交/检出都归一为 LF）
+episodes/*.json   text eol=lf
+catalog.json      text eol=lf
+*.schema.v2.json  text eol=lf
+
+# 生成/校验脚本也固定 LF，保证行为跨机一致
+*.py              text eol=lf
+
+# 文档固定 LF
+*.md              text eol=lf
+.gitattributes    text eol=lf
+
+# 二进制资产不做任何换行处理
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.webp  binary
+*.gif   binary
