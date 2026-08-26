@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-08-26T19:15:35+08:00",
-  "count": 17,
+  "generated_at": "2026-08-26T20:47:30+08:00",
+  "count": 19,
   "routes": [
     {
       "source_id": "BV111Fze1EZw",
@@ -218,6 +218,52 @@
       "related_videos": []
     },
     {
+      "source_id": "BV1KdHZz2ETB",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:1310fbc8f5f9a95d67fe90580031f00a10f81f79e63a4648d87140bf2337da72",
+      "blogger": "小V的奇幻旅程",
+      "series": null,
+      "title": "青甘大环线上半程·敦煌→青海湖（莫高窟→鸣沙山月牙泉→黑独山→火星一号公路→察尔汗盐湖→茶卡→青海湖→西宁）",
+      "regions": [
+        "西北"
+      ],
+      "destinations": [
+        "敦煌市",
+        "冷湖镇",
+        "格尔木市",
+        "德令哈市",
+        "乌兰县",
+        "共和县"
+      ],
+      "location_terms": [
+        "中国",
+        "西北",
+        "甘肃省",
+        "酒泉市",
+        "敦煌市",
+        "青海省",
+        "海西蒙古族藏族自治州",
+        "茫崖市",
+        "冷湖镇",
+        "格尔木市",
+        "德令哈市",
+        "乌兰县",
+        "海南藏族自治州",
+        "共和县"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-08-26",
+      "json_path": "episodes/BV1KdHZz2ETB.json",
+      "page_path": "pages/BV1KdHZz2ETB.html",
+      "related_videos": [
+        {
+          "bvid": "BV1qVspzuEfk",
+          "relation": "part",
+          "part_number": 2
+        }
+      ]
+    },
+    {
       "source_id": "BV1UJ4m1M7vd",
       "source_type": "bilibili_video",
       "content_hash": "sha256:1b6fa9ee07e117d51cd42ab9856a48fab201f7246fe506363506be9f01e2cdd5",
@@ -339,6 +385,55 @@
       "json_path": "episodes/BV1k1421Q7W9.json",
       "page_path": "pages/BV1k1421Q7W9.html",
       "related_videos": []
+    },
+    {
+      "source_id": "BV1qVspzuEfk",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:83d5d6187f17ce88f122480d4dc4a0be1c61db44561a988f1b891c51387fae03",
+      "blogger": "小V的奇幻旅程",
+      "series": null,
+      "title": "青甘大环线下半程·河西走廊（西宁→门源→祁连→张掖→嘉峪关→玉门→瓜州→敦煌）",
+      "regions": [
+        "西北"
+      ],
+      "destinations": [
+        "西宁市",
+        "门源回族自治县",
+        "海北藏族自治州",
+        "祁连县",
+        "张掖市",
+        "肃南裕固族自治县",
+        "嘉峪关市",
+        "玉门市",
+        "瓜州县"
+      ],
+      "location_terms": [
+        "中国",
+        "西北",
+        "青海省",
+        "西宁市",
+        "海北藏族自治州",
+        "门源回族自治县",
+        "祁连县",
+        "甘肃省",
+        "张掖市",
+        "肃南裕固族自治县",
+        "嘉峪关市",
+        "酒泉市",
+        "玉门市",
+        "瓜州县"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-08-26",
+      "json_path": "episodes/BV1qVspzuEfk.json",
+      "page_path": "pages/BV1qVspzuEfk.html",
+      "related_videos": [
+        {
+          "bvid": "BV1KdHZz2ETB",
+          "relation": "part",
+          "part_number": 1
+        }
+      ]
     },
     {
       "source_id": "BV1tF3M6vEoq",
