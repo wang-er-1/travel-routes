@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-08-25T16:09:49+08:00",
-  "count": 16,
+  "generated_at": "2026-08-26T18:51:08+08:00",
+  "count": 17,
   "routes": [
     {
       "source_id": "BV111Fze1EZw",
@@ -161,6 +161,47 @@
           "bvid": "BV1TwS7BmETP",
           "relation": "part",
           "part_number": 2
+        }
+      ]
+    },
+    {
+      "source_id": "BV1Ghjnz6EdN",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:41f20ded35a9521511dd22fcc0a2138e74392a033d5015778481d4e52ba263a2",
+      "blogger": "小可追太阳",
+      "series": {
+        "title": "搭火车环游中国",
+        "series_id": "xiaoke-train-china",
+        "episode_number": 17
+      },
+      "title": "搭火车环游中国第17站：一面坡——百年俄式小镇与全球90%套娃的产地",
+      "regions": [
+        "东北"
+      ],
+      "destinations": [
+        "哈尔滨",
+        "一面坡"
+      ],
+      "location_terms": [
+        "中国",
+        "东北",
+        "黑龙江",
+        "哈尔滨",
+        "尚志",
+        "一面坡"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-08-26",
+      "json_path": "episodes/BV1Ghjnz6EdN.json",
+      "page_path": null,
+      "related_videos": [
+        {
+          "bvid": "BV1HHEqzBEM1",
+          "relation": "series"
+        },
+        {
+          "bvid": "BV1cA7azpEVm",
+          "relation": "series"
         }
       ]
     },
