@@ -18,11 +18,17 @@ h2 { font-size: 19px; margin-top: 34px; padding-left: 10px; border-left: 4px sol
 .meta { color: #888; font-size: 13px; margin: 2px 0; }
 .stat { color: #555; font-size: 13px; margin-top: 6px; }
 .go { color: #e6502e; font-weight: 600; font-size: 14px; margin-top: 10px; }
-.badge { font-size: 12px; padding: 2px 10px; border-radius: 10px; white-space: nowrap; }
-.badge.draft { background: #fdf0e8; color: #c23a1a; }
-.badge.ok { background: #e8f5ee; color: #1a7a4c; }
 .note { font-size: 12.5px; color: #999; margin-top: 40px; border-top: 1px dashed #ddd; padding-top: 14px; }
 a { color: #c23a1a; }
+.count { font-weight: normal; color: #999; font-size: 14px; margin-left: 4px; }
+.search-wrap { margin: 18px 0 4px; }
+#search { width: 100%; max-width: 480px; padding: 10px 16px; font-size: 15px; border: 1px solid #ddd; border-radius: 8px; outline: none; background: #fff; }
+#search:focus { border-color: #e6502e; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 4px; }
+.filter-btn { padding: 5px 14px; font-size: 13.5px; border: 1px solid #ddd; background: #fff; border-radius: 16px; cursor: pointer; color: #555; transition: all .15s; }
+.filter-btn:hover { border-color: #e6502e; color: #e6502e; }
+.filter-btn.active { background: #e6502e; color: #fff; border-color: #e6502e; }
+.empty { display: none; text-align: center; color: #999; padding: 46px 0; font-size: 14.5px; }
 
 @media (max-width: 640px) {
   body { padding: 20px 14px 60px; font-size: 14.5px; }
@@ -43,134 +49,148 @@ a { color: #c23a1a; }
 <h1>旅行博主路线库</h1>
 <p class="lead">把旅行博主公开视频，整理成能直接用的路线图：完整路线、交通方式、花费清单、实用贴士。本站独立整理，与创作者无合作/背书关系；原创内容版权归原作者所有，价格为视频拍摄时信息，出行前请核实。按博主分组浏览，也可去原视频看完整内容。</p>
 
-<h2>▎期末77（2 期）</h2>
-    <a class="card" href="pages/BV1tF3M6vEoq.html">
-      <div class="card-head"><h3>西北边境·伊犁环线自驾（伊宁→伊昭公路→昭苏→喀拉峻→夏塔）</h3><span class="badge draft">整理中</span></div>
+<div class="search-wrap">
+  <input id="search" type="text" placeholder="🔍 搜索目的地 / 路线 / 关键词，如：漠河、套娃、伊犁…">
+</div>
+<div class="filters" id="filters"></div>
+<div class="empty" id="empty">没有找到匹配的路线，换个关键词试试？</div>
+
+<h2 data-group="期末77">▎期末77</h2>
+    <a class="card" data-blogger="期末77" href="pages/BV1tF3M6vEoq.html">
+      <div class="card-head"><h3>西北边境·伊犁环线自驾（伊宁→伊昭公路→昭苏→喀拉峻→夏塔）</h3></div>
       <p class="route">🗺️ 杭州 →（飞机）→ 伊宁 →（伊昭公路）→ 昭苏 →（自驾）→ 喀拉峻草原 →（自驾向西）→ 夏塔（中哈边境·汗腾格里峰）</p>
       <div class="meta">⏱ 37:11 · 📅 2026-07-25 · 天数待定 · 季节：夏季（7月，新疆日落约22:30/日出5点多，一天可掰成两天用）</div>
       <div class="meta">🚌 飞机（杭州→伊宁）、自驾（纯电SUV）、景区区间车</div>
       <div class="stat">▶ 播放 111.2万 ｜ 👍 3.4万 ｜ ⭐ 1.2万</div>
       <div class="go">查看路线与攻略 →</div>
     </a>
-    <h2>▎小V的奇幻旅程（1 期）</h2>
-    <a class="card" href="pages/BV1yb421H7uu.html">
-      <div class="card-head"><h3>大理旅居15天·网红景点打卡路线</h3><span class="badge draft">整理中</span></div>
+    <h2 data-group="小V的奇幻旅程">▎小V的奇幻旅程</h2>
+    <a class="card" data-blogger="小V的奇幻旅程" href="pages/BV1yb421H7uu.html">
+      <div class="card-head"><h3>大理旅居15天·网红景点打卡路线</h3></div>
       <p class="route">🗺️ 大理古城（落脚）→ 苍山（崇圣寺三塔/寂照庵/洗马潭/玉带云游路/白石溪）→ 洱海环海（才村/生态廊道/文笔村/理想邦/小普陀/三圣岛）→ 喜洲古镇 → 双廊古镇 → 周城（扎染）</p>
       <div class="meta">⏱ 36:33 · 📅 2024-07-01 · 15天 · 季节：夏季（视频2024年7月发布；大理四季可游，夏秋雨季注意天气）</div>
       <div class="meta">🚌 公交、骑行/电动车（环海）、索道（苍山）、打车、船（登岛）</div>
       <div class="stat">▶ 播放 99.0万 ｜ 👍 1.1万 ｜ ⭐ 1.2万</div>
       <div class="go">查看路线与攻略 →</div>
-    </a><h2>▎赖导AboutLai（10 期）</h2>
-    <a class="card" href="pages/BV1eh9YBUEYp.html">
-      <div class="card-head"><h3>探访中国“最孤独”的城市茫崖（2天）</h3><span class="badge draft">整理中</span></div>
+    </a><h2 data-group="赖导AboutLai">▎赖导AboutLai</h2>
+    <a class="card" data-blogger="赖导AboutLai" href="pages/BV1eh9YBUEYp.html">
+      <div class="card-head"><h3>探访中国“最孤独”的城市茫崖（2天）</h3></div>
       <p class="route">🗺️ 西宁 →（飞机）→ 花土沟机场 → 花土沟镇 → 艾肯泉（恶魔之眼）→ 茫崖翡翠湖 →（自驾300km）→ 冷湖石油基地遗址 → 赛什腾山天文台 → 冷湖镇</p>
       <div class="meta">⏱ 48:15 · 📅 2026-04-30 · 2天 · 季节：多风沙（4月，随时雪/冰雹/暴晒）</div>
       <div class="meta">🚌 飞机、自驾</div>
       <div class="stat">▶ 播放 506.5万 ｜ 👍 13.7万 ｜ ⭐ 4.5万</div>
       <div class="go">查看路线与攻略 →</div>
     </a>
-    <a class="card" href="pages/BV1Yu4y1L7rL.html">
-      <div class="card-head"><h3>中国最北·漠河县城（2天）</h3><span class="badge draft">整理中</span></div>
+    <a class="card" data-blogger="赖导AboutLai" href="pages/BV1Yu4y1L7rL.html">
+      <div class="card-head"><h3>中国最北·漠河县城（2天）</h3></div>
       <p class="route">🗺️ 上海 →（飞机）→ 哈尔滨 →（绿皮火车19h）→ 漠河：一路向北极地宾馆 → 猪肉面 → 大兴安岭五六火灾纪念馆 → 市区闲逛（老潮河/彩色平房）→ 振兴街（市中心）→ 北极星广场 → 家常菜（北三星茄子）→ 漠河舞厅 → 中国最北电影院（顶泰电影院）→ 拼车去北极村</p>
       <div class="meta">⏱ 31:54 · 📅 2023-11-18 · 2天 · 季节：11月（淡季，白天零下4°C；旺季=11月末-年后滑雪+7-8月避暑）</div>
       <div class="meta">🚌 飞机、绿皮火车（19小时）、拼车、步行</div>
       <div class="stat">▶ 播放 264.8万 ｜ 👍 12.6万 ｜ ⭐ 4.5万</div>
       <div class="go">查看路线与攻略 →</div>
     </a>
-    <a class="card" href="pages/BV1UetHeTEsH.html">
-      <div class="card-head"><h3>去中国房价最低城市鹤岗旅行（2天）</h3><span class="badge draft">整理中</span></div>
+    <a class="card" data-blogger="赖导AboutLai" href="pages/BV1UetHeTEsH.html">
+      <div class="card-head"><h3>去中国房价最低城市鹤岗旅行（2天）</h3></div>
       <p class="route">🗺️ 哈尔滨 →（火车）→ 鹤岗：新世纪广场市中心 → 鹤岗小串 → 松鹤小区（台湾大叔）→ 平安宝塔 → 鹤岗二中 → 儿童公园 → 国家矿山公园</p>
       <div class="meta">⏱ 34:07 · 📅 2024-09-19 · 2天 · 季节：初秋（9月，10-25°C）</div>
       <div class="meta">🚌 飞机+火车、打车、公交</div>
       <div class="stat">▶ 播放 669.4万 ｜ 👍 10.9万 ｜ ⭐ 3.8万</div>
       <div class="go">查看路线与攻略 →</div>
     </a>
-    <a class="card" href="pages/BV1UJ4m1M7vd.html">
-      <div class="card-head"><h3>山东最北海岛·北隍城岛慢旅行（3天）</h3><span class="badge draft">整理中</span></div>
+    <a class="card" data-blogger="赖导AboutLai" href="pages/BV1UJ4m1M7vd.html">
+      <div class="card-head"><h3>山东最北海岛·北隍城岛慢旅行（3天）</h3></div>
       <p class="route">🗺️ 蓬莱（前夜住码头）→（巡仙十二号客船，4小时）→ 北隍城岛：渔家乐（吃住一体）→ 山后村（记忆展馆/观音礁海滩/淡化水厂）→ 出海钓鱼 → 北隍城灯塔（海上日落）→ 赶海 → 山前村（邮政/超市/理发）→ 离岛回蓬莱</p>
       <div class="meta">⏱ 48:39 · 📅 2024-06-14 · 3天 · 季节：5月底（赶在酷暑前，气温20°C但海水凉、日照强）</div>
       <div class="meta">🚌 飞机、客船（4小时）、步行、搭车</div>
       <div class="stat">▶ 播放 278.6万 ｜ 👍 11.1万 ｜ ⭐ 6.0万</div>
       <div class="go">查看路线与攻略 →</div>
     </a>
-    <a class="card" href="pages/BV1Hj1jYKECK.html">
-      <div class="card-head"><h3>云南复古小城·个旧旅行（3天）</h3><span class="badge draft">整理中</span></div>
+    <a class="card" data-blogger="赖导AboutLai" href="pages/BV1Hj1jYKECK.html">
+      <div class="card-head"><h3>云南复古小城·个旧旅行（3天）</h3></div>
       <p class="route">🗺️ 昆明 →（火车）→ 个旧站 →（拼车）→ 市区：金湖环湖 → 巴金广场 → 选矿场遗址+市博物馆 → 老火车站美食街（糖粉小肉串）→ 地轨缆车（小香港全景）→ 法国楼餐厅 → 老阴山（索道+动物园+宝华寺）→ 街头慢走</p>
       <div class="meta">⏱ 38:28 · 📅 2024-10-28 · 3天 · 季节：四季如春（10月拍摄，白天20°C上下，天气多变）</div>
       <div class="meta">🚌 飞机+火车（昆明中转）、拼车/客车、打车、地轨缆车/索道</div>
       <div class="stat">▶ 播放 401.2万 ｜ 👍 7.0万 ｜ ⭐ 3.3万</div>
       <div class="go">查看路线与攻略 →</div>
     </a>
-    <a class="card" href="pages/BV1F9U8BzE3F.html">
-      <div class="card-head"><h3>坐水上公交游长江三峡（上/下两集）</h3><span class="badge draft">整理中</span></div>
+    <a class="card" data-blogger="赖导AboutLai" href="pages/BV1F9U8BzE3F.html">
+      <div class="card-head"><h3>坐水上公交游长江三峡（上/下两集）</h3></div>
       <p class="route">🗺️ 重庆 → 奉节 → 巫山 → 巴东 → 秭归 → 宜昌</p>
       <div class="meta">⏱ 54:41 · 📅 2025-11-26 · 天数待定 · 季节：—</div>
       <div class="meta">🚌 高铁/大巴、小红船（水上公交）、湖北小白船、小客车、轮渡、游轮</div>
       <div class="stat">▶ 播放 355.2万 ｜ 👍 15.1万 ｜ ⭐ 6.2万</div>
       <div class="go">查看路线与攻略 →</div>
     </a>
-    <a class="card" href="pages/BV19jfPY9Eot.html">
-      <div class="card-head"><h3>玉门老市区·资源枯竭小城探访（4天）</h3><span class="badge draft">整理中</span></div>
+    <a class="card" data-blogger="赖导AboutLai" href="pages/BV19jfPY9Eot.html">
+      <div class="card-head"><h3>玉门老市区·资源枯竭小城探访（4天）</h3></div>
       <p class="route">🗺️ 上海 →（飞机）→ 嘉峪关 →（客车20元）→ 玉门老市区：解放门/大环岛市中心 → 浩宇大酒店 → 解放路购物街（金玉宾馆）→ 游城学校+棋牌广场 → 游城公园（王进喜铜像）→ 老君庙油田（中国第一口油井/老一井/窑洞）→ 赤金镇（铁人王进喜家乡）→ 清泉乡（人参果/羊羔肉）</p>
       <div class="meta">⏱ 51:46 · 📅 2025-04-02 · 4天 · 季节：3-4月（零下10°C~0°C，阳光充沛；夏天避暑）</div>
       <div class="meta">🚌 飞机、客车、面包车、自驾</div>
       <div class="stat">▶ 播放 294.0万 ｜ 👍 8.9万 ｜ ⭐ 3.2万</div>
       <div class="go">查看路线与攻略 →</div>
     </a>
-    <a class="card" href="pages/BV19PGwzrEvW.html">
-      <div class="card-head"><h3>从漠河穿越大兴安岭去呼伦贝尔（夏至独行）</h3><span class="badge draft">整理中</span></div>
+    <a class="card" data-blogger="赖导AboutLai" href="pages/BV19PGwzrEvW.html">
+      <div class="card-head"><h3>从漠河穿越大兴安岭去呼伦贝尔（夏至独行）</h3></div>
       <p class="route">🗺️ 漠河 → 满归 → 根河 → 室韦 → 黑山头 → 额尔古纳</p>
       <div class="meta">⏱ 50:41 · 📅 2025-07-09 · 3天 · 季节：夏至（6月21日左右）</div>
       <div class="meta">🚌 大巴、绿皮慢车4182次（牙林线）、自驾（根河租车，异地还车）</div>
       <div class="stat">▶ 播放 166.6万 ｜ 👍 6.3万 ｜ ⭐ 2.0万</div>
       <div class="go">查看路线与攻略 →</div>
     </a>
-    <a class="card" href="pages/BV16NpQznEXC.html">
-      <div class="card-head"><h3>一个人自驾河西走廊·武威+张掖（2天）</h3><span class="badge draft">整理中</span></div>
+    <a class="card" data-blogger="赖导AboutLai" href="pages/BV16NpQznEXC.html">
+      <div class="card-head"><h3>一个人自驾河西走廊·武威+张掖（2天）</h3></div>
       <p class="route">🗺️ 兰州 → 乌鞘岭（起点）→ 天梯山石窟 → 武威：姑臧城遗址/昭武门/雷台汉墓/鸠摩罗什寺/北关市场三套车 → 山丹军马场 → 马蹄寺石窟 → 张掖：大佛寺/钟鼓楼/牛肉小饭/炒炮 → 外星谷 → 高台县花墙子村（《隐入尘烟》取景地）</p>
       <div class="meta">⏱ 1:43:17 · 📅 2025-09-20 · 2天 · 季节：夏末初秋（9月，早晚凉爽）</div>
       <div class="meta">🚌 自驾（零跑C10）</div>
       <div class="stat">▶ 播放 401.7万 ｜ 👍 26.1万 ｜ ⭐ 8.4万</div>
       <div class="go">查看路线与攻略 →</div>
     </a>
-    <a class="card" href="pages/BV15yXGBxE9U.html">
-      <div class="card-head"><h3>云南最南边境小城·勐腊自驾（3天）</h3><span class="badge draft">整理中</span></div>
+    <a class="card" data-blogger="赖导AboutLai" href="pages/BV15yXGBxE9U.html">
+      <div class="card-head"><h3>云南最南边境小城·勐腊自驾（3天）</h3></div>
       <p class="route">🗺️ 重庆 →（自驾1400km）→ 景洪 →（国道130km）→ 勐腊县城：景兰大酒店（《边水往事》取景地）→ 牛乐乐老挝火锅 → 望天树景区（树冠走廊）→ 老城中心+星光夜市 → 布过村 → 小徐家橡胶林 → 曼龙勒村雨林赶摆+南腊河漂流 → 曼东村龙脑香禅院</p>
       <div class="meta">⏱ 68:05 · 📅 2026-03-28 · 3天 · 季节：春节后（2-3月，气温舒适，云南最有春天气息）</div>
       <div class="meta">🚌 自驾（深蓝S07纯电）、皮划艇漂流</div>
       <div class="stat">▶ 播放 381.8万 ｜ 👍 9.4万 ｜ ⭐ 3.5万</div>
       <div class="go">查看路线与攻略 →</div>
-    </a><h2>▎小可追太阳（4 期）</h2>
-    <a class="card" href="pages/BV1k1421Q7W9.html">
-      <div class="card-head"><h3>浙江湖州·荻港村「一元茶馆」——凌晨老茶客的江南水乡早茶</h3><span class="badge draft">整理中</span></div>
+    </a><h2 data-group="小可追太阳">▎小可追太阳</h2>
+    <a class="card" data-blogger="小可追太阳" href="pages/BV1k1421Q7W9.html">
+      <div class="card-head"><h3>浙江湖州·荻港村「一元茶馆」——凌晨老茶客的江南水乡早茶</h3></div>
       <p class="route">🗺️ 湖州南浔区和孚镇荻港村 → 凌晨三四点到百年一元茶馆喝早茶、看老虎灶烧水 → 融入老茶客的听戏/聊天/发烟江湖 → 天亮散场逛水乡古村与桑基鱼塘</p>
       <div class="meta">⏱ 9:52 · 📅 2024-03-25 · 1天 · 季节：四季皆宜（初春凌晨拍摄，注意保暖）</div>
       <div class="meta">🚌 步行、自驾/包车</div>
       <div class="stat">▶ 播放 117.5万 ｜ 👍 18.2万 ｜ ⭐ 5.0万</div>
       <div class="go">查看路线与攻略 →</div>
     </a>
-    <a class="card" href="pages/BV111Fze1EZw.html">
-      <div class="card-head"><h3>辽宁鞍山·钢铁之城——6元东北炒菜+700米深大孤山矿坑</h3><span class="badge draft">整理中</span></div>
+    <a class="card" data-blogger="小可追太阳" href="pages/BV111Fze1EZw.html">
+      <div class="card-head"><h3>辽宁鞍山·钢铁之城——6元东北炒菜+700米深大孤山矿坑</h3></div>
       <p class="route">🗺️ 鞍钢附近小饭馆拼桌午饭 → 居民楼楼顶俯瞰鞍钢全貌 → 小武康大楼（1920年日本职员宿舍） → 胜利广场喂鸽子传明信片 → 大孤山铁矿（690米深巨型矿坑） → 炭火烤肉告别鞍山</p>
       <div class="meta">⏱ 18:10 · 📅 2025-02-02 · 1天 · 季节：冬季（视频中零下7度，夏天可配合鲅鱼圈海边）</div>
       <div class="meta">🚌 火车、打车/包车</div>
       <div class="stat">▶ 播放 82.7万 ｜ 👍 1.8万 ｜ ⭐ 8543</div>
       <div class="go">查看路线与攻略 →</div>
     </a>
-    <a class="card" href="pages/BV1cD3bzwEVm.html">
-      <div class="card-head"><h3>搭火车环游中国·第21站：佳木斯（市井美食+松花江）</h3><span class="badge draft">整理中</span></div>
+    <a class="card" data-blogger="小可追太阳" href="pages/BV1cD3bzwEVm.html">
+      <div class="card-head"><h3>搭火车环游中国·第21站：佳木斯（市井美食+松花江）</h3></div>
       <p class="route">🗺️ 双鸭山 → 佳木斯（夜市→三江省公署旧址→大世界包子铺→暖鸟书店→新兴冷面→沿江公园→知青广场→筋饼卷肉串→晋江早市）</p>
       <div class="meta">⏱ 36:44 · 📅 2025-07-03 · 2天 · 季节：冬季/冰雪季（视频拍摄于2025年冰雪季，7月发布）</div>
       <div class="meta">🚌 高铁（哈佳快铁方向）、步行、打车</div>
       <div class="stat">▶ 播放 26.2万 ｜ 👍 6453 ｜ ⭐ 2011</div>
       <div class="go">查看路线与攻略 →</div>
     </a>
-    <a class="card" href="pages/BV19vzvBXEYb.html">
-      <div class="card-head"><h3>搭火车环游中国·第33站：满洲里（上/下两集，中俄蒙边境百年商埠）</h3><span class="badge draft">整理中</span></div>
+    <a class="card" data-blogger="小可追太阳" href="pages/BV19vzvBXEYb.html">
+      <div class="card-head"><h3>搭火车环游中国·第33站：满洲里（上/下两集，中俄蒙边境百年商埠）</h3></div>
       <p class="route">🗺️ 海拉尔 →（火车2h）→ 满洲里：火车站老建筑群→沙俄监狱→苏联红军公园→铁路天桥→国门景区→中苏金街→卢布里俄餐 →（自驾南行80km）→ 呼伦湖·成吉思汗拴马桩 → 新巴尔虎右旗</p>
       <div class="meta">⏱ 41:28 · 📅 2026-01-26 · 2天 · 季节：冬季（1-2月拍摄，冰雪+边境风光；呼伦湖观景春夏季更佳）</div>
       <div class="meta">🚌 火车（绿皮草原列车）、步行、租车自驾</div>
       <div class="stat">▶ 播放 26.1万 ｜ 👍 5403 ｜ ⭐ 2669</div>
+      <div class="go">查看路线与攻略 →</div>
+    </a>
+    <a class="card" data-blogger="小可追太阳" href="pages/BV1Ghjnz6EdN.html">
+      <div class="card-head"><h3>搭火车环游中国·第17站：一面坡——百年俄式小镇+全球90%套娃产地</h3></div>
+      <p class="route">🗺️ 哈尔滨（哈尔滨火车站）→（绿皮火车·中东铁路滨绥线）→ 一面坡：1898年俄式小站 → 春天旅馆 → 镇饭店（酱焖川丁鱼）→ 俄式小镇漫步（疗养院旧址/护路军司令部/四烟囱民居）→ 套娃作坊 →（预告下一站）横道河子</p>
+      <div class="meta">⏱ 34:42 · 📅 2025-05-23 · 2天 · 季节：冬季（积雪，游客设施冬季关门）</div>
+      <div class="meta">🚌 绿皮火车（中东铁路滨绥线）、出租车（镇内短途）、步行</div>
+      <div class="stat">▶ 播放 71.4万 ｜ 👍 9331 ｜ ⭐ 4530</div>
       <div class="go">查看路线与攻略 →</div>
     </a>
 
@@ -186,5 +206,71 @@ a { color: #c23a1a; }
   本站总访问量 <b id="busuanzi_value_site_pv"></b> 次 ｜ 访客数 <b id="busuanzi_value_site_uv"></b> 人
 </p>
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+(function () {
+  var searchEl = document.getElementById('search');
+  var filtersEl = document.getElementById('filters');
+  var emptyEl = document.getElementById('empty');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var groups = Array.prototype.slice.call(document.querySelectorAll('h2[data-group]'));
+  var currentBlogger = null; // null = 全部
+
+  // 1) 期数改为从卡片自动统计（杜绝手写计数错误）
+  groups.forEach(function (h) {
+    var n = cards.filter(function (c) { return c.getAttribute('data-blogger') === h.getAttribute('data-group'); }).length;
+    var span = document.createElement('span');
+    span.className = 'count';
+    span.textContent = '（' + n + ' 期）';
+    h.appendChild(span);
+  });
+
+  // 2) 博主筛选按钮
+  var allBtn = document.createElement('button');
+  allBtn.className = 'filter-btn active';
+  allBtn.textContent = '全部博主';
+  allBtn.addEventListener('click', function () { setBlogger(null); });
+  filtersEl.appendChild(allBtn);
+  groups.forEach(function (h) {
+    var name = h.getAttribute('data-group');
+    var btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.textContent = name;
+    btn.setAttribute('data-blogger', name);
+    btn.addEventListener('click', function () { setBlogger(name); });
+    filtersEl.appendChild(btn);
+  });
+
+  function setBlogger(name) {
+    currentBlogger = name;
+    Array.prototype.forEach.call(filtersEl.querySelectorAll('.filter-btn'), function (b) {
+      b.classList.toggle('active', b.getAttribute('data-blogger') === name || (!name && !b.getAttribute('data-blogger')));
+    });
+    update();
+  }
+
+  // 3) 搜索 + 筛选联动
+  function update() {
+    var kw = searchEl.value.trim().toLowerCase();
+    var anyVisible = false;
+    cards.forEach(function (c) {
+      var matchBlogger = currentBlogger === null || c.getAttribute('data-blogger') === currentBlogger;
+      var matchKw = !kw || c.textContent.toLowerCase().indexOf(kw) !== -1;
+      var show = matchBlogger && matchKw;
+      c.style.display = show ? '' : 'none';
+      if (show) anyVisible = true;
+    });
+    // 博主分组标题跟随显隐：该组无可见卡片则隐藏标题
+    groups.forEach(function (h) {
+      var g = h.getAttribute('data-group');
+      var any = cards.some(function (c) { return c.getAttribute('data-blogger') === g && c.style.display !== 'none'; });
+      h.style.display = any ? '' : 'none';
+    });
+    emptyEl.style.display = anyVisible ? 'none' : 'block';
+  }
+
+  searchEl.addEventListener('input', update);
+  update();
+})();
+</script>
 </body>
 </html>
