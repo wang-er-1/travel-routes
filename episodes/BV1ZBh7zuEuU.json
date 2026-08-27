@@ -1,0 +1,299 @@
+{
+  "schema_version": "2.0",
+  "episode": {
+    "blogger": "赖导AboutLai",
+    "title": "自驾川西四姑娘山，探访震后17年的汶川映秀镇",
+    "bvid": "BV1ZBh7zuEuU",
+    "url": "https://www.bilibili.com/video/BV1ZBh7zuEuU",
+    "duration": "38:17",
+    "publish_date": "2025-08-01",
+    "stats": {
+      "views": 1573397,
+      "likes": 52968,
+      "favorites": 15592,
+      "danmaku": 7097,
+      "comments": 3730,
+      "captured_at": null
+    },
+    "tags": [
+      "川西",
+      "四姑娘山",
+      "汶川",
+      "映秀",
+      "双桥沟",
+      "毕棚沟",
+      "自驾"
+    ],
+    "description": "川西，现通常是指四川盆地以西的高原地区。横断山脉的巨大海拔差，给这里创造了独特的地质条件和自然风光——雪山、峡谷、湖泊、森林。同时川西处在青藏高原和四川盆地的交界处，复杂的地质构造也带来了地质灾害，比如17年前的汶川大地震。赖导自驾走一个川西小环线：四姑娘山+毕棚沟+映秀镇。",
+    "related_videos": [],
+    "part_number": null,
+    "series": null,
+    "duration_seconds": 2297
+  },
+  "trip": {
+    "title": "自驾川西四姑娘山+汶川映秀镇（3-4天）",
+    "route_summary": "成都 →（自驾约3h）→ 猫鼻梁观景台（远眺四姑娘山）→ 四姑娘山镇 → 双桥沟景区 →（理小路）→ 毕棚沟景区（飞龙瀑布）→（自驾）→ 映秀镇（漩口中学遗址）→ 返回",
+    "direction": "成都向西北（川西小环线）",
+    "season": "雨季（7-8月），地质灾害频发，游客少；秋季（10月后）色彩最佳",
+    "duration_days": 4,
+    "transport_modes": [
+      "自驾",
+      "景区区间车",
+      "徒步"
+    ],
+    "stops": [
+      {
+        "name": "成都（出发）",
+        "day": null,
+        "arrive_transport": "飞机（C919）",
+        "arrive_cost": "—",
+        "activities": [
+          "飞抵成都，接高中老同学'登哥'同行",
+          "取比亚迪秦L EV自驾出发"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": [],
+        "order": 1,
+        "time": null,
+        "detail": null
+      },
+      {
+        "name": "猫鼻梁观景台",
+        "day": null,
+        "arrive_transport": "自驾（成都出发约3-4h）",
+        "arrive_cost": "免费",
+        "activities": [
+          "远眺四姑娘山全貌的最佳公路观景点",
+          "四姑娘山四座山峰：大峰5025m/二峰5276m/三峰5355m/幺妹峰6250m",
+          "幺妹峰是四川第二高峰（弹幕纠正：中山峰才是川西第二，幺妹峰排名有争议）",
+          "'四姑娘山'实为藏语'斯古拉'的音译，四姑娘传说是后人附会"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": [],
+        "order": 2,
+        "time": null,
+        "detail": null
+      },
+      {
+        "name": "四姑娘山镇",
+        "day": null,
+        "arrive_transport": "自驾（猫鼻梁继续前行）",
+        "arrive_cost": "酒店约150元/晚",
+        "activities": [
+          "入住山景房，落地窗外正对山谷",
+          "雨季游客极少，酒店主动升级房间",
+          "充电桩补能（1.9元/度，景区电价偏高）",
+          "吃韭叶牛肉面"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [
+          "酒店约150元/晚（淡季山景双床房）",
+          "充电桩1.9元/度"
+        ],
+        "tips": [],
+        "order": 3,
+        "time": null,
+        "detail": null
+      },
+      {
+        "name": "双桥沟景区",
+        "day": null,
+        "arrive_transport": "自驾/景区区间车",
+        "arrive_cost": "门票+区间车",
+        "activities": [
+          "四姑娘山三条沟中最易到达的一条（有公路+区间车）",
+          "雨季游客稀少，独享高山草甸/雪山/森林",
+          "景区内有餐厅（牦牛肉面等），适合午餐",
+          "海拔约3500m，同行登哥高反",
+          "赖导体力好无高反，被称为'徒步专家'"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": [],
+        "order": 4,
+        "time": null,
+        "detail": null
+      },
+      {
+        "name": "理小路（四姑娘山→毕棚沟）",
+        "day": null,
+        "arrive_transport": "自驾",
+        "arrive_cost": "免费公路",
+        "activities": [
+          "连接小金县和理县的景观公路",
+          "沿途雪山/峡谷/河谷风光",
+          "路过瀑布（冬天结冰可玩冰）"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": [],
+        "order": 5,
+        "time": null,
+        "detail": null
+      },
+      {
+        "name": "毕棚沟景区（理县）",
+        "day": null,
+        "arrive_transport": "自驾+景区交通",
+        "arrive_cost": "景区内面60元/碗、烤肠20元",
+        "activities": [
+          "川西知名沟谷景区，秋天红叶最美（10月），冬天看雪",
+          "景区内餐厅简单补给",
+          "徒步深入：吊桥、森林步道、高山草甸",
+          "海拔逐步攀升至约3900m"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [
+          "景区内面食约60元/碗",
+          "烤肠约20元"
+        ],
+        "tips": [],
+        "order": 6,
+        "time": null,
+        "detail": null
+      },
+      {
+        "name": "飞龙瀑布（毕棚沟深处）",
+        "day": null,
+        "arrive_transport": "徒步",
+        "arrive_cost": "免费（景区内）",
+        "activities": [
+          "毕棚沟深处的壮观瀑布",
+          "赖导下到瀑布底部感受水雾，致敬电影《春光乍泄》伊瓜苏瀑布片段",
+          "配Cucurrucucu Paloma（春光乍泄经典配乐）",
+          "雪水冰凉，'我始终觉得站在瀑布下面的应该是两个人'"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": [],
+        "order": 7,
+        "time": null,
+        "detail": null
+      },
+      {
+        "name": "映秀镇（汶川地震遗址）",
+        "day": null,
+        "arrive_transport": "自驾（毕棚沟方向返回）",
+        "arrive_cost": "酒店百元级",
+        "activities": [
+          "2008年5·12汶川大地震震中所在地",
+          "漩口中学遗址保留：倒塌教学楼、钟表定格在14:28",
+          "震后17年（2008-2025），重建后的映秀镇安静整洁",
+          "全国各省援建（广东/东莞出力最多），赖导童年记忆中的'汶川'",
+          "镇上有小店，买纪念品耳环"
+        ],
+        "lodging": null,
+        "food": [],
+        "cost_notes": [],
+        "tips": [],
+        "order": 8,
+        "time": null,
+        "detail": null
+      }
+    ],
+    "suitable_for": "自驾爱好者、雪山/峡谷自然风光爱好者、地震遗址人文探访",
+    "customization_notes": "B站 BV1ZBh7zuEuU 弹幕3600条时序分析 + 视频description + 元数据",
+    "locations": [
+      {
+        "province": "四川省",
+        "city": "阿坝藏族羌族自治州",
+        "county": "小金县",
+        "region": "四姑娘山镇/双桥沟"
+      },
+      {
+        "province": "四川省",
+        "city": "阿坝藏族羌族自治州",
+        "county": "理县",
+        "region": "毕棚沟"
+      },
+      {
+        "province": "四川省",
+        "city": "阿坝藏族羌族自治州",
+        "county": "汶川县",
+        "town": "映秀镇"
+      }
+    ],
+    "themes": [
+      "雪山",
+      "峡谷",
+      "地震遗址",
+      "自驾环线",
+      "高原徒步"
+    ],
+    "budget": {
+      "total": null,
+      "per_person": null,
+      "note": "视频内明确价格：酒店约150元/晚（四姑娘山镇淡季）、充电1.9元/度、景区面60元/烤肠20元",
+      "price_as_of": "2025-07",
+      "items": [
+        {
+          "item": "四姑娘山镇酒店（淡季山景房）",
+          "price": "约150元/晚",
+          "note": "淡季游客少，酒店主动升级"
+        },
+        {
+          "item": "景区充电桩",
+          "price": "1.9元/度",
+          "note": "景区电价偏高，但比油车仍省"
+        },
+        {
+          "item": "毕棚沟景区面食",
+          "price": "约60元/碗",
+          "note": "景区内餐饮偏贵"
+        },
+        {
+          "item": "毕棚沟景区烤肠",
+          "price": "约20元",
+          "note": "景区内小食"
+        }
+      ]
+    }
+  },
+  "highlights": [
+    "猫鼻梁免费观景台：远眺四姑娘山四峰全貌（幺妹峰6250m）",
+    "双桥沟雨季独享：游客极少，高山草甸/雪山/森林一人包场",
+    "毕棚沟飞龙瀑布：致敬《春光乍泄》伊瓜苏瀑布",
+    "映秀镇漩口中学遗址：震后17年，钟表定格14:28",
+    "理小路自驾：连接小金县和理县的川西景观公路"
+  ],
+  "last_updated": "2026-08-27",
+  "data_status": "draft",
+  "source_note": "无AI字幕/口播转写，路线结构从3600条弹幕时序分析+视频description推断；价格/站点信息来自弹幕实况反馈",
+  "tips": [
+    {
+      "category": "交通",
+      "text": "成都自驾到四姑娘山约3-4小时；电车可跑完全程但建议沿途补电（景区充电1.9元/度）"
+    },
+    {
+      "category": "季节",
+      "text": "雨季（7-8月）游客少体验好但地质灾害风险高；秋季（10月后）色彩斑斓是旺季"
+    },
+    {
+      "category": "住宿",
+      "text": "四姑娘山镇淡季酒店约150元/晚山景房；旺季价格翻倍且需提前预订"
+    },
+    {
+      "category": "人文",
+      "text": "映秀镇漩口中学遗址免费参观，震后重建小镇安静整洁，值得停留半天"
+    },
+    {
+      "category": "餐饮",
+      "text": "景区内餐饮偏贵（面60元/烤肠20元），建议自带干粮补给"
+    },
+    {
+      "category": "其他",
+      "text": "四姑娘山→毕棚沟走理小路（景观公路），沿途风光好；海拔3500-3900m注意高反"
+    }
+  ],
+  "next_stop": null,
+  "last_checked_at": null
+}
