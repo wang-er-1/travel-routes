@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-08-27T11:19:39+08:00",
-  "count": 20,
+  "generated_at": "2026-08-26T20:47:30+08:00",
+  "count": 19,
   "routes": [
     {
       "source_id": "BV111Fze1EZw",
@@ -321,38 +321,6 @@
       "updated_at": "2026-08-23",
       "json_path": "episodes/BV1Yu4y1L7rL.json",
       "page_path": "pages/BV1Yu4y1L7rL.html",
-      "related_videos": []
-    },
-    {
-      "source_id": "BV1ZBh7zuEuU",
-      "source_type": "bilibili_video",
-      "content_hash": "sha256:f043ea1e95822e512616b5777a7c035bbc9b627e9658e62bfb5ba48fc472201c",
-      "blogger": "赖导AboutLai",
-      "series": null,
-      "title": "自驾川西四姑娘山+汶川映秀镇（3-4天）",
-      "regions": [
-        "四姑娘山镇/双桥沟",
-        "毕棚沟"
-      ],
-      "destinations": [
-        "小金县",
-        "理县",
-        "映秀镇"
-      ],
-      "location_terms": [
-        "四姑娘山镇/双桥沟",
-        "四川省",
-        "阿坝藏族羌族自治州",
-        "小金县",
-        "毕棚沟",
-        "理县",
-        "汶川县",
-        "映秀镇"
-      ],
-      "data_status": "draft",
-      "updated_at": "2026-08-27",
-      "json_path": "episodes/BV1ZBh7zuEuU.json",
-      "page_path": null,
       "related_videos": []
     },
     {
