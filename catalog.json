@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-08-27T18:01:40+08:00",
-  "count": 21,
+  "generated_at": "2026-09-03T15:09:11+08:00",
+  "count": 22,
   "routes": [
     {
       "source_id": "BV111Fze1EZw",
@@ -30,6 +30,41 @@
       "updated_at": "2026-08-24",
       "json_path": "episodes/BV111Fze1EZw.json",
       "page_path": "pages/BV111Fze1EZw.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV13n5RzbET8",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:e803cd6e71069793ffe9060c9b81e4eb57f069e67e07e05883d4df388229d185",
+      "blogger": "巡游轨迹",
+      "series": null,
+      "title": "冈底斯山脉普拉喜琼：从日喀则到5600米车宿，徒步看冰川峡谷",
+      "regions": [
+        "冈底斯山脉"
+      ],
+      "destinations": [
+        "西安市",
+        "桑珠孜区",
+        "昂仁县",
+        "乳脚乡",
+        "西藏自治区"
+      ],
+      "location_terms": [
+        "中国",
+        "陕西省",
+        "西安市",
+        "西藏自治区",
+        "日喀则市",
+        "桑珠孜区",
+        "昂仁县",
+        "萨嘎县",
+        "乳脚乡",
+        "冈底斯山脉"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-09-03",
+      "json_path": "episodes/BV13n5RzbET8.json",
+      "page_path": null,
       "related_videos": []
     },
     {
@@ -99,7 +134,7 @@
       "data_status": "draft",
       "updated_at": "2026-08-27",
       "json_path": "episodes/BV17nuzzyE8a.json",
-      "page_path": null,
+      "page_path": "pages/BV17nuzzyE8a.html",
       "related_videos": []
     },
     {
