@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-06T16:01:54+08:00",
-  "count": 23,
+  "generated_at": "2026-09-08T07:36:30+08:00",
+  "count": 24,
   "routes": [
     {
       "source_id": "BV111Fze1EZw",
@@ -482,6 +482,39 @@
       "updated_at": "2026-08-19",
       "json_path": "episodes/BV1eh9YBUEYp.json",
       "page_path": "pages/BV1eh9YBUEYp.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV1hKKV6MEHM",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:8de9b05f47676f5a2065428ab00f9c46e789b3312784982c6d533ac1fdf69171",
+      "blogger": "赖导AboutLai",
+      "series": null,
+      "title": "阿勒泰无计划漫游·反向避开喀纳斯（哈巴河县冷门牧村）",
+      "regions": [
+        "西北"
+      ],
+      "destinations": [
+        "阿勒泰地区",
+        "铁热克提乡",
+        "齐巴尔希力克村",
+        "克勒迭能村"
+      ],
+      "location_terms": [
+        "中国",
+        "西北",
+        "新疆维吾尔自治区",
+        "阿勒泰地区",
+        "哈巴河县",
+        "铁热克提乡",
+        "齐巴尔希力克村",
+        "加依勒玛乡",
+        "克勒迭能村"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-09-06",
+      "json_path": "episodes/BV1hKKV6MEHM.json",
+      "page_path": "pages/BV1hKKV6MEHM.html",
       "related_videos": []
     },
     {
