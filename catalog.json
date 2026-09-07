@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-08T07:36:30+08:00",
-  "count": 24,
+  "generated_at": "2026-09-08T07:52:05+08:00",
+  "count": 25,
   "routes": [
     {
       "source_id": "BV111Fze1EZw",
@@ -482,6 +482,44 @@
       "updated_at": "2026-08-19",
       "json_path": "episodes/BV1eh9YBUEYp.json",
       "page_path": "pages/BV1eh9YBUEYp.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV1g8LQ6BEma",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:49edacf08a40a49509add5f4b79f54bc038176f73d156209fd44edfec949c185",
+      "blogger": "赖导AboutLai",
+      "series": null,
+      "title": "甘南小环线自驾·扎尕那+洛克之路+甘加秘境（藏地秘境）",
+      "regions": [
+        "西北"
+      ],
+      "destinations": [
+        "合作市",
+        "卡车村",
+        "扎尕那",
+        "扎古录镇",
+        "甘加镇"
+      ],
+      "location_terms": [
+        "中国",
+        "西北",
+        "甘肃省",
+        "甘南藏族自治州",
+        "合作市",
+        "卓尼县",
+        "卡车村",
+        "迭部县",
+        "益哇镇",
+        "扎尕那",
+        "扎古录镇",
+        "夏河县",
+        "甘加镇"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-09-06",
+      "json_path": "episodes/BV1g8LQ6BEma.json",
+      "page_path": "pages/BV1g8LQ6BEma.html",
       "related_videos": []
     },
     {
