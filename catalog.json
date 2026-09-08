@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-08T07:52:05+08:00",
-  "count": 25,
+  "generated_at": "2026-09-08T08:09:40+08:00",
+  "count": 26,
   "routes": [
     {
       "source_id": "BV111Fze1EZw",
@@ -462,6 +462,36 @@
       "updated_at": "2026-08-19",
       "json_path": "episodes/BV1cD3bzwEVm.json",
       "page_path": "pages/BV1cD3bzwEVm.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV1eXXTByE29",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:2f1c3333625314c2d628669163d2a440d630fd40f8cea4e67a87a99742371758",
+      "blogger": "期末77",
+      "series": null,
+      "title": "寻找中国经纬度中心点·宜宾屏山人文之旅（乌龟坨）",
+      "regions": [
+        "西南"
+      ],
+      "destinations": [
+        "宜宾市",
+        "屏山县",
+        "乌龟坨"
+      ],
+      "location_terms": [
+        "中国",
+        "西南",
+        "四川省",
+        "宜宾市",
+        "屏山县",
+        "大乘镇",
+        "乌龟坨"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-09-06",
+      "json_path": "episodes/BV1eXXTByE29.json",
+      "page_path": "pages/BV1eXXTByE29.html",
       "related_videos": []
     },
     {
