@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-08T08:09:40+08:00",
-  "count": 26,
+  "generated_at": "2026-09-08T10:35:38+08:00",
+  "count": 27,
   "routes": [
     {
       "source_id": "BV111Fze1EZw",
@@ -327,6 +327,32 @@
           "part_number": 2
         }
       ]
+    },
+    {
+      "source_id": "BV1QfLm6wESC",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:749d302333a012f53f4e4704bd305582b040a64907cd2861153fa2d735446e91",
+      "blogger": "期末77",
+      "series": null,
+      "title": "敦煌星空主题之旅·还原千年前的星图（鸣沙山→莫高窟→敦煌星图）",
+      "regions": [
+        "西北"
+      ],
+      "destinations": [
+        "敦煌市"
+      ],
+      "location_terms": [
+        "中国",
+        "西北",
+        "甘肃省",
+        "酒泉市",
+        "敦煌市"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-09-06",
+      "json_path": "episodes/BV1QfLm6wESC.json",
+      "page_path": "pages/BV1QfLm6wESC.html",
+      "related_videos": []
     },
     {
       "source_id": "BV1RovaBTEE4",
