@@ -29,6 +29,10 @@ a { color: #c23a1a; }
 .filter-btn:hover { border-color: #e6502e; color: #e6502e; }
 .filter-btn.active { background: #e6502e; color: #fff; border-color: #e6502e; }
 .empty { display: none; text-align: center; color: #999; padding: 46px 0; font-size: 14.5px; }
+.library-stats { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 20px; }
+.library-stat { min-width: 152px; padding: 13px 17px; background: #fff; border: 1px solid #eee; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.025); }
+.library-stat b { display: block; color: #e6502e; font-size: 25px; line-height: 1.2; letter-spacing: -.5px; }
+.library-stat span { display: block; color: #777; font-size: 13px; margin-top: 4px; }
 
 @media (max-width: 640px) {
   body { padding: 20px 14px 60px; font-size: 14.5px; }
@@ -41,6 +45,9 @@ a { color: #c23a1a; }
   .statbar { gap: 6px; }
   .stat { padding: 6px 10px; font-size: 12px; }
   .btn { width: 100%; text-align: center; }
+  .library-stats { gap: 8px; margin: 14px 0 18px; }
+  .library-stat { flex: 1; min-width: 0; padding: 11px 13px; }
+  .library-stat b { font-size: 22px; }
 }
 
 </style>
@@ -48,6 +55,10 @@ a { color: #c23a1a; }
 <body>
 <h1>旅行博主路线库</h1>
 <p class="lead">把旅行博主公开视频，整理成能直接用的路线图：完整路线、交通方式、花费清单、实用贴士。本站独立整理，与创作者无合作/背书关系；原创内容版权归原作者所有，价格为视频拍摄时信息，出行前请核实。按博主分组浏览，也可去原视频看完整内容。</p>
+<div class="library-stats" aria-label="路线库收录统计">
+  <div class="library-stat"><b id="route-total">—</b><span>已收录路线</span></div>
+  <div class="library-stat"><b id="blogger-total">—</b><span>已收录博主</span></div>
+</div>
 
 <div class="search-wrap">
   <input id="search" type="text" placeholder="🔍 搜索目的地 / 路线 / 关键词，如：漠河、套娃、伊犁…">
@@ -293,9 +304,12 @@ a { color: #c23a1a; }
   var groups = Array.prototype.slice.call(document.querySelectorAll('h2[data-group]'));
   var currentBlogger = null; // null = 全部
 
-  // 1) 期数改为从卡片自动统计（杜绝手写计数错误）
+  // 1) 总览及分组期数均从卡片自动统计，避免手写数字过期
+  document.getElementById('route-total').textContent = cards.length + ' 条';
+  document.getElementById('blogger-total').textContent = groups.length + ' 位';
   groups.forEach(function (h) {
     var n = cards.filter(function (c) { return c.getAttribute('data-blogger') === h.getAttribute('data-group'); }).length;
+    h.childNodes[0].nodeValue = h.childNodes[0].nodeValue.replace(/（\d+期）$/, '');
     var span = document.createElement('span');
     span.className = 'count';
     span.textContent = '（' + n + ' 期）';
