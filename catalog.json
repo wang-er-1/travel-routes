@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-08T10:35:38+08:00",
-  "count": 27,
+  "generated_at": "2026-09-11T17:07:20+08:00",
+  "count": 30,
   "routes": [
     {
       "source_id": "BV111Fze1EZw",
@@ -283,6 +283,37 @@
       "related_videos": []
     },
     {
+      "source_id": "BV1JyfVY4EfW",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:4fb5f930cf1d2e79080419aea39ea6154a28170c7ccfb73558dced3ba6f8b4f6",
+      "blogger": "赖导AboutLai",
+      "series": null,
+      "title": "山西·阳泉人文轻旅行（高级软卧体验+太行山1500年古村）",
+      "regions": [
+        "华北"
+      ],
+      "destinations": [
+        "阳泉市",
+        "梁家寨乡",
+        "娘子关镇"
+      ],
+      "location_terms": [
+        "中国",
+        "华北",
+        "山西省",
+        "阳泉市",
+        "盂县",
+        "梁家寨乡",
+        "平定县",
+        "娘子关镇"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-09-11",
+      "json_path": "episodes/BV1JyfVY4EfW.json",
+      "page_path": "pages/BV1JyfVY4EfW.html",
+      "related_videos": []
+    },
+    {
       "source_id": "BV1KdHZz2ETB",
       "source_type": "bilibili_video",
       "content_hash": "sha256:1310fbc8f5f9a95d67fe90580031f00a10f81f79e63a4648d87140bf2337da72",
@@ -419,6 +450,39 @@
       "updated_at": "2026-08-19",
       "json_path": "episodes/BV1UetHeTEsH.json",
       "page_path": "pages/BV1UetHeTEsH.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV1X79qYeEpN",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:6b1f7020f34f6eb526612a15dd9ab9970d9ed981f37263e80ecd0309a8824d0c",
+      "blogger": "赖导AboutLai",
+      "series": null,
+      "title": "云南·怒江州纵贯自驾（泸水→知子罗→老姆登→丙中洛→雾里村）",
+      "regions": [
+        "西南"
+      ],
+      "destinations": [
+        "怒江傈僳族自治州",
+        "泸水市",
+        "匹河怒族乡",
+        "丙中洛镇"
+      ],
+      "location_terms": [
+        "中国",
+        "西南",
+        "云南省",
+        "怒江傈僳族自治州",
+        "泸水市",
+        "福贡县",
+        "匹河怒族乡",
+        "贡山独龙族怒族自治县",
+        "丙中洛镇"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-09-11",
+      "json_path": "episodes/BV1X79qYeEpN.json",
+      "page_path": "pages/BV1X79qYeEpN.html",
       "related_videos": []
     },
     {
@@ -632,6 +696,44 @@
       "updated_at": "2026-08-24",
       "json_path": "episodes/BV1k1421Q7W9.json",
       "page_path": "pages/BV1k1421Q7W9.html",
+      "related_videos": []
+    },
+    {
+      "source_id": "BV1n6fdBzEi3",
+      "source_type": "bilibili_video",
+      "content_hash": "sha256:95fde74c19533a0a6c028f914145eb9be1cf0b2120a6b68cb52b34cc8306bcac",
+      "blogger": "赖导AboutLai",
+      "series": null,
+      "title": "湘西·沈从文《边城》轻旅行（茶峒古镇+一脚踏三省）",
+      "regions": [
+        "华中",
+        "西南"
+      ],
+      "destinations": [
+        "边城镇",
+        "洪安镇",
+        "迓驾镇"
+      ],
+      "location_terms": [
+        "中国",
+        "华中",
+        "湖南省",
+        "湘西土家族苗族自治州",
+        "花垣县",
+        "边城镇",
+        "西南",
+        "重庆市",
+        "秀山土家族苗族自治县",
+        "洪安镇",
+        "贵州省",
+        "铜仁市",
+        "松桃苗族自治县",
+        "迓驾镇"
+      ],
+      "data_status": "draft",
+      "updated_at": "2026-09-11",
+      "json_path": "episodes/BV1n6fdBzEi3.json",
+      "page_path": "pages/BV1n6fdBzEi3.html",
       "related_videos": []
     },
     {
