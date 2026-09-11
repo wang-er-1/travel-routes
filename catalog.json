@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "generated_at": "2026-09-11T17:07:20+08:00",
+  "generated_at": "2026-09-11T17:09:44+08:00",
   "count": 30,
   "routes": [
     {
@@ -64,7 +64,7 @@
       "data_status": "draft",
       "updated_at": "2026-09-03",
       "json_path": "episodes/BV13n5RzbET8.json",
-      "page_path": null,
+      "page_path": "pages/BV13n5RzbET8.html",
       "related_videos": []
     },
     {
